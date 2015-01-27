@@ -1,0 +1,8 @@
+{
+  "name": "empty-coop",
+  "dependencies": {
+    "jquery": "1.x.x",
+    "requirejs": "~2.1.x"
+  },
+  "private": true
+}

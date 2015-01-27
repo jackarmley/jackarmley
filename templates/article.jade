@@ -1,0 +1,29 @@
+extends master
+
+block append vars
+  - bodyclass = 'view-post'
+
+block prepend title
+  | #{ page.title + " - "}
+
+block content
+
+    -if(page.metadata.hero_image)
+        -var postclass = 'fullpost fullpost--hasimage'
+    -else
+        -var postclass = 'fullpost'
+
+    article(class='#{postclass}')
+        header.fullpost-header
+            span.fullpost-date=  moment.utc(page.date).format('D.M.YYYY')
+            h1.fullpost-title= page.title
+        -if(page.metadata.hero_image)
+            figure.fullpost-media
+                img(src=page.metadata.hero_image)
+        .fullpost-body
+            -if(page.html)
+                | !{ typogr(page.html).typogrify() }
+        p.back-link
+            a(href="/") Back to article listing
+
+

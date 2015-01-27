@@ -1,0 +1,41 @@
+/**
+ * Pagination
+ */
+
+.pagination{
+    padding: 20px 0 25px;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    li{
+        display: inline-block;
+        border-radius: 5px;
+        background: fade-out(color(white),.8);
+        font-size: .8em;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    a{
+        display: block;
+        padding: .5em 20px;
+        color: color(white);
+        text-decoration: none;
+    }
+}
+
+.back-link{
+    padding: 25px 0 25px;
+    margin: 0;
+    text-align: center;
+    a{
+        display: inline-block;
+        padding: .5em 20px;
+        border-radius: 5px;
+        color: color(white);
+        background: fade-out(color(white),.8);
+        font-size: .8em;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+}

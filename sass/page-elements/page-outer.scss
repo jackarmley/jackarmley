@@ -1,0 +1,26 @@
+/**
+ * Page outer
+ */
+
+%layoutwrap{
+    width: auto;
+    max-width: 800px;
+    margin: auto;
+    padding:0 40px;
+    @include breakpoint(tinybear){
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+html{
+    min-height: 100%;
+    background:{
+        image: linear-gradient(to bottom, color(key), adjust-hue(color(key),20%));
+        color: color(key);
+    };
+}
+body{
+    width: auto;
+    margin: auto;
+}
