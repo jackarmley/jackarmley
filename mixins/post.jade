@@ -15,6 +15,6 @@ mixin post(obj)
                     blockquote.post-summary
                         p= obj.metadata.summary
                 -if (obj.metadata.image_thumb)
-                    figure.post-img
+                    figure.post-img(style="background-image:url('#{obj.metadata.image_thumb}');")
                         img(src="#{obj.metadata.image_thumb}")
 

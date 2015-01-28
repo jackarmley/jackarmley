@@ -104,8 +104,10 @@ $weights: (
         margin: 0;
         border-bottom: 2px solid;
         background-color: color(white);
+        background-position: center center;
+        background-size: cover;
         img{
-            width: 100%;
+            display: none;
         }
     }
     &:hover{

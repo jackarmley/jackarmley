@@ -65,9 +65,7 @@
         &-body{
             border: 5px solid color(white);
             border-radius: 5px;
-        }
-        &--hasimage{
-            .fullpost-body{
+            .fullpost-media + &{
                 border-top-left-radius: 0;
                 border-top-right-radius: 0;
             }
