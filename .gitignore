@@ -1,7 +1,6 @@
 # Misc #
 ##################
 .htaccess
-package.json
 node_modules/
 bower_components/
 _cache/
