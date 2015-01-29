@@ -248,19 +248,15 @@ module.exports = function (grunt) {
         }
     });
 
-    // Deployment
+    // Deploy
     ext.configure({
-        'ftp-deploy': {
-            build: {
-                auth: {
-                    host: 'jackarmley.com',
-                    port: 21,
-                    authKey: 'default'
-                },
-                src: '<%= assets.build %>',
-                dest: '/jackarmley.com/',
-                exclusions: ['<%= assets.build %>/**/.css.map','<%= assets.build %>/**/.DS_Store']
-            }
+        shell: {
+            rsync: {
+                command: "rsync --update -av -e 'ssh' --progress --remove-sent-files ./build/ jackarmley16@jackarmley.com:jackarmley.com"
+            },
+            dryrun: {
+                command: "rsync --update -av -e 'ssh' --progress --dry-run --remove-sent-files ./build/ jackarmley16@jackarmley.com:jackarmley.com"
+            } 
         }
     });
 
@@ -291,10 +287,6 @@ module.exports = function (grunt) {
         'connect'
     ]);
 
-    // Deploy
-    ext.registerTask('deploy',[
-        'ftp-deploy:build'
-    ]);
 
     // Load grunt configuration
     ext.initConfig(grunt);

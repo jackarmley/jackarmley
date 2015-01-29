@@ -1,164 +1,72 @@
-/**
- * Breakpoint helper
- * A visual tool to help the developer see
- * when a breakpoint is triggered
- */
+/*
+Error: File to import not found or unreadable: mixins/settings-mixins.
+       Load path: /Users/jackarmley/projects/jackarmley.com-v4
+        on line 9 of sass/config/settings.scss
+        from line 8 of sass/breakpointguide.scss
 
-/**
- * Global settings
- *
- * Use this file to set custom colours, and to set
- * the base text size / line height value
- * More settings can be added here, the sky is the limit!
- */
+4:  * when a breakpoint is triggered
+5:  *\/
+6: 
+7: $mq-support:true;
+8: @import 'config/settings';
+9: 
+10: $bpguide:(
+11:     bg:#fff,
+12:     text:#333,
+13:     label:#EF4034
+14: );
 
-/**
- * Settings mixins / functions
- *
- * Helpers that relate directly to the settings files
- */
-
-/**
- * Reusable functions
- */
-
-/**
- * Responsive breakpoints
- */
-
-/**
- * Responsive breakpoints
- */
-
-/**
- * Define which breakpoint(s) will be
- * the default for IE8 and below
- */
-
-/**
- * Define breakpoints
- * @usage:
- * name: width(min,max) height(min,max) orientation(portrait|landscape)
- */
-
-/**
- * Eggbox:
- * Fallback settings
- */
-
-/**
- * Font sizes
- * @usage: fontsize($size);
- */
-
-/**
- * Font famillies
- * @usage: fontfamily($family)
- */
-
-/**
- * Colours
- * @usage: color($color);
- */
-
-.breakpointguide {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	overflow: hidden;
-	background: #fff;
-	color: #333;
-	font: normal normal 12px/1.5em sans-serif;
-}
-
-.breakpointguide-label {
-	display: block;
-	padding: .5em 1em;
-	background: #EF4034;
-	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
-	color: white;
-	font-weight: bold;
-	text-transform: uppercase;
-}
-
-.breakpointguide-values {
-	margin: 0;
-	list-style: none;
-}
-
-.breakpointguide-value {
-	display: none;
-	padding: .5em 1em;
-}
-
-.breakpointguide-value-label,
-.breakpointguide-value-data {
-	display: block;
-}
-
-.breakpointguide-value-data {
-	font-weight: bold;
-}
-
-/*# sourceMappingURL=breakpointguide.css.map */
-
-@media screen and (min-width: 31.3125em) {
-
-.breakpointguide-label {
-	background: #66ef34;
-}
-
-.breakpointguide-label:before {
-	content: "babybear";
-}
-
-.breakpointguide-value--minw {
-	display: inline-block;
-}
-
-.breakpointguide-value--minw .breakpointguide-value-data:before {
-	content: "501";
-}
-
-}
-
-@media screen and (min-width: 50em) {
-
-.breakpointguide-label {
-	background: #efdc34;
-}
-
-.breakpointguide-label:before {
-	content: "mamabear";
-}
-
-.breakpointguide-value--minw {
-	display: inline-block;
-}
-
-.breakpointguide-value--minw .breakpointguide-value-data:before {
-	content: "800";
-}
-
-}
-
-@media screen and (max-width: 31.25em) {
-
-.breakpointguide-label {
-	background: #34ef9e;
-}
-
-.breakpointguide-label:before {
-	content: "tinybear";
-}
-
-.breakpointguide-value--maxw {
-	display: inline-block;
-}
-
-.breakpointguide-value--maxw .breakpointguide-value-data:before {
-	content: "500";
-}
-
-}
-
+Backtrace:
+sass/config/settings.scss:9
+sass/breakpointguide.scss:8
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/import_node.rb:66:in `rescue in import'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/import_node.rb:45:in `import'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/import_node.rb:28:in `imported_file'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/import_node.rb:37:in `css_import?'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:301:in `visit_import'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:315:in `block (2 levels) in visit_import'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:315:in `map'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:315:in `block in visit_import'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:88:in `block in with_import'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:88:in `with_import'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:312:in `visit_import'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:396:in `run'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: mixins/settings-mixins.\A        Load path: /Users/jackarmley/projects/jackarmley.com-v4\A         on line 9 of sass/config/settings.scss\A         from line 8 of sass/breakpointguide.scss\A \A 4:  * when a breakpoint is triggered\A 5:  */\A 6: \A 7: $mq-support:true;\A 8: @import 'config/settings';\A 9: \A 10: $bpguide:(\A 11:     bg:#fff,\A 12:     text:#333,\A 13:     label:#EF4034\A 14: );"; }
