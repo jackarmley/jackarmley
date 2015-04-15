@@ -3,6 +3,7 @@
  * A visual tool to help the developer see
  * when a breakpoint is triggered
  */
+
 /**
  * Global settings
  *
@@ -10,118 +11,154 @@
  * the base text size / line height value
  * More settings can be added here, the sky is the limit!
  */
+
 /**
  * Settings mixins / functions
  *
  * Helpers that relate directly to the settings files
  */
+
 /**
  * Reusable functions
  */
+
 /**
  * Responsive breakpoints
  */
+
 /**
  * Responsive breakpoints
  */
+
 /**
  * Define which breakpoint(s) will be
  * the default for IE8 and below
  */
+
 /**
  * Define breakpoints
  * @usage:
  * name: width(min,max) height(min,max) orientation(portrait|landscape)
  */
+
 /**
  * Eggbox:
  * Fallback settings
  */
+
 /**
  * Font sizes
  * @usage: fontsize($size);
  */
+
 /**
  * Font famillies
  * @usage: fontfamily($family)
  */
+
 /**
  * Colours
  * @usage: color($color);
  */
+
 .breakpointguide {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  overflow: hidden;
-  background: #fff;
-  color: #333;
-  font: normal normal 12px/1.5em sans-serif;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+	background: #fff;
+	color: #333;
+	font: normal normal 12px/1.5em sans-serif;
 }
+
 .breakpointguide-label {
-  display: block;
-  padding: .5em 1em;
-  background: #EF4034;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
+	display: block;
+	padding: .5em 1em;
+	background: #EF4034;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
 }
+
 .breakpointguide-values {
-  margin: 0;
-  list-style: none;
+	margin: 0;
+	list-style: none;
 }
+
 .breakpointguide-value {
-  display: none;
-  padding: .5em 1em;
+	display: none;
+	padding: .5em 1em;
 }
-.breakpointguide-value-label, .breakpointguide-value-data {
-  display: block;
-}
+
+.breakpointguide-value-label,
 .breakpointguide-value-data {
-  font-weight: bold;
+	display: block;
 }
-@media screen and (min-width: 50em) {
-  .breakpointguide-label {
-    background: #efdc34;
-  }
-  .breakpointguide-label:before {
-    content: "mamabear";
-  }
-  .breakpointguide-value--minw {
-    display: inline-block;
-  }
-  .breakpointguide-value--minw .breakpointguide-value-data:before {
-    content: "800";
-  }
-}
-@media screen and (min-width: 31.3125em) {
-  .breakpointguide-label {
-    background: #66ef34;
-  }
-  .breakpointguide-label:before {
-    content: "babybear";
-  }
-  .breakpointguide-value--minw {
-    display: inline-block;
-  }
-  .breakpointguide-value--minw .breakpointguide-value-data:before {
-    content: "501";
-  }
-}
-@media screen and (max-width: 31.25em) {
-  .breakpointguide-label {
-    background: #34ef9e;
-  }
-  .breakpointguide-label:before {
-    content: "tinybear";
-  }
-  .breakpointguide-value--maxw {
-    display: inline-block;
-  }
-  .breakpointguide-value--maxw .breakpointguide-value-data:before {
-    content: "500";
-  }
+
+.breakpointguide-value-data {
+	font-weight: bold;
 }
 
 /*# sourceMappingURL=breakpointguide.css.map */
+
+@media screen and (min-width: 31.3125em) {
+
+.breakpointguide-label {
+	background: #66ef34;
+}
+
+.breakpointguide-label:before {
+	content: "babybear";
+}
+
+.breakpointguide-value--minw {
+	display: inline-block;
+}
+
+.breakpointguide-value--minw .breakpointguide-value-data:before {
+	content: "501";
+}
+
+}
+
+@media screen and (min-width: 50em) {
+
+.breakpointguide-label {
+	background: #efdc34;
+}
+
+.breakpointguide-label:before {
+	content: "mamabear";
+}
+
+.breakpointguide-value--minw {
+	display: inline-block;
+}
+
+.breakpointguide-value--minw .breakpointguide-value-data:before {
+	content: "800";
+}
+
+}
+
+@media screen and (max-width: 31.25em) {
+
+.breakpointguide-label {
+	background: #34ef9e;
+}
+
+.breakpointguide-label:before {
+	content: "tinybear";
+}
+
+.breakpointguide-value--maxw {
+	display: inline-block;
+}
+
+.breakpointguide-value--maxw .breakpointguide-value-data:before {
+	content: "500";
+}
+
+}
+

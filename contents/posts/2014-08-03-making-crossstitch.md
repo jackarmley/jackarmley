@@ -4,6 +4,7 @@ template: article.jade
 date: 2014.08.03
 category: article
 summary: Crossstitch
+status: draft
 ---
 
 In the quest to reduce image requests (something I'm fanatical about given the range of devices and network speeds out there), one tool I use is box shadows to generate simple icons. I've seen this technique used in the wild to make simple things like hamburger icons (which seems performant and realistic) and for amazing but impractical things, like a full pixel-art Mona Lisa.
