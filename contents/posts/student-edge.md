@@ -11,3 +11,9 @@ Student Edge is an Australia-wide service providing much needed discounts for ca
 We focused on providing just that, shying away from complex Javascript-driven interactions and lavish graphics in favor of a clean, zippy and retina-ready site, perfect even for those with cheaper mobiles on edge connections.
 
 To cut down on image requests, we made heavy use of modern alternatives like webfont icons and CSS gradients.
+
+## Built with
+
+- HTML5
+- LESS
+- jQuery
