@@ -18,6 +18,8 @@ build/
 *.exe
 *.o
 *.so
+*.css
+*.css.map
 
 # Packages #
 ############
