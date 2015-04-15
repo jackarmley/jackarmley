@@ -1,11 +1,12 @@
 ---
 title: MRA website
 template: article.jade
-date: 2015.01.01
+date: 2014.11.05
 category: work
+summary: Bringing renewed vibrancy to MRA's online home
 ---
 
-MRA website
+The Metropolitan Redevelopment Authority is a placemaking organisation for the Government of Western Australian.
 
 ## Built with
 

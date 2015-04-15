@@ -9,13 +9,12 @@ summary: The website was a vehicle for the images, and a way to give them contex
 
 To help motivate their postgrads through the final summer push, Hatchd worked with Murdoch on an Instagram-driven campaign where students can tag and submit inspirational quotes through Instagram.
 
-The website was a vehicle for the images, and a way to give them context and a seperately branded home away from Murdoch's Instagram account.
-
-The main focus was to display and share the images, so the build had to be as lightweight as possible to conserve page weight.
+The website was a vehicle for the quotes; a way to give them context and a seperately branded home away from Murdoch's Instagram account.
 
 ## Build insight
 
-For tighter size control within the image grid, I used floats over flexbox, implemented through a SASS map. With this technique, I could define how many images per row should be used at specific widths, without having to create dozens of arbritrary sitewite breakpoint variables.
+For tighter size control within the image grid, I used floats over flexbox, implemented through a SASS map. With this technique, 
+I could define how many images per row should be used at specific widths, without having to create dozens of arbritrary sitewite breakpoint variables.
 
 ```
 // Seperate sizing for the grid per relevent view,
