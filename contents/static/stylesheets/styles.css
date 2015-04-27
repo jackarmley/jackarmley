@@ -1,141 +1,490 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,800,300);/*
- *  Front-end business for
- *  my site (jackarmley.com).
- *  Built with empty-coop, a front-end starting point
- *  what I helped make at Hatchd.
- */
-
-/**
- * Manifest
- * Staging file to pull in all sass components
- */
-
-/**
- * Settings
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700");/*
+ *  Empty-coop:
+ *  A front-end starting point from the team at Hatchd
  *
- * Define colours, text sizes etc... before any styles are pulled in
- * Also, establish grid type and settings
- */
-
-/**
- * Global settings
+ *  @Author Hatchd Digital
  *
- * Use this file to set custom colours, and to set
- * the base text size / line height value
- * More settings can be added here, the sky is the limit!
- */
-
-/**
- * Settings mixins / functions
- *
- * Helpers that relate directly to the settings files
- */
-
-/**
- * Reusable functions
- */
-
-/**
- * Responsive breakpoints
- */
-
-/**
- * Responsive breakpoints
- */
-
-/**
- * Define which breakpoint(s) will be
- * the default for IE8 and below
- */
-
-/**
- * Define breakpoints
- * @usage:
- * name: width(min,max) height(min,max) orientation(portrait|landscape)
- */
-
-/**
- * Eggbox:
- * Fallback settings
- */
-
-/**
- * Font sizes
- * @usage: fontsize($size);
- */
-
-/**
- * Font famillies
- * @usage: fontfamily($family)
- */
-
-/**
- * Colours
- * @usage: color($color);
- */
-
-/**
- * Mixins
- *
- * Define predefined mixins, and custom mixins (optional) that can be
- * set on a per-project basis
- */
-
-/**
- * Predefined mixins
- *
- * A set of SASS mixins to make common css tasks that little bit easier
+ *  ...HHH...........................................HH ................DDD....
+ *  ...HHH.......................TT .................HH.................DDD....
+ *  ...HHH.......................TT..................HH.................DDD....
+ *  ...HHHHHHHH..... AAAAAA......TTTTTT....CCCCCC....HHHHHHHN..... DDDDDDDD....
+ *  ...HHHHHHHHH ...AAAAAAAAA....TTTTTT...CCCCCCCC...HHHHHHHHH... DDDDDDDDD....
+ *  ...HHH... HH..........AAA....TTT..... CCC........HH....HHH....DD....DDD....
+ *  ...HHH... HH.....AAAAAAAA....TTT......CC.........HH....HHH...DDD....DDD....
+ *  ...HHH... HH....AAA...AAA....TTT......CC ........HH....HHH...DDD....DDD....
+ *  ...HHH... HH....AAA...AAA....TTT..... CCC........HH....HHH....DD....DDD....
+ *  ...HHH... HH....AAA..AAAA....TTT..... CCCC..CC...HH....HHH....DDD..DDDD....
+ *  ...HHH... HH.....AAAAAAAA....TTTTTT....CCCCCCC...HH....HHH.... DDDDDDD.....
  *
  */
 
 /**
- * Make an element square
- * Automagically set the same width/height for a block-level element
- *
- * @param size: size in chosen unit
- */
+* Eggbox @font-face declaration
+**/
+
+@font-face {
+	font-family: "eggbox";
+	src: url("../fonts/eggbox/eggbox.eot");
+	src: url("../fonts/eggbox/eggbox.eot?#iefix") format("embedded-opentype"), url("../fonts/eggbox/eggbox.woff") format("woff"), url("../fonts/eggbox/eggbox.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
 
 /**
- * Set width and height
- * Automagically set the width/height for a block-level element
- *
- * @param width: width in chosen unit
- * @param height: height in chosen unit
+ * Eggbox classes
+ * An alternative to using the mixin
+ * (which is the preferred option)
  */
 
-/**
- * Evenly distribute items
- * Automagically set items evenly in a line
- *
- * @param item-number: number of items to distribute
- */
+[data-eggbox]:before {
+	display: inline-block;
+	font-family: eggbox;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: inherit;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	speak: none;
+}
 
-/**
- * CSS triangles
- * Make pure CSS triangles
- * Useful for pointers and tooltips
- */
+[data-eggbox="alert-fill"]:before {
+	content: "";
+}
 
-/**
- * Set font properties
- * Set all properties within the font{}
- * namespace, and line-height.
- * Font sizes can be loose, or from the font size map.
- * Font famillies need to be from the font family map.
- */
+[data-eggbox="arrow-full-down"]:before {
+	content: "";
+}
 
-/**
- * Global custom mixins
- *
- * Mixins that can be set on a per-project basis
- */
+[data-eggbox="arrow-full-left"]:before {
+	content: "";
+}
 
-/**
- * Establish any resource using an @rule
- *
- * Set rules for any CSS resource requiring an @ prefix,
- * such as @animate rules or @font-face fonts
- */
+[data-eggbox="arrow-full-right"]:before {
+	content: "";
+}
+
+[data-eggbox="arrow-full-up"]:before {
+	content: "";
+}
+
+[data-eggbox="arrow-fullinverted-down"]:before {
+	content: "";
+}
+
+[data-eggbox="arrow-fullinverted-left"]:before {
+	content: "";
+}
+
+[data-eggbox="arrow-fullinverted-right"]:before {
+	content: "";
+}
+
+[data-eggbox="arrow-fullinverted-up"]:before {
+	content: "";
+}
+
+[data-eggbox="arrow-hairline-down"]:before {
+	content: "";
+}
+
+[data-eggbox="arrow-hairline-left"]:before {
+	content: "";
+}
+
+[data-eggbox="arrow-hairline-right"]:before {
+	content: "";
+}
+
+[data-eggbox="arrow-hairline-up"]:before {
+	content: "";
+}
+
+[data-eggbox="arrow-keyline-down"]:before {
+	content: "";
+}
+
+[data-eggbox="arrow-keyline-left"]:before {
+	content: "";
+}
+
+[data-eggbox="arrow-keyline-right"]:before {
+	content: "";
+}
+
+[data-eggbox="arrow-keyline-up"]:before {
+	content: "";
+}
+
+[data-eggbox="arrow-outline-down"]:before {
+	content: "";
+}
+
+[data-eggbox="arrow-outline-left"]:before {
+	content: "";
+}
+
+[data-eggbox="arrow-outline-right"]:before {
+	content: "";
+}
+
+[data-eggbox="arrow-outline-up"]:before {
+	content: "";
+}
+
+[data-eggbox="battery-50"]:before {
+	content: "";
+}
+
+[data-eggbox="battery-full"]:before {
+	content: "";
+}
+
+[data-eggbox="battery-low"]:before {
+	content: "";
+}
+
+[data-eggbox="bell"]:before {
+	content: "";
+}
+
+[data-eggbox="book-closed"]:before {
+	content: "";
+}
+
+[data-eggbox="book-open"]:before {
+	content: "";
+}
+
+[data-eggbox="bookmark"]:before {
+	content: "";
+}
+
+[data-eggbox="calendar"]:before {
+	content: "";
+}
+
+[data-eggbox="check"]:before {
+	content: "";
+}
+
+[data-eggbox="checkbox-blank"]:before {
+	content: "";
+}
+
+[data-eggbox="checkbox-checked"]:before {
+	content: "";
+}
+
+[data-eggbox="clock"]:before {
+	content: "";
+}
+
+[data-eggbox="coffeecup"]:before {
+	content: "";
+}
+
+[data-eggbox="comment"]:before {
+	content: "";
+}
+
+[data-eggbox="contract"]:before {
+	content: "";
+}
+
+[data-eggbox="conversation"]:before {
+	content: "";
+}
+
+[data-eggbox="cross-large"]:before {
+	content: "";
+}
+
+[data-eggbox="cross-small"]:before {
+	content: "";
+}
+
+[data-eggbox="documents"]:before {
+	content: "";
+}
+
+[data-eggbox="download"]:before {
+	content: "";
+}
+
+[data-eggbox="edit"]:before {
+	content: "";
+}
+
+[data-eggbox="email-closed"]:before {
+	content: "";
+}
+
+[data-eggbox="email-open"]:before {
+	content: "";
+}
+
+[data-eggbox="equaliser-horz"]:before {
+	content: "";
+}
+
+[data-eggbox="equaliser-vert"]:before {
+	content: "";
+}
+
+[data-eggbox="expand"]:before {
+	content: "";
+}
+
+[data-eggbox="facebook-fill"]:before {
+	content: "";
+}
+
+[data-eggbox="facebook"]:before {
+	content: "";
+}
+
+[data-eggbox="favourite"]:before {
+	content: "";
+}
+
+[data-eggbox="flag"]:before {
+	content: "";
+}
+
+[data-eggbox="forbidden"]:before {
+	content: "";
+}
+
+[data-eggbox="foursquare-inverted"]:before {
+	content: "";
+}
+
+[data-eggbox="foursquare"]:before {
+	content: "";
+}
+
+[data-eggbox="googleplus"]:before {
+	content: "";
+}
+
+[data-eggbox="handshake"]:before {
+	content: "";
+}
+
+[data-eggbox="heart"]:before {
+	content: "";
+}
+
+[data-eggbox="help-inverse"]:before {
+	content: "";
+}
+
+[data-eggbox="help"]:before {
+	content: "";
+}
+
+[data-eggbox="home"]:before {
+	content: "";
+}
+
+[data-eggbox="image"]:before {
+	content: "";
+}
+
+[data-eggbox="info-fill"]:before {
+	content: "";
+}
+
+[data-eggbox="info"]:before {
+	content: "";
+}
+
+[data-eggbox="instagram-video"]:before {
+	content: "";
+}
+
+[data-eggbox="instagram"]:before {
+	content: "";
+}
+
+[data-eggbox="link"]:before {
+	content: "";
+}
+
+[data-eggbox="linked"]:before {
+	content: "";
+}
+
+[data-eggbox="linkedin-fill"]:before {
+	content: "";
+}
+
+[data-eggbox="location-pointer"]:before {
+	content: "";
+}
+
+[data-eggbox="lock-locked"]:before {
+	content: "";
+}
+
+[data-eggbox="lock-unlocked"]:before {
+	content: "";
+}
+
+[data-eggbox="logout-1"]:before {
+	content: "";
+}
+
+[data-eggbox="logout-2"]:before {
+	content: "";
+}
+
+[data-eggbox="mapmarker"]:before {
+	content: "";
+}
+
+[data-eggbox="menutoggle"]:before {
+	content: "";
+}
+
+[data-eggbox="microphone"]:before {
+	content: "";
+}
+
+[data-eggbox="minus"]:before {
+	content: "";
+}
+
+[data-eggbox="paperclip"]:before {
+	content: "";
+}
+
+[data-eggbox="phone"]:before {
+	content: "";
+}
+
+[data-eggbox="plus"]:before {
+	content: "";
+}
+
+[data-eggbox="presentation"]:before {
+	content: "";
+}
+
+[data-eggbox="print"]:before {
+	content: "";
+}
+
+[data-eggbox="profile-2"]:before {
+	content: "";
+}
+
+[data-eggbox="profile"]:before {
+	content: "";
+}
+
+[data-eggbox="refresh"]:before {
+	content: "";
+}
+
+[data-eggbox="reply"]:before {
+	content: "";
+}
+
+[data-eggbox="retweet"]:before {
+	content: "";
+}
+
+[data-eggbox="rss-fill"]:before {
+	content: "";
+}
+
+[data-eggbox="rss"]:before {
+	content: "";
+}
+
+[data-eggbox="search"]:before {
+	content: "";
+}
+
+[data-eggbox="settings-spanner"]:before {
+	content: "";
+}
+
+[data-eggbox="settings"]:before {
+	content: "";
+}
+
+[data-eggbox="stopwatch"]:before {
+	content: "";
+}
+
+[data-eggbox="sync-1"]:before {
+	content: "";
+}
+
+[data-eggbox="sync-2"]:before {
+	content: "";
+}
+
+[data-eggbox="tab"]:before {
+	content: "";
+}
+
+[data-eggbox="timer"]:before {
+	content: "";
+}
+
+[data-eggbox="trash"]:before {
+	content: "";
+}
+
+[data-eggbox="twitter-fill"]:before {
+	content: "";
+}
+
+[data-eggbox="twitter"]:before {
+	content: "";
+}
+
+[data-eggbox="upload"]:before {
+	content: "";
+}
+
+[data-eggbox="vcard"]:before {
+	content: "";
+}
+
+[data-eggbox="view"]:before {
+	content: "";
+}
+
+[data-eggbox="youtube"]:before {
+	content: "";
+}
+
+[data-eggbox="zoom-in"]:before {
+	content: "";
+}
+
+[data-eggbox="zoom-out"]:before {
+	content: "";
+}
+
+[data-eggbox="sample"]:before {
+	content: "";
+}
+
+.site-header-inner,
+.view-home .page-header-inner,
+.page-section,
+.page-header-inner {
+	position: relative;
+	width: auto;
+	max-width: 110rem;
+	margin: auto;
+}
 
 /**
  * Webfonts
@@ -144,11 +493,22 @@
  */
 
 /**
- * Create a clean slate
- *
- * Ensure we level any browser differences, so we can build any
- * subsequent declarations on level ground
+ * Open Sans
+ * @src: Google Fonts
  */
+
+/**
+ * League Spartan
+ * @src: League of Movable Type
+ */
+
+@font-face {
+	font-family: 'League Spartan';
+	src: url("../static/fonts/league-spartan/leaguespartan-bold.eot");
+	src: url("../static/fonts/league-spartan/leaguespartan-bold.eot?#iefix") format("embedded-opentype"), url("../static/fonts/league-spartan/leaguespartan-bold.woff2") format("woff2"), url("../static/fonts/league-spartan/leaguespartan-bold.woff") format("woff"), url("../static/fonts/league-spartan/leaguespartan-bold.ttf") format("truetype"), url("../static/fonts/league-spartan/leaguespartan-bold.svg#league_spartanbold") format("svg");
+	font-weight: bold;
+	font-style: normal;
+}
 
 /**
  * normalize.css v2.1.3
@@ -163,6 +523,18 @@
  * HTML5 display definitions
  *
  */
+
+/**
+*  Default box-sizing to border-box
+*/
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
 /**
 * Corrects `block` display not defined in IE6/7/8/9 & FF3.
@@ -449,6 +821,18 @@ textarea {
 }
 
 /**
+ * Stops iOS safari to zoom in on focus
+ */
+
+.touch input,
+.touch
+textarea,
+.touch
+select {
+	font-size: 16px !important;
+}
+
+/**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
@@ -566,12 +950,6 @@ table {
 }
 
 /**
- * Set base rules that can apply site-wide
- *
- * These should apply to naked elements, no classes should be defined here
- */
-
-/**
  * Base type styles
  */
 
@@ -579,12 +957,15 @@ table {
  * Set base font size/line-height and declare the px size of an em unit
  */
 
+html {
+	font-size: 62.5%;
+}
+
 body {
-	color: #535353;
-	font-size: 100%;
-	line-height: 1.8em;
-	font-family: "Open Sans";
-	font-weight: 300;
+	font-size: 180%;
+	line-height: 1.5em;
+	font-family: "Open Sans", sans-serif;
+	color: #000;
 }
 
 p,
@@ -594,7 +975,7 @@ dd,
 input,
 textarea,
 button {
-	line-height: 1.8em;
+	line-height: 1.5em;
 }
 
 /**
@@ -607,31 +988,34 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 1.5em 0 .75em;
-	line-height: 1.5em;
+	line-height: 1.3em;
+	font-family: "League Spartan", sans-serif;
 	font-weight: normal;
+	margin: 1em 0 .5em;
 }
 
 h1 {
-	font-size: 2em;
-	font-weight: 300;
+	font-size: 3em;
 }
 
 h2 {
-	font-size: 1.3em;
-	font-weight: 600;
+	font-size: 2em;
 }
 
 h3 {
-	font-size: 1.1em;
-	font-weight: 600;
+	font-size: 1.5em;
 }
 
-h4,
-h5,
+h4 {
+	font-size: 1em;
+}
+
+h5 {
+	font-size: 1em;
+}
+
 h6 {
 	font-size: 1em;
-	font-weight: 700;
 }
 
 /**
@@ -647,7 +1031,7 @@ hr {
 	margin: 0 0 1em 0;
 	padding: 0;
 	border: none;
-	border-top: 1px solid #cccccc;
+	border-top: 1px solid gray;
 }
 
 /**
@@ -659,14 +1043,12 @@ hr {
  */
 
 blockquote {
-	position: relative;
-	margin: 0 0 1em;
+	margin: 0 0 1em 3em;
 }
 
 blockquote > p {
-	font-size: 1em;
-	font-weight: 600;
-	margin-bottom: 0.60em;
+	margin-bottom: .60em;
+	font-size: 1.4em;
 }
 
 blockquote > p:first-child:before {
@@ -677,13 +1059,23 @@ blockquote > p:first-child:after {
 	content: '\201D';
 }
 
+blockquote footer p {
+	margin: -.5em 0 0 0;
+	font-size: .85em;
+	font-style: italic;
+}
+
+blockquote footer p:before {
+	content: '-';
+}
+
 /**
  * Inline quotes
  */
 
 q {
-	font-style: italic;
 	color: inherit;
+	font-style: italic;
 }
 
 cite {
@@ -706,7 +1098,7 @@ dl {
 }
 
 li {
-	margin: 0 0 0.25em 0;
+	margin: 0 0 .25em 0;
 }
 
 /**
@@ -718,7 +1110,7 @@ ul {
 }
 
 ul ul {
-	margin: 0.25em 0 0.5em 1em;
+	margin: .25em 0 .5em 1em;
 }
 
 /**
@@ -730,7 +1122,7 @@ ol {
 }
 
 ol ol {
-	margin: 0.25em 0 0.5em 1.5em;
+	margin: .25em 0 .5em 1.5em;
 	list-style-type: lower-roman;
 }
 
@@ -743,12 +1135,12 @@ dl {
 }
 
 dt {
+	margin: 0 0 .5em 0;
 	font-weight: bold;
-	margin: 0 0 0.5em 0;
 }
 
 dd {
-	margin: 0 0 0.5em 0;
+	margin: 0 0 .5em 0;
 }
 
 /**
@@ -761,18 +1153,18 @@ dd {
 
 sup,
 sub {
-	font-size: 75%;
-	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
+	font-size: 75%;
+	line-height: 0;
 }
 
 sup {
-	top: -0.5em;
+	top: -.5em;
 }
 
 sub {
-	bottom: -0.25em;
+	bottom: -.25em;
 }
 
 /**
@@ -788,7 +1180,7 @@ del {
 }
 
 s {
-	color: #cccccc;
+	color: gray;
 	text-decoration: line-through;
 }
 
@@ -823,65 +1215,8 @@ i {
 
 dfn,
 abbr {
-	font-style: inherit;
 	position: relative;
-}
-
-/**
- * Code formatting
- *
- */
-
-/**
-* Preformatted text
-*/
-
-pre {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	overflow: auto;
-	white-space: pre;
-	margin: 0 0 1em 0;
-	padding: 1.3em 20px;
-	line-height: 1.3em;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d9d9d9), color-stop(1px, #d9d9d9), color-stop(2px, transparent)) repeat top left/1.3em 1.3em #e6e6e6;
-	background: -webkit-linear-gradient(top, #d9d9d9 0, #d9d9d9 1px, transparent 2px) repeat top left/1.3em 1.3em #e6e6e6;
-	background: linear-gradient(to bottom, #d9d9d9 0, #d9d9d9 1px, transparent 2px) repeat top left/1.3em 1.3em #e6e6e6;
-}
-
-/**
-* Code, samp, kbd
-*/
-
-code,
-samp,
-kbd {
-	display: inline-block;
-	padding: 0 0.5em;
-}
-
-p code,
-li code,
-p
-samp,
-li
-samp,
-p
-kbd,
-li
-kbd {
-	border-radius: 5px;
-	background-color: #e6e6e6;
-}
-
-/**
-* Var
-*/
-
-var {
-	font-style: italic;
-	font-weight: bold;
+	font-style: inherit;
 }
 
 /**
@@ -893,12 +1228,12 @@ var {
  */
 
 a {
-	color: currentColor;
-	text-decoration: underline;
+	color: inherit;
+	text-decoration: none;
 }
 
 a:hover {
-	color: #17E881;
+	color: inherit;
 	text-decoration: none;
 }
 
@@ -916,27 +1251,27 @@ a[href^="tel"] {
 
 ::-moz-selection {
 	color: #fff;
-	background: currentColor;
+	background: inherit;
 }
 
 ::selection {
 	color: #fff;
-	background: currentColor;
+	background: inherit;
 }
 
 ::-webkit-selection {
 	color: #fff;
-	background: currentColor;
+	background: inherit;
 }
 
 ::-moz-selection {
 	color: #fff;
-	background: currentColor;
+	background: inherit;
 }
 
 ::-ms-selection {
 	color: #fff;
-	background: currentColor;
+	background: inherit;
 }
 
 /**
@@ -955,14 +1290,14 @@ fieldset {
 }
 
 legend {
-	margin: 0 0 0.5em 0;
+	margin: 0 0 .5em 0;
 	padding: 0;
 	font-size: 1;
 }
 
 label {
 	display: inline-block;
-	margin: 0 0 0.25em 0;
+	margin: 0 0 .25em 0;
 }
 
 input,
@@ -974,13 +1309,13 @@ select {
 	box-sizing: border-box;
 	width: 100%;
 	margin: 0;
-	color: #535353;
+	color: #000;
 }
 
 input,
 textarea {
 	padding: 10px 15px;
-	border: 1px solid #cccccc;
+	border: 1px solid gray;
 	border-radius: 0;
 }
 
@@ -995,7 +1330,7 @@ input[type="radio"] {
 	width: auto;
 	float: left;
 	border: none;
-	margin: 0.25em 0.5em 0 0;
+	margin: .25em .5em 0 0;
 }
 
 input[type="file"] {
@@ -1009,24 +1344,26 @@ input[type="date"] {
 
 button,
 input[type="submit"] {
-	padding: 0.5em;
+	padding: .5em;
 	cursor: pointer;
 }
 
 ::-webkit-input-placeholder {
-	color: currentColor;
+	color: inherit;
 }
 
 :-moz-placeholder {
-	color: currentColor;
+	color: inherit;
+	opacity: 1;
 }
 
 ::-moz-placeholder {
-	color: currentColor;
+	color: inherit;
+	opacity: 1;
 }
 
 :-ms-input-placeholder {
-	color: currentColor;
+	color: inherit;
 }
 
 /**
@@ -1047,8 +1384,8 @@ img {
    */
 }
 
-img:not[src*="maps.gstatic.com"] {
-	max-width: 100%;
+img[src*="maps.gstatic.com"] {
+	max-width: none;
 }
 
 /**
@@ -1067,7 +1404,7 @@ figure img {
 }
 
 figcaption {
-	margin-top: 0.5em;
+	margin-top: .5em;
 	font-style: italic;
 }
 
@@ -1078,7 +1415,7 @@ figcaption {
 table {
 	width: 100%;
 	margin: 0 0 1em 0;
-	border: 1px solid #535353;
+	border: 1px solid #000;
 }
 
 table,
@@ -1089,654 +1426,99 @@ td {
 
 th,
 td {
-	padding: 0.5em;
-	border: 1px dotted #535353;
+	padding: .5em;
+	border: 1px dotted #000;
 	border-top: none;
 	border-right: none;
 	text-align: left;
 }
 
 thead th {
-	border-bottom: 2px solid #535353;
+	border-bottom: 2px solid #000;
 }
 
 tfoot td {
 	border-bottom: none;
-	font-size: 0.85em;
+	font-size: .85em;
 	font-style: italic;
 }
 
 /**
- * Define modular components
- *
- * Reusable components, called with a class (or classes)
- * that can exist anywhere in the site
- */
-
-/**
- * Helpers
- */
-
-/**
- * Clearfix
- * @src http://css-tricks.com/snippets/css/clear-fix
- */
-
-/**
- * Hide a text element but ensure it is still readable via assistive technology
- */
-
-/**
- * Completely hide an element
- */
-
-/**
- * Set an element to clear the element above it
- */
-
-/**
- * Pagination
- */
-
-.pagination {
-	padding: 20px 0 25px;
-	margin: 0;
-	list-style: none;
-	text-align: center;
-}
-
-.pagination li {
-	display: inline-block;
-	border-radius: 5px;
-	background: rgba(255, 255, 255, 0.2);
-	font-size: .8em;
-	font-weight: 600;
-	text-transform: uppercase;
-}
-
-.pagination a {
-	display: block;
-	padding: .5em 20px;
-	color: #fff;
-	text-decoration: none;
-}
-
-.back-link {
-	padding: 25px 0 25px;
-	margin: 0;
-	text-align: center;
-}
-
-.back-link a {
-	display: inline-block;
-	padding: .5em 20px;
-	border-radius: 5px;
-	color: #fff;
-	background: rgba(255, 255, 255, 0.2);
-	font-size: .8em;
-	font-weight: 600;
-	text-transform: uppercase;
-	text-decoration: none;
-}
-
-/**
-* Post
+* Example component name
+* Example component description
 */
 
 .post {
-	position: relative;
-	overflow: hidden;
-	margin-bottom: 5px;
-}
-
-.post:after {
-	content: 'Read';
-	position: absolute;
-	top: 50%;
-	right: 20px;
-	z-index: 0;
-	display: block;
-	width: auto;
-	height: 1em;
-	margin-top: -0.5em;
-	color: #fff;
-	font-size: 3em;
-	line-height: 1em;
-	-webkit-transform: translateX(-20px);
-	-ms-transform: translateX(-20px);
-	transform: translateX(-20px);
-	-webkit-transition: -webkit-transform .25s ease;
-	transition: transform .25s ease;
-}
-
-.post > a {
-	position: relative;
-	display: block;
-	overflow: hidden;
-	border-radius: 5px;
-	color: inherit;
-	text-decoration: none;
-}
-
-.post-inner {
-	position: relative;
-	z-index: 1;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: reverse;
-	-webkit-flex-direction: column-reverse;
-	-ms-flex-direction: column-reverse;
-	flex-direction: column-reverse;
-	-webkit-transition: -webkit-transform .25s ease;
-	transition: transform .25s ease;
-}
-
-.post-meta {
-	margin: 0 0 .15em;
-	list-style: none;
-}
-
-.post-meta li {
-	margin: 0;
-}
-
-.post-meta-category {
-	width: 0;
-	height: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-.post-meta-category span {
-	position: absolute;
-	top: 0;
-	left: 30px;
-	display: inline-block;
-	width: 600px;
-	padding: 0 15px 0 20px;
-	background-color: #12ba67;
-	color: #74f1b3;
-	-webkit-transform-origin: top left;
-	-ms-transform-origin: top left;
-	transform-origin: top left;
-	-webkit-transform: rotateZ(90deg);
-	transform: rotateZ(90deg);
-	line-height: 30px;
-	text-transform: uppercase;
-	font-size: .7em;
-	font-weight: bold;
-}
-
-.post-meta-date {
-	font-size: .8em;
-	font-weight: 600;
-	text-transform: uppercase;
-}
-
-.post-text {
-	position: relative;
-	-webkit-box-flex: 1;
-	-webkit-flex: 1 1;
-	-ms-flex: 1 1;
-	flex: 1 1;
-	padding: 15px 20px 15px 50px;
-	background-color: #fff;
+	padding: 30px;
+	background: gray;
 }
 
 .post-title {
-	margin: 0;
-	font-size: .8em;
-	font-weight: 600;
-	text-transform: uppercase;
-}
-
-.post-summary {
-	display: none;
-	margin: 0;
-}
-
-.post-summary > p {
-	font-weight: 300;
-}
-
-.post-img {
-	position: relative;
-	overflow: hidden;
-	-webkit-box-flex: 1;
-	-webkit-flex: 1 1;
-	-ms-flex: 1 1;
-	flex: 1 1;
-	margin: 0;
-	border-bottom: 2px solid;
-	background-color: #fff;
-	background-position: center center;
-	-webkit-background-size: cover;
-	background-size: cover;
-}
-
-.post-img img {
-	display: none;
-}
-
-.no-touch .post:hover:after {
-	-webkit-transform: translateX(0);
-	-ms-transform: translateX(0);
-	transform: translateX(0);
-}
-
-.no-touch .post:hover .post-inner {
-	-webkit-transform: translateX(-132px);
-	-ms-transform: translateX(-132px);
-	transform: translateX(-132px);
-}
-
-.post[data-weight=light] .post-summary {
-	font-size: 2.5em;
-}
-
-.post[data-weight=medium] .post-summary {
 	font-size: 2em;
 }
 
-.post[data-weight=heavy] .post-summary {
-	font-size: 1.5em;
+.post-desc {
+	font-size: 1em;
 }
-
-.post[data-weight=overweight] .post-summary {
-	font-size: 1.25em;
-}
-
-.post:nth-child(1) .post-meta-category span {
-	background-color: #12ba6d;
-	color: #74f1b8;
-}
-
-.post:nth-child(1) .post-title,
-.post:nth-child(1) .post-meta-date {
-	color: #12ba6d;
-}
-
-.post:nth-child(1) .post-img {
-	border-bottom-color: #12ba6d;
-}
-
-.post:nth-child(2) .post-meta-category span {
-	background-color: #12ba72;
-	color: #74f1bc;
-}
-
-.post:nth-child(2) .post-title,
-.post:nth-child(2) .post-meta-date {
-	color: #12ba72;
-}
-
-.post:nth-child(2) .post-img {
-	border-bottom-color: #12ba72;
-}
-
-.post:nth-child(3) .post-meta-category span {
-	background-color: #12ba78;
-	color: #74f1c0;
-}
-
-.post:nth-child(3) .post-title,
-.post:nth-child(3) .post-meta-date {
-	color: #12ba78;
-}
-
-.post:nth-child(3) .post-img {
-	border-bottom-color: #12ba78;
-}
-
-.post:nth-child(4) .post-meta-category span {
-	background-color: #12ba7d;
-	color: #74f1c4;
-}
-
-.post:nth-child(4) .post-title,
-.post:nth-child(4) .post-meta-date {
-	color: #12ba7d;
-}
-
-.post:nth-child(4) .post-img {
-	border-bottom-color: #12ba7d;
-}
-
-.post:nth-child(5) .post-meta-category span {
-	background-color: #12ba83;
-	color: #74f1c8;
-}
-
-.post:nth-child(5) .post-title,
-.post:nth-child(5) .post-meta-date {
-	color: #12ba83;
-}
-
-.post:nth-child(5) .post-img {
-	border-bottom-color: #12ba83;
-}
-
-.post:nth-child(6) .post-meta-category span {
-	background-color: #12ba89;
-	color: #74f1cc;
-}
-
-.post:nth-child(6) .post-title,
-.post:nth-child(6) .post-meta-date {
-	color: #12ba89;
-}
-
-.post:nth-child(6) .post-img {
-	border-bottom-color: #12ba89;
-}
-
-.post:nth-child(7) .post-meta-category span {
-	background-color: #12ba8e;
-	color: #74f1d1;
-}
-
-.post:nth-child(7) .post-title,
-.post:nth-child(7) .post-meta-date {
-	color: #12ba8e;
-}
-
-.post:nth-child(7) .post-img {
-	border-bottom-color: #12ba8e;
-}
-
-.post:nth-child(8) .post-meta-category span {
-	background-color: #12ba94;
-	color: #74f1d5;
-}
-
-.post:nth-child(8) .post-title,
-.post:nth-child(8) .post-meta-date {
-	color: #12ba94;
-}
-
-.post:nth-child(8) .post-img {
-	border-bottom-color: #12ba94;
-}
-
-.post:nth-child(9) .post-meta-category span {
-	background-color: #12ba99;
-	color: #74f1d9;
-}
-
-.post:nth-child(9) .post-title,
-.post:nth-child(9) .post-meta-date {
-	color: #12ba99;
-}
-
-.post:nth-child(9) .post-img {
-	border-bottom-color: #12ba99;
-}
-
-.post:nth-child(10) .post-meta-category span {
-	background-color: #12ba9f;
-	color: #74f1dd;
-}
-
-.post:nth-child(10) .post-title,
-.post:nth-child(10) .post-meta-date {
-	color: #12ba9f;
-}
-
-.post:nth-child(10) .post-img {
-	border-bottom-color: #12ba9f;
-}
-
-.post:nth-child(11) .post-meta-category span {
-	background-color: #12baa5;
-	color: #74f1e1;
-}
-
-.post:nth-child(11) .post-title,
-.post:nth-child(11) .post-meta-date {
-	color: #12baa5;
-}
-
-.post:nth-child(11) .post-img {
-	border-bottom-color: #12baa5;
-}
-
-.post:nth-child(12) .post-meta-category span {
-	background-color: #12baaa;
-	color: #74f1e6;
-}
-
-.post:nth-child(12) .post-title,
-.post:nth-child(12) .post-meta-date {
-	color: #12baaa;
-}
-
-.post:nth-child(12) .post-img {
-	border-bottom-color: #12baaa;
-}
-
-.post:nth-child(13) .post-meta-category span {
-	background-color: #12bab0;
-	color: #74f1ea;
-}
-
-.post:nth-child(13) .post-title,
-.post:nth-child(13) .post-meta-date {
-	color: #12bab0;
-}
-
-.post:nth-child(13) .post-img {
-	border-bottom-color: #12bab0;
-}
-
-.post:nth-child(14) .post-meta-category span {
-	background-color: #12bab5;
-	color: #74f1ee;
-}
-
-.post:nth-child(14) .post-title,
-.post:nth-child(14) .post-meta-date {
-	color: #12bab5;
-}
-
-.post:nth-child(14) .post-img {
-	border-bottom-color: #12bab5;
-}
-
-.post:nth-child(15) .post-meta-category span {
-	background-color: #12b8ba;
-	color: #74f0f1;
-}
-
-.post:nth-child(15) .post-title,
-.post:nth-child(15) .post-meta-date {
-	color: #12b8ba;
-}
-
-.post:nth-child(15) .post-img {
-	border-bottom-color: #12b8ba;
-}
-
-.post:nth-child(16) .post-meta-category span {
-	background-color: #12b3ba;
-	color: #74ecf1;
-}
-
-.post:nth-child(16) .post-title,
-.post:nth-child(16) .post-meta-date {
-	color: #12b3ba;
-}
-
-.post:nth-child(16) .post-img {
-	border-bottom-color: #12b3ba;
-}
-
-.post:nth-child(17) .post-meta-category span {
-	background-color: #12adba;
-	color: #74e8f1;
-}
-
-.post:nth-child(17) .post-title,
-.post:nth-child(17) .post-meta-date {
-	color: #12adba;
-}
-
-.post:nth-child(17) .post-img {
-	border-bottom-color: #12adba;
-}
-
-/**
- * Full post
- */
-
-.view-post .site-logo {
-	margin-right: 0;
-	margin-left: 0;
-}
-
-.fullpost-header {
-	color: #fff;
-}
-
-.fullpost-header h1 {
-	margin: 0 0 .5em;
-}
-
-.fullpost-date {
-	font-size: .8em;
-	font-weight: 600;
-	text-transform: uppercase;
-}
-
-.fullpost-media {
-	margin: 0 -20px 2px;
-}
-
-.fullpost-media img {
-	max-width: 100%;
-}
-
-.fullpost-body {
-	position: relative;
-	margin: 0 -20px;
-	padding: 20px;
-	background-color: #fff;
-}
-
-.fullpost-body > p:first-child {
-	color: #17E881;
-	font-weight: 600;
-}
-
-.fullpost-body > p:first-child a {
-	color: currentColor;
-}
-
-.fullpost-body h2,
-.fullpost-body h3 {
-	margin-right: -20px;
-	margin-left: -20px;
-	padding: 0 20px 0 15px;
-	border-left: 5px solid #17E881;
-}
-
-.fullpost-body pre {
-	margin-right: -20px;
-	margin-left: -20px;
-}
-
-.fullpost-body blockquote {
-	padding: 0 20px;
-}
-
-.fullpost-body blockquote:before {
-	content: ' ';
-	display: block;
-	width: 0;
-	height: 0;
-	border: 10px solid transparent;
-	border-left-color: #17E881;
-	position: absolute;
-	top: .5em;
-	left: -20px;
-}
-
-/**
- * Set static page elements
- *
- * The scaffolding of the site, defined through elements that occur only
- * once per page, defined via an aria role or ID
- */
 
 /**
  * Page outer
  */
 
-.site-header,
-.page-content {
-	width: auto;
-	max-width: 800px;
-	margin: auto;
-	padding: 0 40px;
-}
-
-html {
-	min-height: 100%;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#17E881), to(#17e8c7));
-	background-image: -webkit-linear-gradient(top, #17E881, #17e8c7);
-	background-image: linear-gradient(to bottom, #17E881, #17e8c7);
-	background-color: #17E881;
-}
-
-body {
-	width: auto;
-	margin: auto;
-}
-
 /**
- * Page header
+ * Site header
  */
 
 .site-header {
-	position: relative;
-	padding-top: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+}
+
+.site-header-inner {
+	min-height: 8rem;
+}
+
+.site-logo,
+.site-navigation {
+	position: absolute;
+	top: 50%;
+}
+
+.site-logo a,
+.site-navigation a {
+	display: inline-block;
+	vertical-align: top;
 }
 
 .site-logo {
-	width: 60px;
-	height: 60px;
-	margin: 0 10px;
-	background-image: url("../images/site-logo.svg");
-	background-repeat: no-repeat;
-	background-position: center left;
-	-webkit-background-size: 20px auto;
-	background-size: 20px auto;
+	font-size: 1em;
+	line-height: 1.5em;
+	font-family: "League Spartan", sans-serif;
+	left: 0;
+	margin: 0;
+	text-transform: uppercase;
 }
 
 .site-logo a {
 	display: block;
-	text-indent: -9000px;
 }
 
-.page-heading {
-	padding: 0 5px 30px;
-	color: #fff;
+.site-navigation {
+	right: 0;
 }
 
-.page-heading h1 {
-	margin: 0 0 .5em;
-	font-size: 2em;
+.site-navigation li {
+	display: inline;
 }
 
-.page-heading p {
-	margin-bottom: 0;
-}
-
-.page-heading a {
-	color: #fff;
+.site-navigation a {
+	font-size: 1em;
+	font-family: "League Spartan", sans-serif;
+	margin-left: 2rem;
+	text-transform: uppercase;
 }
 
 /**
@@ -1744,124 +1526,117 @@ body {
  */
 
 /**
- * Set page layout(s)
- *
- * Rules unique to a specific template or set of templates.
- * These definitions should be set from a unique class
+ * Page footer
  */
 
 /**
- * Sample bespoke page layout
- *
- * Note: global page elements should be defined within /page-elements
+ * Bespoke page layout template
  */
 
 /**
- * Init
- *
- * Define variables, helper mixins and animations
- * local to this component
+ * Shame file
+ * Add quick changes here, to be incorperated properly at a later point
  */
 
-/**
- * Component classes
- */
-
-/**
- * Modernizr hooks
- */
-
-/**
- * Media queries
- */
-
-/**
- * IE overrides
- */
-
-/*# sourceMappingURL=styles.css.map */
-
-@media screen and (min-width: 31.3125em) {
-
-.fullpost-body {
-	border: 5px solid #fff;
-	border-radius: 5px;
+.view-home .page-header {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	height: -webkit-calc(100vh - 2em - 2rem);
+	height: calc(100vh - 2em - 2rem);
+	background-color: transparent;
+	color: #000;
 }
 
-.fullpost-media + .fullpost-body {
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
+.view-home .page-header-inner {
+	max-width: 80rem;
 }
 
+.view-home .page-header p {
+	font-size: 2.2em;
+	font-weight: 300;
+	margin: auto;
 }
 
-@media screen and (min-width: 50em) {
-
-.post-inner {
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: row;
-	-ms-flex-direction: row;
-	flex-direction: row;
+.page-section {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
 
-.post-text {
-	-webkit-box-flex: 1.5;
-	-webkit-flex-grow: 1.5;
-	-ms-flex-positive: 1.5;
-	flex-grow: 1.5;
+.page-section-header {
+	font-size: 1em;
+	margin: 0 0 1em;
+	text-align: center;
+	text-transform: uppercase;
 }
 
-.post-header {
-	margin-bottom: 1em;
+.page-header {
+	background-color: #2aff85;
+	color: #fff;
 }
 
-.post-summary {
+.page-header-inner {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	min-height: 50vh;
+	padding-bottom: 3rem;
+}
+
+.page-header h1 {
+	-webkit-align-self: flex-end;
+	-ms-flex-item-align: end;
+	align-self: flex-end;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.postlisting {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	margin: auto;
+	list-style: none;
+}
+
+.postlisting-post {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 1 40rem;
+	-ms-flex: 1 1 40rem;
+	flex: 1 1 40rem;
+	padding: 1rem;
+}
+
+.postlisting-post a {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 50%;
 	display: block;
+	background-color: #d4a600;
+	color: #fff;
 }
 
-.post-img {
-	border-bottom: none;
-}
-
-.post-img img {
+.postlisting-post a:before {
+	content: ' ';
+	display: block;
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: auto;
+	width: 100%;
 	height: 100%;
 }
 
-.fullpost-header {
-	padding: 60px 30px;
+.postlisting-post h3 {
+	padding: 2rem;
+	margin: 0;
 }
 
-.fullpost-body {
-	padding: 60px;
-}
-
-.fullpost-body > p:first-child {
-	font-size: 1.2em;
-}
-
-.site-logo {
-	margin-right: 60px;
-	margin-left: 60px;
-}
-
-.page-heading {
-	padding: 0 60px 60px;
-}
-
-}
-
-@media screen and (max-width: 31.25em) {
-
-.site-header,
-.page-content {
-	padding-right: 20px;
-	padding-left: 20px;
-}
-
-}
+/*# sourceMappingURL=styles.css.map */
 

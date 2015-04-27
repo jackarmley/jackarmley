@@ -16,10 +16,16 @@ html(lang='en')
             link(rel='stylesheet', href='/static/stylesheets/styles.css')
             script(src="/static/libs/modernizr/modernizr.min.js")
     body(class=bodyclass)
-        header.site-header(role="banner")
-            h1.site-logo: a(href="/")= locals.name
-        section.page-content(role="main")
+        header.site-header(role="banner" aria-label="Site header")
+            .site-header-inner
+                h1.site-logo: a(href="/")= locals.name
+                nav.site-navigation(role="navigation" aria-label="Site navigation")
+                    ul
+                        -each link in [['Activity','/activity'],['About','/about']]
+                            li: a(href="#{link[1]}.html")= link[0]
+        main.page-content(role="main" aria-label="Page content")
             block content
+        footer(role="contentinfo" aria-label="Site footer")
         script(data-main="/static/scripts/app.min.js" src="/static/libs/requirejs/require.js")
 
 

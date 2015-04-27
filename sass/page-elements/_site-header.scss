@@ -1,0 +1,42 @@
+/**
+ * Site header
+ */
+
+.site-header{
+    @include pos(a,t0 l0 1);
+    width: 100%;
+    &-inner{
+        @extend %layoutwrap;
+        min-height: 8rem;
+    }
+    @at-root{
+        .site-logo,
+        .site-navigation{
+            @include pos(a,'t50%');
+            a{
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+        .site-logo{
+            @include font(1em 1.5em,prominent);
+            left: 0;
+            margin: 0;
+            text-transform: uppercase;
+            a{
+                display: block;
+            }
+        }
+        .site-navigation{
+            right: 0;
+            li{
+                display: inline;
+            }
+            a{
+                @include font(1em,prominent);
+                margin-left: 2rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

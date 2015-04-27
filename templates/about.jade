@@ -1,0 +1,8 @@
+extends master
+block content
+    article.page
+        header.page-header
+            .page-header-inner
+                h1!= contents['about.md'].title
+        .page-content.page-section
+            !=contents['about.md'].html

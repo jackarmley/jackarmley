@@ -1,0 +1,72 @@
+/**
+ * Shame file
+ * Add quick changes here, to be incorperated properly at a later point
+ */
+
+.view-home{
+    .page-header{
+        display: flex;
+        height: calc(100vh - 2em - 2rem);
+        background-color: transparent;
+        color: color(default);
+        &-inner{
+            @extend %layoutwrap;
+            max-width: 80rem;
+        }
+        p{
+            @include font(2.2em,false,300);
+            margin: auto;
+        }
+    }
+}
+
+.page-section{
+    @extend %layoutwrap;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    &-header{
+        @include font(1em);
+        margin: 0 0 1em;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.page{
+    &-header{
+        background-color: #2aff85;
+        color: color(white);
+        &-inner{
+            @extend %layoutwrap;
+            display: flex;
+            min-height: 50vh;
+            padding-bottom: 3rem;
+        }
+        h1{
+            align-self: flex-end;
+            margin: 0;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.postlisting{
+    display: flex;
+    flex-flow: row wrap;
+    margin: auto;
+    list-style: none;
+    &-post{
+        flex: 1 1 40rem;
+        padding: 1rem;
+        a{
+            @include propelem('&:before',2 1);
+            display: block;
+            background-color: #d4a600;
+            color: color(white);
+        }
+        h3{
+            padding: 2rem;
+            margin: 0;
+        }
+    }
+}
