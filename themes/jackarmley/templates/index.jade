@@ -9,10 +9,9 @@ block content
     section.page-section
         h2.page-section-header Latest activity
         ul.postlisting
-            -each value in ['Revitalizing the MRA website','A new home for wa dairy','box shadow pixel art with sass','Jade mixins 101']
-                li.postlisting-post: a(href="")
-                    h3= value
-
+             ul.postlisting
+                each article in articles
+                    +post(article)
 
 
 

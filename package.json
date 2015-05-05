@@ -1,28 +1,19 @@
 {
+  "name": "hexo-site",
+  "version": "0.0.0",
+  "private": true,
+  "hexo": {
+    "version": ""
+  },
   "dependencies": {
-    "moment": "2.3.x",
-    "underscore": "1.4.x",
-    "typogr": "0.5.x"
-  },
-  "repository": "none",
-  "devDependencies": {
-    "matchdep": "~0.3.0",
-    "grunt-wintersmith": "0.0.2",
-    "grunt-contrib-sass": "~0.7.3",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-jade": "~0.12.0",
-    "grunt-contrib-connect": "~0.7.1",
-    "grunt-contrib-requirejs": "0.4.4",
-    "grunt-contrib-cssmin": "0.9.0",
-    "grunt-contrib-jshint": "0.10.0",
-    "grunt-contrib-imagemin": "0.7.0",
-    "grunt-notify": "0.3.0",
-    "grunt-autoprefixer": "0.7.3",
-    "grunt-modernizr": "0.5.2",
-    "grunt-combine-media-queries": "1.0.15",
-    "grunt-shell": "1.1.1"
-  },
-  "scripts": {
-    "quickstart": "npm install && bower install && grunt dev"
+    "hexo": "^3.0.0",
+    "hexo-generator-archive": "^0.1.0",
+    "hexo-generator-category": "^0.1.0",
+    "hexo-generator-index": "^0.1.0",
+    "hexo-generator-tag": "^0.1.0",
+    "hexo-renderer-ejs": "^0.1.0",
+    "hexo-renderer-stylus": "^0.2.0",
+    "hexo-renderer-marked": "^0.2.4",
+    "hexo-server": "^0.1.2"
   }
 }

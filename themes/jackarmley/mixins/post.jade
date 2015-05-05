@@ -3,7 +3,7 @@
 //-
 
 mixin post(obj)
-    article.post(data-category=obj.metadata.category)
+    article.postlisting-post(data-category=obj.metadata.category)
             header.post-header
                 h1.post-title
                     a(href=obj.url)= obj.title
