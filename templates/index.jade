@@ -1,22 +1,18 @@
 extends master
+block vars
+    -var bodyclass = 'view-home';
 block content
-    header.page-heading
-        h1 Hello
-        p
-            | I'm a web designer,
-            | living and working in beautiful Perth,
-            | Western Australia. This is where
-            | I show my work and write things.
-            | I also dabble on
-            | &nbsp;
-            a(href="http://codepen.io/jackarmley") Codepen
-            | &nbsp;
-            | and occasionally
-            | &nbsp;
-            a(href="http://twitter.com/jackarmley") tweet
-    each article in articles
-        +post(article)
-    +pagination
+    .page-header
+        .page-header-inner
+            !=contents['home.md'].html
+
+    section.page-section
+        h2.page-section-header Latest activity
+        ul.postlisting
+            -each value in ['Revitalizing the MRA website','A new home for wa dairy','box shadow pixel art with sass','Jade mixins 101']
+                li.postlisting-post: a(href="")
+                    h3= value
+
 
 
 

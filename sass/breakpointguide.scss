@@ -4,48 +4,53 @@
  * when a breakpoint is triggered
  */
 
-$mq-support:true;
-@import 'config/settings';
+/// Import dependancies
+@import 
+    'utils/variables/_fonts', 
+    'utils/variables/_colours', 
+    'utils/variables/_breakpoints', 
+    'utils/_placeholders',
+    'utils/_functions',
+    'utils/_mixins';
 
+/// Define media query support
+/// @type Variable
+/// @alias mqsupport
+$mqsupport: true;
+
+/// Properties for the breakpoint guide
+/// @type Map
 $bpguide:(
-    bg:#fff,
-    text:#333,
-    label:#EF4034
+    'bg': #fff,
+    'text': #333,
+    'label': #EF4034
 );
 
+/**
+ * Set styles for the
+ * breakpoint helper
+ */
 .breakpointguide{
-    position: fixed;
-    bottom: 0;
-    right: 0;
+    $counter: 0;
+    @include pos(fixed,b0 r0);
     overflow:hidden;
-    background:map-get($bpguide,bg);
-    color:map-get($bpguide,text);
-    font:normal normal 12px/1.5em sans-serif;
-    &-label{
+    background: map-get($bpguide,bg);
+    color: map-get($bpguide,text);
+    font: normal normal 12px/1.5em sans-serif;
+    &-label,
+    &-value{
         display: block;
-        padding:.5em 1em;
-        background:map-get($bpguide,label);
+        padding: .5em 1em;
+    }
+    &-label{
+        background: map-get($bpguide,label);
         text-shadow: 0 1px 0 fade-out(black,.8);
         color:white;
-        font-weight: bold;
         text-transform: uppercase;
     }
-    &-values{
-        margin: 0;
-        list-style: none;
-    }
     &-value{
-        display: none;
-        padding:.5em 1em;
-        &-label,
-        &-data{
-            display: block;
-        }
-        &-data{
-            font-weight: bold;
-        }
+        font-weight: bold;
     }
-    $counter: 0;
     @each $key,$value in $breakpoints{
         $counter: $counter + 1;
         @include breakpoint($key){
@@ -55,50 +60,9 @@ $bpguide:(
                     content:'#{$key}';
                 }
             }
-            @if nth($value,1) != (){
-                @if nth(nth($value,1),1){
-                    &-value--minw{
-                        display: inline-block;
-                        .breakpointguide-value-data:before{
-                            content:'#{get-breakpoint-value($key, 'width', 1, false)}';
-                        }
-                    }
-                }
-                @if nth(nth($value,1),2){
-                    &-value--maxw{
-                        display: inline-block;
-                        .breakpointguide-value-data:before{
-                            content:'#{get-breakpoint-value($key, 'width', 2, false)}';
-                        }
-                    }
-                }
-            }
-            @if nth($value,2) != (){
-                @if nth(nth($value,2),1){
-                    &-value--minh{
-                        display: inline-block;
-                        .breakpointguide-value-data:before{
-                            content:'#{get-breakpoint-value($key, 'height', 1, false)}';
-                        }
-                    }
-                }
-                @if nth(nth($value,2),2){
-                    &-value--maxh{
-                        display: inline-block;
-                        .breakpointguide-value-data:before{
-                            content:'#{get-breakpoint-value($key, 'height', 2, false)}';
-                        }
-                    }
-                }
-            }
-            @if nth($value,3) != (){
-                &-value--orientation{
-                    display: inline-block;
-                }
-                &-value--orientation{
-                    .breakpointguide-value-data:before{
-                        content:'#{get-breakpoint-value($key, 'orientation', 1, false)}';
-                    }
+            &-value{
+                &:before{
+                    content:'#{processforguide($key)}';
                 }
             }
         }

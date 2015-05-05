@@ -3,19 +3,14 @@
 //-
 
 mixin post(obj)
-    -if(obj.metadata.status != 'draft')
-        article.post(data-category=obj.metadata.category)
-            a(href=obj.url)
-                .post-inner
-                    .post-text
-                        header.post-header
-                            ul.post-meta
-                                li.post-meta-category: span= obj.metadata.category
-                                li.post-meta-date= moment.utc(obj.date).format('D.M.YYYY')
-                            h1.post-title= obj.title
-                        blockquote.post-summary
-                            p= obj.metadata.summary
-                    -if (obj.metadata.image_thumb)
-                        figure.post-img(style="background-image:url('#{obj.metadata.image_thumb}');")
-                            img(src="#{obj.metadata.image_thumb}")
+    article.post(data-category=obj.metadata.category)
+            header.post-header
+                h1.post-title
+                    a(href=obj.url)= obj.title
+            figure.post-image
+                -if (obj.metadata.image_thumb)
+                    img(src="#{obj.metadata.image_thumb}")
+                -else
+                    img(src="/assets/images/work/thumb-brownesdairy.jpg")
+
 
