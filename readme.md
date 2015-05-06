@@ -1,4 +1,4 @@
 
-# Blog
+# Jack Armley
 
-The default [wintersmith](https://github.com/jnordberg/wintersmith) template
+My personal website and blog.

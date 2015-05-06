@@ -1,6 +1,5 @@
 ---
 title: About
-template: about.jade
 ---
 
 I've been designing websites, emails and other
