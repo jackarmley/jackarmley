@@ -31,7 +31,7 @@ module.exports = function (grunt) {
         watch: {
           sourceFiles: {
             files: ['themes/**','scaffolds/**','scripts/**','source/**'],
-            tasks: 'shell:hexoGen'
+            tasks: ['shell:hexoGen']
           },
         }
     });
@@ -40,6 +40,9 @@ module.exports = function (grunt) {
         shell: {
           hexoGen: {
               command: 'hexo generate'
+          },
+          clean: {
+            command: 'rm -rf public'
           }
         }
     });
