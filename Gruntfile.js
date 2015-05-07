@@ -4,10 +4,7 @@ module.exports = function (grunt) {
 
     // Set root path (if you change this line you must also change the
     // project template to match).
-    var root = 'contents/static';
-
-    // Build folder
-    var build = 'build';
+    var root = 'themes/jackarmley/source/static';
 
     // Configuration
     ext.configure({
@@ -19,11 +16,10 @@ module.exports = function (grunt) {
             '* <%= pkg.description %>\n' +
             '* Copyright (c) <%= grunt.template.today("yyyy") %> */',
         assets: {
-            sass: 'sass/',
-            css: root + '/stylesheets',
+            css: root + '/styles',
             scripts: root + '/scripts',
             images: root + '/images',
-            build: build,
+            compiled: 'public/',
         }
     });
 
@@ -44,6 +40,97 @@ module.exports = function (grunt) {
           clean: {
             command: 'rm -rf public'
           }
+        }
+    });
+
+    // Stylesheets
+    ext.configure({
+        sass: {
+            development: {
+                options: {
+                    style: 'expanded',
+                    debugInfo: false,
+                    noCache: true
+                },
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= assets.css %>/sass/',
+                        src: '*.scss',
+                        dest: '<%= assets.css %>',
+                        ext: '.css',
+                        extDot: 'last'
+                    },
+                ]
+            },
+            production: {
+                options: {
+                    style: 'compressed',
+                    debugInfo: false,
+                    noCache: true
+                },
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= assets.css %>/sass/',
+                        src: '*.scss',
+                        dest: '<%= assets.css %>',
+                        ext: '.css',
+                        extDot: 'last'
+                    },
+                ]
+            }
+        },
+        autoprefixer: {
+            options: {
+                browsers: ['last 3 versions', '> 1%', 'ie 8']
+            },
+            dist: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= assets.css %>/',
+                        src: '*.css',
+                        dest: '<%= assets.css %>',
+                        ext: '.css',
+                        extDot: 'last'
+                    },
+                ]
+            }
+        },
+        cmq: {
+            combine: {
+                options: {
+                    log: false
+                },
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= assets.css %>/',
+                        src: '*.css',
+                        dest: '<%= assets.css %>',
+                        ext: '.css',
+                        extDot: 'last'
+                    },
+                ]
+            }
+        },
+        cssmin: {
+            combine: {
+                options: {
+                    banner: '<%= banner %>'
+                },
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= assets.css %>/',
+                        src: '*.css',
+                        dest: '<%= assets.css %>',
+                        ext: '.css',
+                        extDot: 'last'
+                    },
+                ]
+            }
         }
     });
 
