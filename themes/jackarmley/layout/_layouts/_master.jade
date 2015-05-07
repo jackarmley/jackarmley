@@ -1,8 +1,8 @@
 block vars
   - var bodyclass = null;
 block dependencies
-    include ../mixins/post.jade
-    include ../mixins/pagination.jade
+    //-include ../mixins/post.jade
+    //-include ../mixins/pagination.jade
 doctype html
 html(lang='en')
     head
@@ -12,13 +12,13 @@ html(lang='en')
             meta(content='width=device-width, initial-scale=1.0' name='viewport')
             title
                 block title
-                  = locals.name
-            link(rel='stylesheet', href='/static/stylesheets/styles.css')
+                    != config.title
+            link(rel='stylesheet', href='/static/styles/styles.css')
             script(src="/static/libs/modernizr/modernizr.min.js")
     body(class=bodyclass)
         header.site-header(role="banner" aria-label="Site header")
             .site-header-inner
-                h1.site-logo: a(href="/")= locals.name
+                h1.site-logo: a(href=config.root)= config.title
                 nav.site-navigation(role="navigation" aria-label="Site navigation")
                     ul
                         -each link in [['Activity','/activity'],['About','/about']]

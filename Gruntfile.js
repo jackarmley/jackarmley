@@ -26,8 +26,8 @@ module.exports = function (grunt) {
     ext.configure({
         watch: {
           sourceFiles: {
-            files: ['themes/**','scaffolds/**','scripts/**','source/**'],
-            tasks: ['shell:hexoGen']
+            files: ['themes/jackarmley/**','scaffolds/**','source/**'],
+            tasks: ['sass:development','shell:hexoGen']
           },
         }
     });
@@ -55,7 +55,7 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: '<%= assets.css %>/sass/',
+                        cwd: '<%= assets.css %>/_sass/',
                         src: '*.scss',
                         dest: '<%= assets.css %>',
                         ext: '.css',
@@ -72,7 +72,7 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: '<%= assets.css %>/sass/',
+                        cwd: '<%= assets.css %>/_sass/',
                         src: '*.scss',
                         dest: '<%= assets.css %>',
                         ext: '.css',
@@ -134,8 +134,21 @@ module.exports = function (grunt) {
         }
     });
 
+    // Dev server
+    ext.configure({
+        connect: {
+            dev: {
+                options: {
+                    port: 3000,
+                    base: 'public'
+                }
+            }
+        }
+    });
+
     // Default task.
     ext.registerTask('default', [
+        'connect',
         'watch'
     ]);
 
