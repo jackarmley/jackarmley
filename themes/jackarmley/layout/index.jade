@@ -12,14 +12,9 @@ block content
     section.page-section
         h2.page-section-header Latest activity
         ul.postlisting
-            - page.posts.each(function(article){
-
-              li
-                article
-                  h2
-                    a(href=config.root + article.path)= article.title
-
-            - })
+            each post in site.posts.toArray()
+                -console.log(post)
+                p= post.title
 
 
 
