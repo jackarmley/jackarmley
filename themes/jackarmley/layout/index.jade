@@ -13,8 +13,7 @@ block content
         h2.page-section-header Latest activity
         ul.postlisting
             each post in site.posts.toArray()
-                -console.log(post)
-                p= post.title
+                +post(post)
 
 
 
