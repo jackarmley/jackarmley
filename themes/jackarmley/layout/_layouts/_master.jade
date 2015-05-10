@@ -1,7 +1,14 @@
-block vars
-  - var bodyclass = null;
 block dependencies
     include ../_partials/_post
+    include ../_partials/_pagination
+
+-var viewclass = '';
+-if(page.layout)
+    -var viewclass = 'view-' + page.layout;
+-else
+    -var viewclass = 'view-home';
+
+
 doctype html
 html(lang='en')
     head
@@ -14,14 +21,14 @@ html(lang='en')
                     != config.title
             link(rel='stylesheet', href='/static/styles/styles.css')
             script(src="/static/libs/modernizr/modernizr.min.js")
-    body(class=bodyclass)
+    body(class=viewclass)
         header.site-header(role="banner" aria-label="Site header")
             .site-header-inner
                 h1.site-logo: a(href=config.root)= config.title
                 nav.site-navigation(role="navigation" aria-label="Site navigation")
                     ul
-                        -each link in [['Activity','/activity'],['About','/about']]
-                            li: a(href="#{link[1]}.html")= link[0]
+                        each link in site.pages.toArray()
+                            li: a(href=config.root + link.path)= link.title
         main.page-content(role="main" aria-label="Page content")
             block content
         footer(role="contentinfo" aria-label="Site footer")

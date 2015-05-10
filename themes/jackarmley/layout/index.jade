@@ -1,19 +1,16 @@
 extends _layouts/_master
-block vars
-    -var bodyclass = 'view-home';
 block content
-    .page-header
-        .page-header-inner
-            p
-                | 7 years and countless numbers of curly
-                | braces and semi-colons later,
-                | I still love hand-crafting websites for people.
+    section.page-section.home-intro
+        p
+            | I build websites. CSS and HTML are
+            | my bread and butter!
 
     section.page-section
         h2.page-section-header Latest activity
         ul.postlisting
-            each post in site.posts.toArray()
+            each post in page.posts.toArray()
                 +post(post)
+        +pagination(page)
 
 
 

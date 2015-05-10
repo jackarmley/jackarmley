@@ -3,8 +3,7 @@
  */
 
 .site-header{
-    @include pos(a,t0 l0 1);
-    width: 100%;
+    @include pos(r);
     &-inner{
         @extend %layoutwrap;
         min-height: 8rem;

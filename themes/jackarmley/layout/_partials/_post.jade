@@ -1,5 +1,11 @@
 mixin post(obj)
-    article.postlisting-post
-        header.post-header
-            h1.post-title
-                a(href=config.root + obj.path)= obj.title
+    li.post
+        article
+            header.post-header
+                ul.post-meta
+                    -if(obj.categories.length > 0)
+                        each category in obj.categories.toArray()
+                            li.post-meta-item= category.name
+                    li.post-meta-item= obj.date.format(config.date_format)
+                h1.post-title: a(href=config.root + obj.path)= obj.title
+                p.post-category= obj.categories.name

@@ -3,20 +3,16 @@
  * Add quick changes here, to be incorperated properly at a later point
  */
 
-.view-home{
-    .page-header{
-        display: flex;
-        height: calc(100vh - 2em - 2rem);
-        background-color: transparent;
-        color: color(default);
-        &-inner{
-            @extend %layoutwrap;
-            max-width: 80rem;
-        }
-        p{
-            @include font(2.2em,false,300);
-            margin: auto;
-        }
+.home-intro{
+    display: flex;
+    min-height: 70vh;
+    p{
+        @include font(4em,prominent);
+        margin: auto;
+        color: transparent;
+        background: linear-gradient(to bottom, #A8FF3C, #66FFBB) repeat top left/cover fixed transparent;
+        -webkit-background-clip: text;
+        text-align: center;
     }
 }
 
@@ -34,8 +30,6 @@
 
 .page{
     &-header{
-        background-color: #2aff85;
-        color: color(white);
         &-inner{
             @extend %layoutwrap;
             display: flex;
@@ -55,18 +49,126 @@
     flex-flow: row wrap;
     margin: auto;
     list-style: none;
-    &-post{
-        flex: 1 1 40rem;
-        padding: 1rem;
+}
+
+.view-post{
+    .site-header{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
         a{
-            @include propelem('&:before',2 1);
-            display: block;
-            background-color: #d4a600;
             color: color(white);
         }
-        h3{
-            padding: 2rem;
+    }
+}
+
+.fullpost{
+    &-header{
+        position: relative;
+        background:{
+            repeat: no-repeat;
+            position: center center;
+            size: cover;
+            attachment: fixed;
+            color: #ccc;
+        };
+        background-blend-mode: multiply;
+        &:before{
+            @include setsize(100%);
+            content:' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            background-color: fade-out(color(black),.5);
+        }
+        &-inner{
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            width: auto;
+            max-width: 60rem;
+            min-height: 80vh;
+            margin: auto;
+            padding: 4rem 2rem;
+        }
+    }
+        &-title{
             margin: 0;
+            color: color(white);
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+    &-body{
+        width: auto;
+        max-width: 60rem;
+        margin: auto;
+        padding: 4rem 2rem;
+        > p:first-child{
+            font-size: 1.5em;
+        }
+    }
+}
+
+.post{
+    position: relative;
+    flex: 1 1 30rem;
+    overflow: hidden;
+    margin: 0;
+    article{
+        position: relative;
+        z-index: 1;
+        padding: 2rem;
+    }
+    &-header{
+
+    }
+        &-meta{
+            margin: 0 0 .5em;
+            list-style: none;
+            &-item{
+                display: inline-block;
+                vertical-align: top;
+                margin: 0;
+                text-transform: uppercase;
+                &:after{
+                    content:'/';
+                    display: inline-block;
+                    vertical-align: top;
+                    padding: 0 .5em;
+                }
+                &:last-child:after{
+                    display: none;
+                }
+            }
+        }
+        &-title{
+            @include font(1.5em);
+            margin: 0;
+        }
+    &-image{
+        margin: 0 -2rem -2rem;
+    }
+}
+
+.pagination{
+    margin: 0;
+    padding: 2rem 0;
+    list-style: none;
+    text-align: center;
+    &-link{
+        display: inline-block;
+        margin: 0 .5rem;
+        a{
+            display: block;
+            padding: 1rem 2rem;
+            border: 1px solid #A8FF3C;
+            color: #494949;
+            text-transform: uppercase;
         }
     }
 }

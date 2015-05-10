@@ -1,0 +1,13 @@
+//-
+//- Pagination
+//- @param {Variable} obj - object to paginate
+mixin pagination(obj)
+    ul.pagination
+        if obj.prev
+            li.pagination-link
+                a(href=config.root + obj.prev_link, title='Go newer')
+                    | Newer
+        if obj.next
+            li.pagination-link
+                a(href=config.root + obj.next_link, title='Go older')
+                    | Older

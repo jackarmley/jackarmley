@@ -27,7 +27,7 @@ module.exports = function (grunt) {
         watch: {
           sourceFiles: {
             files: ['themes/jackarmley/**','scaffolds/**','source/**'],
-            tasks: ['sass:development','shell:hexoGen']
+            tasks: ['sass:development','autoprefixer','shell:hexoGen']
           },
         }
     });
