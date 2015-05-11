@@ -68,21 +68,22 @@
     &-header{
         position: relative;
         background:{
+            image: linear-gradient(to bottom, #A8FF3C, #66FFBB);
             repeat: no-repeat;
             position: center center;
             size: cover;
             attachment: fixed;
-            color: #ccc;
         };
-        background-blend-mode: multiply;
-        &:before{
-            @include setsize(100%);
-            content:' ';
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: block;
-            background-color: fade-out(color(black),.5);
+        &[style]{
+            &:before{
+                @include setsize(100%);
+                content:' ';
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                background-color: fade-out(color(black),.5);
+            }
         }
         &-inner{
             position: relative;
