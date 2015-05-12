@@ -1,16 +1,26 @@
 extends _layouts/_master
 block content
-    section.page-section.home-intro
-        p
-            | I build websites. CSS and HTML are
-            | my bread and butter!
+    if url_for(path) == '/index.html'
+        section.page-section.home-intro
+            p
+                | I build websites. CSS and HTML are
+                | my bread and butter!
 
-    section.page-section
-        h2.page-section-header Latest activity
-        ul.postlisting
-            each post in page.posts.toArray()
-                +post(post)
-        +pagination(page)
-
+        section.page-section
+            h2.page-section-header Latest activity
+            ul.postlisting
+                each post in page.posts.toArray()
+                    +post(post)
+            +pagination(page)
+    else
+        section
+            header.page-header
+                .page-header-inner
+                    h1.page-title Activity
+            .page-section
+                ul.postlisting
+                    each post in page.posts.toArray()
+                        +post(post)
+                +pagination(page)
 
 

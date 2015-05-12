@@ -3,9 +3,10 @@
  * Add quick changes here, to be incorperated properly at a later point
  */
 
-.home-intro{
+.page-section.home-intro{
     display: flex;
     min-height: 70vh;
+    padding-top: 8rem;
     p{
         @include font(4em,prominent);
         margin: auto;
@@ -30,15 +31,27 @@
 
 .page{
     &-header{
+        background:{
+            image: linear-gradient(to bottom, #A8FF3C, #66FFBB);
+            repeat: no-repeat;
+            position: center center;
+            size: cover;
+            attachment: fixed;
+        };
         &-inner{
             @extend %layoutwrap;
+            position: relative;
+            z-index: 1;
             display: flex;
-            min-height: 50vh;
-            padding-bottom: 3rem;
+            flex-direction: column;
+            justify-content: flex-end;
+            min-height: 80vh;
+            padding: 4rem 2rem;
         }
         h1{
-            align-self: flex-end;
             margin: 0;
+            color: color(white);
+            font-size: 2em;
             text-transform: uppercase;
         }
     }
@@ -53,11 +66,6 @@
 
 .view-post{
     .site-header{
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        width: 100%;
         a{
             color: color(white);
         }
@@ -92,7 +100,7 @@
             flex-direction: column;
             justify-content: flex-end;
             width: auto;
-            max-width: 60rem;
+            max-width: 80rem;
             min-height: 80vh;
             margin: auto;
             padding: 4rem 2rem;
@@ -106,7 +114,7 @@
         }
     &-body{
         width: auto;
-        max-width: 60rem;
+        max-width: 80rem;
         margin: auto;
         padding: 4rem 2rem;
         > p:first-child{
