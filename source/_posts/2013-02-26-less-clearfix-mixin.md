@@ -2,7 +2,7 @@
 title: Removing clearfix from the markup with LESS
 template: article.jade
 date: 2013.02.26
-category: article
+category: notes
 summary: It always irked me that there was no easily maintainable way to extract the clearfix class out of markup
 ---
 

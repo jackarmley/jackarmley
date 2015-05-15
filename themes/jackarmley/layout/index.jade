@@ -1,17 +1,24 @@
 extends _layouts/_master
+
+block viewclass
+    if is_category() === true
+        -var viewclass = 'view-' + url_for(path).split('/')[2];
+
 block content
 
     if is_category() != true
         section.page-section.home-intro
-            p
-                | I build websites. CSS and HTML are
-                | my bread and butter!
+            .page-section-inner
+                p
+                    | I build websites. CSS and HTML are
+                    | my bread and butter!
 
         section.page-section
-            h2.page-section-header Latest activity
-            ul.postlisting
-                each post in page.posts.toArray()
-                    +post(post)
+            .page-section-inner
+                h2.page-section-header Latest activity
+                ul.postlisting
+                    each post in page.posts.toArray()
+                        +post(post)
 
     else
         //- Get category name
@@ -22,9 +29,10 @@ block content
                 .page-header-inner
                     h1.page-title= categoryname
             .page-section
-                ul.postlisting
-                    each post in page.posts.toArray()
-                        +post(post)
-                +pagination(page)
+                .page-section-inner
+                    ul.postlisting
+                        each post in page.posts.toArray()
+                            +post(post)
+                    +pagination(page)
 
 

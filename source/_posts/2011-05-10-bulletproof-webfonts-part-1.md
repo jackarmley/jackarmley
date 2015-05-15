@@ -2,7 +2,7 @@
 title: 'Bulletproof webfonts: part 1'
 template: article.jade
 date: 2011.05.10
-category: article
+category: notes
 summary: Before a webfont reaches the browser, it needs to be transformed from a set of mathematical instructions to a bitmap, which is then laid out across the pixels of the monitor
 ---
 

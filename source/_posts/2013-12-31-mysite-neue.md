@@ -2,7 +2,7 @@
 title: It's my site, I can build how I want to
 template: article.jade
 date: 2013.12.31
-category: article
+category: notes
 summary: On our personal sites, implementing shaky new features is fair game. This is what such sites are all about.
 ---
 

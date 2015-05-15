@@ -2,7 +2,7 @@
 title: 'Webfont icons - simplifying the process'
 template: article.jade
 date: 2012.12.11
-category: article
+category: notes
 summary: some recent findings from my explorations working with icon webfonts, in the course of building a custom icon set for Hatchd
 hero_image: /assets/images/blog/artimg-creatingsnowcone.jpg
 ---

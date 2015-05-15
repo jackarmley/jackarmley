@@ -2,7 +2,7 @@
 title: New site, no assumptions
 template: article.jade
 date: 2014.01.19
-category: article
+category: notes
 summary: Whether people love or hate it, the new site finally feels like mine again, which feels good. Onwards!
 ---
 After quite a bit of tinkering in illustrator, and messing about in [codepen](http://codepen.io/collection/vjgCd/), I've a new site design that I'm happy to leave up and build upon. My aims for this design were:

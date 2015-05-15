@@ -2,7 +2,7 @@
 title: Fancy abbr tags
 template: article.jade
 date: 2012.02.01
-category: article
+category: notes
 summary: when it came to the abbr tag, I wanted to make it a more helpful addition to an article.
 ---
 

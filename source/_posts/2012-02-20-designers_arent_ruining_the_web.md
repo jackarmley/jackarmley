@@ -2,7 +2,7 @@
 title: Designers aren't ruining the web
 template: article.jade
 date: 2012.02.20
-category: article
+category: notes
 summary: Setting good client expectations depends on good communication between all parties responsible for creating a website; an enviroment that facilitates this and encourages people to ask questions can make this possible
 hero_image: /assets/images/blog/artimg-designersweb.jpg
 ---

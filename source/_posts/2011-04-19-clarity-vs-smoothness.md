@@ -2,7 +2,7 @@
 title: Clarity vs smoothness
 template: article.jade
 date: 2011.04.19
-category: article
+category: notes
 summary: apple mac users will get more smoothly rendered fonts across all browsers, but this doesn't mean if a font you pick doesn't look as smooth on windows it should be discounted.
 ---
 

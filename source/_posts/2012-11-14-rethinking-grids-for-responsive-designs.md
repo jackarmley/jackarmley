@@ -2,7 +2,7 @@
 title: Rethinking grids for responsive designs
 template: article.jade
 date: 2012.11.14
-category: article
+category: notes
 summary: In some cases, a class-based grid may still be useful, but it's definitely a good exercise to try and build a site without one.
 hero_image: /assets/images/blog/artimg-responsivegrids.jpg
 ---

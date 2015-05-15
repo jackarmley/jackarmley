@@ -2,11 +2,12 @@ block dependencies
     include ../_partials/_post
     include ../_partials/_pagination
 
--var viewclass = '';
--if(page.layout)
-    -var viewclass = 'view-' + page.layout;
--else
-    -var viewclass = 'view-home';
+block viewclass
+    -var viewclass = '';
+    -if(page.layout)
+        -var viewclass = 'view-' + page.layout;
+    -else
+        -var viewclass = 'view-home';
 
 
 doctype html
@@ -27,7 +28,7 @@ html(lang='en')
                 h1.site-logo: a(href=config.root)= config.title
                 nav.site-navigation(role="navigation" aria-label="Site navigation")
                     ul
-                        each page in [['Work','/categories/work'],['Articles','/categories/article']]
+                        each page in [['Work','/categories/work'],['Notes','/categories/notes']]
                             li: a(href=page[1])= page[0]
         main.page-content(role="main" aria-label="Page content")
             block content

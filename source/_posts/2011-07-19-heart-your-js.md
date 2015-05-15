@@ -2,7 +2,7 @@
 title: Love your JS
 template: article.jade
 date: 2011.07.19
-category: article
+category: notes
 summary: Crystal Hirschorn from the BBC, did a great talk about unit testing for JavaScript
 ---
 After braving driving rain with the help of my stylish PVC man-mac, I attended a great London Web Standards talk called "Javascript Nuts 'n' Bolts" ([best twitter tag ever:]("http://twitter.com/#!/JeffVanCampen/statuses/93092234035077120") #lwsnuts)

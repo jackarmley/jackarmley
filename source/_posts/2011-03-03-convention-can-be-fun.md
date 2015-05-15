@@ -2,7 +2,7 @@
 title: Convention can be fun
 template: article.jade
 date: 2011.03.03
-category: article
+category: notes
 summary: Making rules for yourself is really important. One such rule I always stick to is to use good naming conventions.
 ---
 

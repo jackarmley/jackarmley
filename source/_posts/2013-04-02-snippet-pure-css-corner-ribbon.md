@@ -2,7 +2,7 @@
 title: 'Snippet: pure CSS corner ribbon'
 template: article.jade
 date: 2013.04.02
-category: article
+category: notes
 summary: In the quest to create components that are resolution-agnostic, I've attempted an image-less corner ribbon, that purely uses CSS.
 ---
 Little ribbons that wrap round panels and images are a feature I see cropping up on many sites. In the quest to create components that are resolution-agnostic, I've attempted an image-less corner ribbon, that purely uses CSS.

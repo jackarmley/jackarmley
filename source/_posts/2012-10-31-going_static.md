@@ -2,7 +2,7 @@
 title: Going Static
 template: article.jade
 date: 2012.10.31
-category: article
+category: notes
 summary: I've been looking for a system that could allow me to write a post on my phone, using Markdown
 hero_image: /assets/images/blog/artimg-goingstatic.jpg
 ---

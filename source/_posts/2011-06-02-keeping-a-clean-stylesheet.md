@@ -2,7 +2,7 @@
 title: Keeping a clean (style) sheet
 template: article.jade
 date: 2011.06.02
-category: article
+category: notes
 summary: A stylesheet may seem small, but the kilobytes can add up. Sticking to a few simple rules can help keep the weight off
 ---
 

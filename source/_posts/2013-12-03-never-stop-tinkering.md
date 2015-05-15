@@ -2,7 +2,7 @@
 title: Never stop tinkering
 template: article.jade
 date: 2013.12.03
-category: article
+category: notes
 summary: No process is perfect; no chunk of css is flawless.
 ---
 No process is perfect; no chunk of css is flawless. Just because something has been tried and tested on 100 builds, doesn't mean it shouldn't be revisited.

@@ -2,7 +2,7 @@
 title: Let's talk about LESS
 template: article.jade
 date: 2012.02.26
-category: article
+category: notes
 summary: Recently, I discovered LESS and went about utilizing it on my site to figure out what all the fuss was about
 ---
 

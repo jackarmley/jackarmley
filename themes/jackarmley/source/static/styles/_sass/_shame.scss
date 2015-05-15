@@ -3,36 +3,52 @@
  * Add quick changes here, to be incorperated properly at a later point
  */
 
-.page-section.home-intro{
-    display: flex;
-    min-height: 70vh;
-    padding-top: 8rem;
-    p{
-        @include font(4em,prominent);
-        margin: auto;
-        color: transparent;
-        background: linear-gradient(to bottom, #A8FF3C, #66FFBB) repeat top left/cover fixed transparent;
-        -webkit-background-clip: text;
-        text-align: center;
-    }
-}
+
+
 
 .page-section{
-    @extend %layoutwrap;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    &-inner{
+        @extend %layoutwrap;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
     &-header{
         @include font(1em);
         margin: 0 0 1em;
         text-align: center;
         text-transform: uppercase;
     }
+    &:nth-child(1){
+        padding-top: 8rem;
+    }
+}
+
+.home-intro{
+    background-color: color(key);
+    &-inner{
+        display: flex;
+        min-height: 70vh;
+    }
+    p{
+        @include font(4em,prominent);
+        margin: auto;
+        color: color(white);
+        text-align: center;
+    }
+}
+
+@each $value in work notes{
+    .view-#{$value}{
+        .page-header{
+            background-color: color($value);
+        }
+    }
 }
 
 .page{
     &-header{
         background:{
-            image: linear-gradient(to bottom, #A8FF3C, #66FFBB);
+            color: #4AD9D9;
             repeat: no-repeat;
             position: center center;
             size: cover;
@@ -45,9 +61,8 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            min-height: 80vh;
-            max-height: 40rem;
-            padding: 4rem 2rem;
+            min-height: 40rem;
+            padding: 8rem 2rem 4rem;
         }
         h1{
             margin: 0;
@@ -65,19 +80,11 @@
     list-style: none;
 }
 
-.view-post{
-    .site-header{
-        a{
-            color: color(white);
-        }
-    }
-}
-
 .fullpost{
     &-header{
         position: relative;
         background:{
-            image: linear-gradient(to bottom, #A8FF3C, #66FFBB);
+            color: #4AD9D9;
             repeat: no-repeat;
             position: center center;
             size: cover;
@@ -102,10 +109,9 @@
             justify-content: flex-end;
             width: auto;
             max-width: 80rem;
-            min-height: 80vh;
-            height: 40rem;
+            min-height: 40rem;
             margin: auto;
-            padding: 4rem 2rem;
+            padding: 8rem 2rem 4rem;
         }
     }
         &-title{

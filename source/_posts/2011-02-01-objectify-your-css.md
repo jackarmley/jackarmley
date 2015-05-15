@@ -2,7 +2,7 @@
 title: Objectify your CSS
 template: article.jade
 date: 2011.02.01
-category: article
+category: notes
 summary: When working on large builds,  unlocking your styles from a specific location and making them modular is really important.
 ---
 

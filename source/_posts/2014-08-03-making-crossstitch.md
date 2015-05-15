@@ -2,7 +2,7 @@
 title: Making crossstitch
 template: article.jade
 date: 2014.08.03
-category: article
+category: notes
 summary: Crossstitch
 status: draft
 ---

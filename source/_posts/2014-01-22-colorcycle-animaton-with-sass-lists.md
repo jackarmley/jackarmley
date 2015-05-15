@@ -2,7 +2,7 @@
 title: Maneagable colour cycle animations with SASS lists
 template: article.jade
 date: 2014.01.22
-category: article
+category: notes
 summary: For my new site I built a nav menu whose background subtly changed over time, fading in measured increments through the site's colour palette.
 ---
 
