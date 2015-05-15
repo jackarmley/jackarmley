@@ -1,6 +1,7 @@
 extends _layouts/_master
 block content
-    if url_for(path) == '/index.html'
+
+    if is_category() != true
         section.page-section.home-intro
             p
                 | I build websites. CSS and HTML are
@@ -11,12 +12,15 @@ block content
             ul.postlisting
                 each post in page.posts.toArray()
                     +post(post)
-            +pagination(page)
+
     else
+        //- Get category name
+        -var categoryname = url_for(path).split('/')[2];
+        //- Set markup
         section
             header.page-header
                 .page-header-inner
-                    h1.page-title Activity
+                    h1.page-title= categoryname
             .page-section
                 ul.postlisting
                     each post in page.posts.toArray()

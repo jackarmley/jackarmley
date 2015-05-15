@@ -27,8 +27,8 @@ html(lang='en')
                 h1.site-logo: a(href=config.root)= config.title
                 nav.site-navigation(role="navigation" aria-label="Site navigation")
                     ul
-                        each link in site.pages.toArray()
-                            li: a(href=config.root + link.path)= link.title
+                        each page in [['Work','/categories/work'],['Articles','/categories/article']]
+                            li: a(href=page[1])= page[0]
         main.page-content(role="main" aria-label="Page content")
             block content
         footer(role="contentinfo" aria-label="Site footer")
