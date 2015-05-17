@@ -3,6 +3,7 @@ title: A new home for a vibrant venue
 template: article.jade
 date: 2011.05.09
 category: work
+keycolor: ae003f
 summary: The site focused on making events easy to browse through and book
 image_thumb: /assets/images/work/thumb-cornexchangenew.jpg
 hero_image: /assets/images/work/slide-cornexchangenew_01.jpg

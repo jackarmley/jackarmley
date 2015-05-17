@@ -3,6 +3,7 @@ title: "Engaging Dunhill's clientele"
 template: article.jade
 date: 2012.09.01
 category: work
+keycolor: 949494
 summary: We concentrated on creating something as luxurious as possible, within the guidelines the Economist provided for producing an ad
 image_thumb: /assets/images/work/thumb-dunhill.png
 hero_image: /assets/images/work/slide-dunhill_01.png

@@ -3,6 +3,7 @@ title: Announcing Tangent Snowball
 template: article.jade
 date: 2012.01.26
 category: work
+keycolor: 6AD0C9
 summary: The whole site uses large, sumptuous images and snappy text to bring the work to life
 image_thumb: /assets/images/work/thumb-tangentsnowball.jpg
 hero_image: /assets/images/work/slide-tangentsnowball_03.png

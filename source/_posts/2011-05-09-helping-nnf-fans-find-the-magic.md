@@ -3,6 +3,7 @@ title: Helping NNF fans find the magic
 template: article.jade
 date: 2011.05.09
 category: work
+keycolor: 403C30
 summary: The Norfolk and Nowich Festival is long-established, with a varied programme and audience
 image_thumb: /assets/images/work/thumb-nnf11.jpg
 hero_image: /assets/images/work/slide-nnf11_01.jpg

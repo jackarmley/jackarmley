@@ -3,6 +3,8 @@ title: Murdoch Universiy 100 Ways to Make a Difference Campaign
 template: article.jade
 date: 2014.11.19
 category: work
+keycolor: 4d4d4d
+image_thumb: /assets/images/work/thumb-murdoch100ways.jpg
 hero_image: /assets/images/work/full-murdoch100ways.jpg
 summary: The website was a vehicle for the images, and a way to give them context and a seperately branded home away from Murdoch's Instagram account.
 ---

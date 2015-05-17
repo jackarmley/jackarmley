@@ -3,6 +3,7 @@ title: Creating Snowcone
 template: article.jade
 date: 2012.01.10
 category: work
+keycolor: 483C47
 summary: We wanted to ensure that our projects wouldn't be swayed by a preset icon style. If we made our own, it could be customized for each new project.
 image_thumb: /assets/images/work/thumb-snowcone.png
 hero_image: /assets/images/work/slide-snowcone_01.gif

@@ -2,6 +2,7 @@
 title: Bringing a feisty theatre online
 template: article.jade
 date: 2011.05.09
+keycolor: 81AF2D
 category: work
 summary: Whilst each page is clean and easy to read, it is surrounded by playfully cut-out images from their back-catalouge of productions, and each page has a colourful, vibrant background
 image_thumb: /assets/images/work/thumb-tbai.jpg

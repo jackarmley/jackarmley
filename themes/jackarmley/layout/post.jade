@@ -1,9 +1,9 @@
 extends _layouts/_master
 block content
     if page.hero_image
-        -var hero = {'background-image': 'url(' +  page.hero_image  + ')'}
+        -var hero = {'background-image': 'url(' +  page.hero_image  + ')','background-color': '#' + page.keycolor}
     else
-        -var hero = false
+        -var hero = {'background-color': '#' + page.keycolor}
     article.fullpost
         header.fullpost-header(style=hero)
             .fullpost-header-inner

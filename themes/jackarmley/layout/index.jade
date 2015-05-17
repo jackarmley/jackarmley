@@ -29,10 +29,12 @@ block content
                 .page-header-inner
                     h1.page-title= categoryname
             .page-section
-                .page-section-inner
-                    ul.postlisting
-                        each post in page.posts.toArray()
-                            +post(post)
-                    +pagination(page)
+                ul.postlisting(class='postlisting--' + categoryname)
+                    each post in page.posts.toArray()
+                        if categoryname == 'work'
+                            +post(post,'imageled', false)
+                        else
+                            +post(post,'default', false)
+                +pagination(page)
 
 

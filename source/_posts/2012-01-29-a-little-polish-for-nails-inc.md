@@ -3,6 +3,7 @@ title: A little polish for Nails Inc
 template: article.jade
 date: 2012.01.29
 category: work
+keycolor: D04D74
 summary: We spent a worrying amount of time trying on nail varnish in order to represent the product correctly on screen
 hero_image: /assets/images/work/slide-nailsinc-couture_01.png
 ---

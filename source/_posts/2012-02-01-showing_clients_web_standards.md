@@ -3,6 +3,7 @@ title: Showing clients web standards
 template: article.jade
 date: 2012.02.01
 category: work
+keycolor: D0508B
 summary: At Tangent Snowball, we created a booklet to explain to our clients that serving a slightly stripped-back design to older browsers is a good thing
 image_thumb: /assets/images/work/thumb-browserbooklet.jpg
 hero_image: /assets/images/work/slide-browserbook_01.jpg

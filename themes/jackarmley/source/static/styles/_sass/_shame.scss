@@ -37,18 +37,10 @@
     }
 }
 
-@each $value in work notes{
-    .view-#{$value}{
-        .page-header{
-            background-color: color($value);
-        }
-    }
-}
-
 .page{
     &-header{
         background:{
-            color: #4AD9D9;
+            //color: #4AD9D9;
             repeat: no-repeat;
             position: center center;
             size: cover;
@@ -66,7 +58,7 @@
         }
         h1{
             margin: 0;
-            color: color(white);
+            //color: color(white);
             font-size: 2em;
             text-transform: uppercase;
         }
@@ -78,6 +70,25 @@
     flex-flow: row wrap;
     margin: auto;
     list-style: none;
+    &--work{
+        flex-flow: column nowrap;
+        .post{
+            flex: 1 1 auto;
+            article{
+                @extend %layoutwrap;
+                display: flex;
+                padding: 0;
+            }
+            &-thumb{
+                flex: 1 1 rem(300);
+            }
+            &-details{
+                flex: 2 1;
+                padding: 2rem;
+                color: color(white);
+            }
+        }
+    }
 }
 
 .fullpost{
@@ -90,7 +101,7 @@
             size: cover;
             attachment: fixed;
         };
-        &[style]{
+        &[style*="background-image"]{
             &:before{
                 @include setsize(100%);
                 content:' ';
@@ -131,6 +142,10 @@
     }
 }
 
+.view-work{
+
+}
+
 .post{
     position: relative;
     flex: 1 1 30rem;
@@ -140,6 +155,12 @@
         position: relative;
         z-index: 1;
         padding: 2rem;
+    }
+    &-thumb{
+        margin-bottom: 0;
+        img{
+            @include setsize(100% auto);
+        }
     }
     &-header{
 

@@ -3,8 +3,9 @@ title: Murdoch Open Day 2013
 template: article.jade
 date: 2013.07.11
 category: work
+keycolor: 222432
 summary: A lightweight, multi-device friendly site to help attract new students to Murdoch
-image_thumb: /assets/images/work/murdoch-open-day-2013.jpg
+image_thumb: /assets/images/work/thumb-murdochopenday2013.jpg
 hero_image: /assets/images/work/murdoch-open-day-2013.jpg
 ---
 

@@ -3,6 +3,8 @@ title: Surf Life Saving WA Website
 template: article.jade
 date: 2013.07.12
 category: work
+keycolor: 85C6E8
+image_thumb: /assets/images/work/thumb-slswa.jpg
 summary: Revamping SLS's prescence in Western Australia
 ---
 

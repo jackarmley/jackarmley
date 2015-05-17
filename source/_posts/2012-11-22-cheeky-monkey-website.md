@@ -3,6 +3,7 @@ title: "Keeping things on-tap for Cheeky Monkey's thirsty customers"
 template: article.jade
 date: 2012.11.22
 category: work
+keycolor: E9800C
 summary: It was made fully responsive, to ensure it would be a useful tool to those half way to the venue, shouting at their sat-navs
 image_thumb: /assets/images/work/thumb-cheekymonkey.jpg
 hero_image: /assets/images/work/slide-cheekymonkey_01.jpg

@@ -3,6 +3,8 @@ title: Chicken Treat
 template: article.jade
 date: 2013.09.02
 category: work
+keycolor: f4a435
+image_thumb: /assets/images/work/thumb-chickentreat.jpg
 summary: A one-stop destination for Chicken Treat fans
 ---
 

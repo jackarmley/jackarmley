@@ -3,6 +3,7 @@ title: Public arts in the virtual space
 template: article.jade
 date: 2011.05.09
 category: work
+keycolor: f27e41
 summary: Emergency Exit Arts needed a personality-packed, bold site to showcase their offering
 image_thumb: /assets/images/work/thumb-eea.jpg
 hero_image: /assets/images/work/slide-eea_01.jpg

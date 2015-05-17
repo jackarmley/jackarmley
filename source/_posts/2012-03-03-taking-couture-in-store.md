@@ -3,6 +3,7 @@ title: Taking couture in-store
 template: article.jade
 date: 2012.03.03
 category: work
+keycolor: D0B48E
 summary: Two popular areas of nails inc's new website were to be transposed from their desktop/mobile environment to be available in-store, on an interactive touchscreen.
 image_thumb: /assets/images/work/thumb-nailsinc_instore.jpg
 hero_image: /assets/images/work/slide-nailsinc-couture_01.png
