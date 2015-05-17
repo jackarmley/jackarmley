@@ -24,7 +24,7 @@
 }
 
 .home-intro{
-    background-color: color(default);
+    background-color: color(lime);
     &-inner{
         display: flex;
         min-height: 70vh;
@@ -39,7 +39,7 @@
 
 .page{
     &-header{
-        background: color(default);
+        background: color(lime);
         &-inner{
             @extend %layoutwrap;
             position: relative;
@@ -59,74 +59,10 @@
     }
 }
 
-.postlisting{
-    display: flex;
-    flex-flow: row wrap;
-    margin: auto;
-    list-style: none;
-    flex-flow: column nowrap;
-    .post{
-        flex: 1 1 auto;
-        article{
-            @extend %layoutwrap;
-            display: flex;
-            padding: 0;
-        }
-        &-thumb{
-            flex: 1 1 rem(300);
-        }
-        &-details{
-            flex: 2 1;
-            padding: 2rem;
-            color: color(white);
-        }
-    }
-}
 
 
-.post{
-    position: relative;
-    flex: 1 1 30rem;
-    overflow: hidden;
-    margin: 0;
-    article{
-        position: relative;
-        z-index: 1;
-        padding: 2rem;
-    }
-    &-thumb{
-        margin-bottom: 0;
-        img{
-            @include setsize(100% auto);
-        }
-    }
-    &-header{
 
-    }
-        &-meta{
-            margin: 0 0 .5em;
-            list-style: none;
-            &-item{
-                display: inline-block;
-                vertical-align: top;
-                margin: 0;
-                text-transform: uppercase;
-                &:after{
-                    content:'/';
-                    display: inline-block;
-                    vertical-align: top;
-                    padding: 0 .5em;
-                }
-                &:last-child:after{
-                    display: none;
-                }
-            }
-        }
-        &-title{
-            @include font(1.5em);
-            margin: 0;
-        }
-    &-image{
-        margin: 0 -2rem -2rem;
-    }
-}
+
+
+
+

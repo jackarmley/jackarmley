@@ -33,6 +33,10 @@ $azure: #4AD9D9;
 /// @type Color
 $mattazure: #36B1BF;
 
+/// Lime
+/// @type Color
+$lime: #4BB629;
+
 /// Pebble
 /// @type Color
 $pebble: #363942;
@@ -49,7 +53,5 @@ $colors: (
     highlight: $tangerine,
     link: inherit,
     linkactive: inherit,
-    key: $azure,
-    work: $tangerine,
-    notes: $strawberry
+    lime: $lime
 );

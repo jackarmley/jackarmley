@@ -13,9 +13,7 @@ block content
                     | I love hand-crafting websites
                     | that people love to use.
         .page-section
-            ul.postlisting
-                each post in page.posts.toArray()
-                    +post(post)
+            +postlisting(page,false)
 
     else
         //- Get category name
@@ -26,9 +24,6 @@ block content
                 .page-header-inner
                     h1.page-title= categoryname
             .page-section
-                ul.postlisting
-                    each post in page.posts.toArray()
-                        +post(post, false)
-                +pagination(page)
+                +postlisting(page,true)
 
 

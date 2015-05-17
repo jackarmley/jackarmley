@@ -1,0 +1,33 @@
+/**
+ * Post listing
+ */
+
+$postcolours:
+    $strawberry,
+    $tangerine,
+    $azure;
+$i: 0;
+
+.postlisting{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0;
+    list-style: none;
+    &-item{
+        flex: 1 1 auto;
+        margin: 0;
+        @each $key in $postcolours{
+            &:nth-child(#{length($postcolours)}n + #{$i}){
+                background-color: $key;
+            }
+            $i: $i + 1;
+        }
+        .post{
+            @extend %layoutwrap;
+            background-color: transparent;
+            &-details{
+                color: color(white);
+            }
+        }
+    }
+}

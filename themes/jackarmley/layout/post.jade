@@ -9,11 +9,4 @@ block content
                 img(src=page.full)
         .fullpost-body
             != page.content
-        aside
-            ul.fullpost-pagination
-                if page.prev
-                    li: a(href=config.root + page.prev.path)= page.prev.title
-                if page.next
-                    li: a(href=config.root + page.next.path)= page.next.title
-
 

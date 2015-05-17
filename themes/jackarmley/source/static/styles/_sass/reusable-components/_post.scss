@@ -1,0 +1,41 @@
+/**
+ * Post
+ */
+
+.post{
+    display: flex;
+    &-thumb{
+        flex: 1 1 rem(300);
+        margin-bottom: 0;
+        img{
+            @include setsize(100% auto);
+        }
+    }
+    &-meta{
+        margin: 0 0 .5em;
+        list-style: none;
+        &-item{
+            display: inline-block;
+            vertical-align: top;
+            margin: 0;
+            text-transform: uppercase;
+            &:after{
+                content:'/';
+                display: inline-block;
+                vertical-align: top;
+                padding: 0 .5em;
+            }
+            &:last-child:after{
+                display: none;
+            }
+        }
+    }
+    &-title{
+        @include font(1.5em);
+        margin: 0;
+    }
+    &-details{
+        flex: 2 1;
+        padding: 2rem;
+    }
+}
