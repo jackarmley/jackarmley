@@ -1,6 +1,5 @@
 block dependencies
-    include ../_partials/_post
-    include ../_partials/_pagination
+    include ../_data/_dependancies
 
 block viewclass
     -var viewclass = '';
@@ -29,15 +28,15 @@ html(lang='en')
                 h1.site-logo: a(href=config.root)= config.title
                 nav.site-navigation(role="navigation" aria-label="Site navigation")
                     ul
-                        each page in [['Work','/categories/work'],['Notes','/categories/notes']]
-                            li: a(href=page[1])= page[0]
+                        each link in sitenav
+                            li: a(href=link[1])= link[0]
         main.page-content(role="main" aria-label="Page content")
             block content
         footer.site-footer(role="contentinfo" aria-label="Site footer")
             .site-footer-inner
                 h2 Find me on
                 ul.followme
-                    each value in [['twitter','http://twitter.com/jackarmley'],['codepen','http://codepen.io/jackarmley'],['github','http://github.com/jackarmley']]
-                        li.followme-link: a(href=value[1])= value[0]
+                    each link in socialnav
+                        li.followme-link: a(href=link[1])= link[0]
 
 

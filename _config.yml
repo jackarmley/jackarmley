@@ -38,12 +38,12 @@ post_asset_folder: true
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   tab_replace:
 
 # Category & Tag
-default_category: uncategorized
+default_category: notes
 category_map:
 tag_map:
 

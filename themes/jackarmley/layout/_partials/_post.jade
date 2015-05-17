@@ -1,16 +1,16 @@
-mixin post(obj,layout,showcategory)
+mixin post(obj,showcategory)
     -var layout = layout || 'default';
     -var thumb = obj.thumb || 'http://placehold.it/500x375';
-    li.post(style={'background-color': '#' + obj.keycolor || false})
+    li.post(style={'background-color': '#' + obj.keycolor || false} class = 'post--' + posttype)
         article
-                if layout == 'imageled'
-                    figure.post-thumb
-                        img(src=thumb alt='Screenshot of' + obj.title)
-                .post-details
-                    header.post-header
-                        ul.post-meta
-                            if obj.categories.length > 0 && showcategory != false
-                                each category in obj.categories.toArray()
-                                    li.post-meta-item= category.name
-                            li.post-meta-item= obj.date.format(config.date_format)
-                        h1.post-title: a(href=config.root + obj.path)= obj.title
+            if obj.thumb
+                figure.post-thumb
+                    img(src=obj.thumb alt='Screenshot of' + obj.title)
+            .post-details
+                header.post-header
+                    ul.post-meta
+                        if obj.categories.length > 0 && showcategory != false
+                            each category in obj.categories.toArray()
+                                li.post-meta-item= category.name
+                        li.post-meta-item= obj.date.format(config.date_format)
+                    h1.post-title: a(href=config.root + obj.path)= obj.title

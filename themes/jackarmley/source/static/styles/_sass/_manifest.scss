@@ -39,7 +39,8 @@
 /// Reusable components, called with a class (or classes)
 /// that can exist anywhere in the site
 @import
-    'reusable-components/_pagination';
+    'reusable-components/_pagination',
+    'reusable-components/_fullpost';
 
 /// Set static page elements
 /// The scaffolding of the site, defined through elements that occur only

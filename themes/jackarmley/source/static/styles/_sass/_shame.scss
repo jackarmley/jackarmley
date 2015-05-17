@@ -64,94 +64,25 @@
     flex-flow: row wrap;
     margin: auto;
     list-style: none;
-    &--work{
-        flex-flow: column nowrap;
-        .post{
-            flex: 1 1 auto;
-            article{
-                @extend %layoutwrap;
-                display: flex;
-                padding: 0;
-            }
-            &-thumb{
-                flex: 1 1 rem(300);
-            }
-            &-details{
-                flex: 2 1;
-                padding: 2rem;
-                color: color(white);
-            }
-        }
-    }
-    &--notes{
-        @extend %layoutwrap;
-    }
-}
-
-.fullpost{
-    &-header{
-        position: relative;
-        background:{
-            color: #4AD9D9;
-            repeat: no-repeat;
-            position: center center;
-            size: cover;
-            attachment: fixed;
-        };
-        &[style*="background-image"]{
-            &:before{
-                @include setsize(100%);
-                content:' ';
-                position: absolute;
-                top: 0;
-                left: 0;
-                display: block;
-                background-color: fade-out(color(black),.5);
-            }
-        }
-        &-inner{
-            position: relative;
-            z-index: 1;
+    flex-flow: column nowrap;
+    .post{
+        flex: 1 1 auto;
+        article{
+            @extend %layoutwrap;
             display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            width: auto;
-            max-width: 80rem;
-            min-height: 40rem;
-            margin: auto;
-            padding: 8rem 2rem 4rem;
+            padding: 0;
         }
-    }
-        &-title{
-            margin: 0;
+        &-thumb{
+            flex: 1 1 rem(300);
+        }
+        &-details{
+            flex: 2 1;
+            padding: 2rem;
             color: color(white);
-            font-size: 2em;
-            text-transform: uppercase;
-        }
-    &-hero{
-        @extend %layoutwrap;
-        padding:{
-            top: 4rem;
-            bottom: 4rem;
-        };
-        img{
-            margin: auto;
-        }
-    }
-    &-body{
-        width: auto;
-        max-width: 80rem;
-        margin: auto;
-        padding: 4rem 2rem;
-        > p:first-child{
-            font-size: 1.5em;
         }
     }
 }
 
-.view-work{
-
-}
 
 .post{
     position: relative;

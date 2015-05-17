@@ -12,13 +12,10 @@ block content
                 p
                     | I love hand-crafting websites
                     | that people love to use.
-
-        section.page-section
-            .page-section-inner
-                h2.page-section-header Latest activity
-                ul.postlisting
-                    each post in page.posts.toArray()
-                        +post(post,'mixed')
+        .page-section
+            ul.postlisting
+                each post in page.posts.toArray()
+                    +post(post)
 
     else
         //- Get category name
@@ -29,12 +26,9 @@ block content
                 .page-header-inner
                     h1.page-title= categoryname
             .page-section
-                ul.postlisting(class='postlisting--' + categoryname)
+                ul.postlisting
                     each post in page.posts.toArray()
-                        if categoryname == 'work'
-                            +post(post,'imageled', false)
-                        else
-                            +post(post,'default', false)
+                        +post(post, false)
                 +pagination(page)
 
 

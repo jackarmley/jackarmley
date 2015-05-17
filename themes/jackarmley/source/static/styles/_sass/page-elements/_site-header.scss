@@ -12,7 +12,10 @@
         @extend %layoutwrap;
         display: flex;
         justify-content: space-between;
-        padding: 3rem 0;
+        padding:{
+            top: 3rem;
+            bottom: 3rem;
+        };
     }
     @at-root{
         .site-logo a,
