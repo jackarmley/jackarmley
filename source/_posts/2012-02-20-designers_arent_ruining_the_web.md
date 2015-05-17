@@ -4,7 +4,7 @@ template: article.jade
 date: 2012.02.20
 category: notes
 summary: Setting good client expectations depends on good communication between all parties responsible for creating a website; an enviroment that facilitates this and encourages people to ask questions can make this possible
-hero_image: /assets/images/blog/artimg-designersweb.jpg
+full: /images/blog/artimg-designersweb.jpg
 ---
 
 John Naughton, a writer at the observer recently wrote an article entitled [Graphic designers are ruining the web.]("http://www.guardian.co.uk/technology/2012/feb/19/john-naughton-webpage-obesity") Hang on John, surely that's a bit unfair. Nothing can be that black and white.

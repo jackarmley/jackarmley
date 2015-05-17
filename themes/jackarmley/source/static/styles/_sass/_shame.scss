@@ -24,7 +24,7 @@
 }
 
 .home-intro{
-    background-color: color(key);
+    background-color: color(default);
     &-inner{
         display: flex;
         min-height: 70vh;
@@ -39,13 +39,7 @@
 
 .page{
     &-header{
-        background:{
-            //color: #4AD9D9;
-            repeat: no-repeat;
-            position: center center;
-            size: cover;
-            attachment: fixed;
-        };
+        background: color(default);
         &-inner{
             @extend %layoutwrap;
             position: relative;
@@ -58,7 +52,7 @@
         }
         h1{
             margin: 0;
-            //color: color(white);
+            color: color(white);
             font-size: 2em;
             text-transform: uppercase;
         }
@@ -88,6 +82,9 @@
                 color: color(white);
             }
         }
+    }
+    &--notes{
+        @extend %layoutwrap;
     }
 }
 
@@ -131,6 +128,16 @@
             font-size: 2em;
             text-transform: uppercase;
         }
+    &-hero{
+        @extend %layoutwrap;
+        padding:{
+            top: 4rem;
+            bottom: 4rem;
+        };
+        img{
+            margin: auto;
+        }
+    }
     &-body{
         width: auto;
         max-width: 80rem;
@@ -190,23 +197,5 @@
         }
     &-image{
         margin: 0 -2rem -2rem;
-    }
-}
-
-.pagination{
-    margin: 0;
-    padding: 2rem 0;
-    list-style: none;
-    text-align: center;
-    &-link{
-        display: inline-block;
-        margin: 0 .5rem;
-        a{
-            display: block;
-            padding: 1rem 2rem;
-            border: 1px solid #A8FF3C;
-            color: #494949;
-            text-transform: uppercase;
-        }
     }
 }

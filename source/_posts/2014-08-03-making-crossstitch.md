@@ -15,7 +15,7 @@ It can be super tricky figuring out where each shadow should go to make the icon
 
 ## What I needed to get to
 
-![A diagram explaining how icons are made using CSS box shadows](/assets/images/blog/making-crossstitch--fig1.gif)
+![A diagram explaining how icons are made using CSS box shadows](/images/blog/making-crossstitch--fig1.gif)
 
 ## Step 1: Provide input
 

@@ -4,7 +4,7 @@ template: article.jade
 date: 2012.11.14
 category: notes
 summary: In some cases, a class-based grid may still be useful, but it's definitely a good exercise to try and build a site without one.
-hero_image: /assets/images/blog/artimg-responsivegrids.jpg
+full: /images/blog/artimg-responsivegrids.jpg
 ---
 Grids are great; they help a site achieve some level of consistency from the get-go, by ensuring all block-level elements align to a preset structure (horizontally and sometimes, vertically as well).
 

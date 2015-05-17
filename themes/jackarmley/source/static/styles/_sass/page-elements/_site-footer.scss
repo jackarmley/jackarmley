@@ -1,3 +1,35 @@
 /**
- * Page footer
+ * Site footer
  */
+
+.site-footer{
+    background-color: color(default);
+    &-inner{
+        @extend %layoutwrap;
+        padding:{
+            top: 6rem;
+            bottom: 6rem;
+        };
+    }
+    h2{
+        @include font(1em);
+        margin: 0 0 1em;
+        color: color(white);
+        text-align: center;
+        text-transform: uppercase;
+    }
+    @at-root{
+        .followme{
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            list-style: none;
+            &-link{
+                margin: 0;
+                a{
+                    color: color(white);
+                }
+            }
+        }
+    }
+}

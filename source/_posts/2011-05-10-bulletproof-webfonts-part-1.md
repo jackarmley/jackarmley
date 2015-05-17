@@ -6,7 +6,7 @@ category: notes
 summary: Before a webfont reaches the browser, it needs to be transformed from a set of mathematical instructions to a bitmap, which is then laid out across the pixels of the monitor
 ---
 
-![A 3d letter being threatened by a missile](/assets/images/blog/blogimg-bulletproof_webfont.png)
+![A 3d letter being threatened by a missile](/images/blog/blogimg-bulletproof_webfont.png)
 
 Know your enemy (or, stop worrying and learn to love the rasterizer).
 

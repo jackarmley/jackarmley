@@ -4,7 +4,7 @@ template: article.jade
 date: 2012.10.31
 category: notes
 summary: I've been looking for a system that could allow me to write a post on my phone, using Markdown
-hero_image: /assets/images/blog/artimg-goingstatic.jpg
+full: /images/blog/artimg-goingstatic.jpg
 ---
 
 My site's been in its current form now, for around 6 months. Since it's inception I've moved countries and as a result, no longer have a desktop machine; in my spare time I usually stay connected through one of 3 i-devices, or a low-spec laptop.

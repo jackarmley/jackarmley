@@ -10,15 +10,15 @@ block content
         section.page-section.home-intro
             .page-section-inner
                 p
-                    | I build websites. CSS and HTML are
-                    | my bread and butter!
+                    | I love hand-crafting websites
+                    | that people love to use.
 
         section.page-section
             .page-section-inner
                 h2.page-section-header Latest activity
                 ul.postlisting
                     each post in page.posts.toArray()
-                        +post(post)
+                        +post(post,'mixed')
 
     else
         //- Get category name

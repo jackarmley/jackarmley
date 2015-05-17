@@ -5,8 +5,8 @@ date: 2011.05.09
 category: work
 keycolor: d25a38
 summary: London's largest outdoor arts festival pulled in 825,000+ visitors in 2010, with the website recieving 1.25m page views
-image_thumb: /assets/images/work/thumb-thamesfestival.jpg
-hero_image: /assets/images/work/slide-thamesfestival_01.jpg
+thumb: /images/work/thumb-thamesfestival.jpg
+full: /images/work/slide-thamesfestival_01.jpg
 ---
 "London's largest outdoor arts festival" pulled in 825,000+ visitors in 2010, with the website recieving 1.25m page views.
 

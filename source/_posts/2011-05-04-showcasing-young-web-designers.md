@@ -5,8 +5,8 @@ date: 2011.05.04
 category: work
 keycolor: 35a8f9
 summary: I really got to flex my illustrating muscle, designing all the graphics and logo from scratch
-image_thumb: /assets/images/work/thumb-iluv2.jpg
-hero_image: /assets/images/work/slide-iluv2_01.jpg
+thumb: /images/work/thumb-iluv2.jpg
+full: /images/work/slide-iluv2_01.jpg
 ---
 I created the iluv2 site for Lewisham CLC; it stemmed from a web design course they were running with their students.
 

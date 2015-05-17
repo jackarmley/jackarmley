@@ -5,8 +5,8 @@ date: 2013.03.08
 category: work
 keycolor: 669B35
 summary: To evoke a rustic feel the design was rich with skewmorphism
-image_thumb: /assets/images/work/thumb-brownesdairy.jpg
-image_hero: /assets/images/work/slide-brownesdairy_01.jpg
+thumb: /images/work/thumb-brownesdairy.jpg
+image_hero: /images/work/slide-brownesdairy_01.jpg
 ---
 
 Brownes, a household name in WA for fresh dairy products, needed a farm-fresh

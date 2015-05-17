@@ -4,7 +4,7 @@ template: article.jade
 date: 2013.10.14
 category: work
 keycolor: 99cf84
-image_thumb: /assets/images/work/thumb-brownes.fowa.jpg
+thumb: /images/work/thumb-brownes.fowa.jpg
 summary: Championing local WA flavoured milk over imported alternatives
 ---
 

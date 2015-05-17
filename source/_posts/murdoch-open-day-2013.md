@@ -5,8 +5,8 @@ date: 2013.07.11
 category: work
 keycolor: 222432
 summary: A lightweight, multi-device friendly site to help attract new students to Murdoch
-image_thumb: /assets/images/work/thumb-murdochopenday2013.jpg
-hero_image: /assets/images/work/murdoch-open-day-2013.jpg
+thumb: /images/work/thumb-murdochopenday2013.jpg
+full: /images/work/murdoch-open-day-2013.jpg
 ---
 
 Murdoch University run an open day each year to attract potential new students. Their main site isn't mobile friendly, so they needed a clean, responsive microsite to inform visitors about the day.

@@ -1,6 +1,6 @@
 mixin post(obj,layout,showcategory)
     -var layout = layout || 'default';
-    -var thumb = obj.image_thumb || 'http://placehold.it/500x375';
+    -var thumb = obj.thumb || 'http://placehold.it/500x375';
     li.post(style={'background-color': '#' + obj.keycolor || false})
         article
                 if layout == 'imageled'

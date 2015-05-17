@@ -5,8 +5,8 @@ date: 2012.02.01
 category: work
 keycolor: D0508B
 summary: At Tangent Snowball, we created a booklet to explain to our clients that serving a slightly stripped-back design to older browsers is a good thing
-image_thumb: /assets/images/work/thumb-browserbooklet.jpg
-hero_image: /assets/images/work/slide-browserbook_01.jpg
+thumb: /images/work/thumb-browserbooklet.jpg
+full: /images/work/slide-browserbook_01.jpg
 ---
 
 At Tangent Snowball we wanted to ensure the sites we were building were future-ready. To do this, older browsers needed a different treatment and we needed a tool to communicate this philosophy to our clients.

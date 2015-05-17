@@ -45,7 +45,7 @@ $colors: (
     default: $pebble,
     black: $black,
     white: $white,
-    muted: lighten($black,50%),
+    muted: lighten($pebble,50%),
     highlight: $tangerine,
     link: inherit,
     linkactive: inherit,

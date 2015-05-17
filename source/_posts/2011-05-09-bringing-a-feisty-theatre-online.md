@@ -5,8 +5,8 @@ date: 2011.05.09
 keycolor: 81AF2D
 category: work
 summary: Whilst each page is clean and easy to read, it is surrounded by playfully cut-out images from their back-catalouge of productions, and each page has a colourful, vibrant background
-image_thumb: /assets/images/work/thumb-tbai.jpg
-hero_image: /assets/images/work/slide-tbai_01.jpg
+thumb: /images/work/thumb-tbai.jpg
+full: /images/work/slide-tbai_01.jpg
 ---
 Founded in 1993, Told by an Idiot is a small theatre company with a big reputation.
 

@@ -4,7 +4,7 @@ template: article.jade
 date: 2014.11.05
 category: work
 keycolor: c5353f
-image_thumb: /assets/images/work/thumb-mra.jpg
+thumb: /images/work/thumb-mra.jpg
 summary: Bringing renewed vibrancy to MRA's online home
 ---
 

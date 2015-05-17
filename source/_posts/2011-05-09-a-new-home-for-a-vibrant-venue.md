@@ -5,8 +5,8 @@ date: 2011.05.09
 category: work
 keycolor: ae003f
 summary: The site focused on making events easy to browse through and book
-image_thumb: /assets/images/work/thumb-cornexchangenew.jpg
-hero_image: /assets/images/work/slide-cornexchangenew_01.jpg
+thumb: /images/work/thumb-cornexchangenew.jpg
+full: /images/work/slide-cornexchangenew_01.jpg
 ---
 Located in beautiful Newbury, the Corn Exchange (and New Greenham Arts) run a packed schedule of flms, performances and workshops.
 

@@ -33,6 +33,11 @@ html(lang='en')
                             li: a(href=page[1])= page[0]
         main.page-content(role="main" aria-label="Page content")
             block content
-        footer(role="contentinfo" aria-label="Site footer")
+        footer.site-footer(role="contentinfo" aria-label="Site footer")
+            .site-footer-inner
+                h2 Find me on
+                ul.followme
+                    each value in [['twitter','http://twitter.com/jackarmley'],['codepen','http://codepen.io/jackarmley'],['github','http://github.com/jackarmley']]
+                        li.followme-link: a(href=value[1])= value[0]
 
 

@@ -5,8 +5,8 @@ date: 2012.09.01
 category: work
 keycolor: 949494
 summary: We concentrated on creating something as luxurious as possible, within the guidelines the Economist provided for producing an ad
-image_thumb: /assets/images/work/thumb-dunhill.png
-hero_image: /assets/images/work/slide-dunhill_01.png
+thumb: /images/work/thumb-dunhill.png
+full: /images/work/slide-dunhill_01.png
 ---
 Dunhill asked Tangent to bring their brand alive on the Economist iPad edition by creating a rich, engaging microsite.
 
