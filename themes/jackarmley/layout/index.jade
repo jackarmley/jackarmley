@@ -3,17 +3,26 @@ extends _layouts/_master
 block viewclass
     if is_category() === true
         -var viewclass = 'view-' + url_for(path).split('/')[2];
-
+    else
+        -var viewclass = 'view-home';
 block content
 
     if is_category() != true
         section.page-section.home-intro
             .page-section-inner
                 p
-                    | I love hand-crafting websites
-                    | that people love to use.
-        .page-section
-            +postlisting(page,false)
+                    | Hi!
+                    | &nbsp;
+                    a(href="/about.html") My name is Jack.
+                    br
+                    |  I hand-craft websites
+                    | for people, not machines.
+        section.page-section
+            h2.visual-hide See my stuff
+            nav.heronav
+                ul
+                    each value in heronav
+                        li: a(href=value[1]): span= value[0]
 
     else
         //- Get category name

@@ -27,7 +27,13 @@ module.exports = function (grunt) {
         watch: {
           sourceFiles: {
             files: ['themes/jackarmley/**','scaffolds/**','source/**'],
-            tasks: ['sass:development','autoprefixer','shell:hexoGen']
+            tasks: [
+                'sass:development',
+                'autoprefixer',
+                'requirejs',
+                'modernizr:dist',
+                'shell:hexoGen'
+            ]
           },
         }
     });
@@ -130,6 +136,46 @@ module.exports = function (grunt) {
                         extDot: 'last'
                     },
                 ]
+            }
+        }
+    });
+
+    // Javascript
+    ext.configure({
+        jshint: {
+            all: [
+                'Gruntfile.js',
+                '<%= assets.scripts %>/{,*/}*.js',
+                '!<%= assets.scripts %>/{,*/}*.min.js'
+            ]
+        },
+        requirejs: {
+            compile: {
+                options: {
+                    name: 'app',
+                    baseUrl: '<%= assets.scripts %>',
+                    mainConfigFile: '<%= assets.scripts %>/app.js',
+                    out: '<%= assets.scripts %>/app.min.js'
+                }
+            }
+        },
+        modernizr: {
+            dist: {
+                devFile: 'remote',
+                outputFile: '<%= assets.scripts %>/../libs/modernizr/modernizr.min.js',
+                extra: {
+                    'shiv': true,
+                    'load': false,
+                    'cssclasses': true
+                },
+                uglify: true,
+                parseFiles: true,
+                files: {
+                    src: [
+                        '<%= assets.stylesheets %>/*.css',
+                        '<%= assets.scripts %>/app.min.js'
+                    ]
+                }
             }
         }
     });

@@ -1,0 +1,50 @@
+/**
+ * Homepage layout
+ */
+
+.view-home{
+    .site-header{
+        display: none;
+    }
+    @at-root{
+        .home-intro{
+            .page-section-inner{
+                padding:{
+                    top: 4rem;
+                    bottom: 4rem;
+                };
+            }
+            background-color: color(lime);
+            .page-section-inner{
+                display: flex;
+            }
+            p{
+                @include font(1.3em 1.8,prominent);
+                margin: auto;
+                color: color(white);
+                text-align: center;
+            }
+            a{
+                display: inline-block;
+                padding: 0 1rem;
+                background-color: darken( color(lime),5% );
+                transition: .25s ease;
+                &:hover{
+                    background-color: lighten(color(lime),2%);
+                }
+            }
+            @include breakpoint(orange){
+                .page-section-inner{
+                    min-height: 70vh;
+                    padding:{
+                        top: 8rem;
+                        bottom: 8rem;
+                    };
+                }
+                p{
+                    @include font(4em);
+                }
+            }
+        }
+    }
+}

@@ -5,11 +5,11 @@ date: 2013.09.02
 category: work
 keycolor: f4a435
 thumb: /images/work/thumb-chickentreat.jpg
+full: /images/work/full-chickentreat.jpg
 summary: A one-stop destination for Chicken Treat fans
 ---
 
-Chicken Treat needed a one-stop online shop for their customers to see menus,
-nutritional information and outlet locations.
+Chicken Treat needed a one-stop online shop for their customers to see menus, nutritional information and outlet locations.
 
 To achieve more family appeal, loud colours and brash graphics were scrapped,
 in favor of a richly textured, farm-y look-and-feel.

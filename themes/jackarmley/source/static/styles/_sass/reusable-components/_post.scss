@@ -5,16 +5,23 @@
 .post{
     display: flex;
     &-thumb{
-        flex: 1 1 rem(300);
+        flex: 1 1;
         margin-bottom: 0;
+        background:{
+            repeat: no-repeat;
+            position: center center;
+            size: cover;
+        };
         img{
             @include setsize(100% auto);
+            visibility: hidden;
         }
     }
     &-meta{
-        margin: 0 0 .5em;
+        margin: 0;
         list-style: none;
         &-item{
+            @include font(.8em);
             display: inline-block;
             vertical-align: top;
             margin: 0;
@@ -31,11 +38,31 @@
         }
     }
     &-title{
-        @include font(1.5em);
+        @include font(1em);
         margin: 0;
     }
     &-details{
         flex: 2 1;
         padding: 2rem;
+    }
+    @include breakpoint(orange){
+        &-thumb{
+            flex-basis: rem(300);
+            + .post-details{
+                padding: 2rem;
+            }
+        }
+        &-meta{
+            margin-bottom: .5em;
+            &-item{
+                @include font(1em);
+            }
+        }
+        &-title{
+            @include font(1.5em);
+        }
+        &-details{
+            padding: 4rem 2rem;
+        }
     }
 }

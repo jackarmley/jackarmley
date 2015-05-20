@@ -5,7 +5,7 @@ date: 2012.01.26
 category: work
 keycolor: 6AD0C9
 summary: The whole site uses large, sumptuous images and snappy text to bring the work to life
-thumb: /images/work/thumb-tangentsnowball.jpg
+thumb: /images/work/thumb-tangentsnowball.png
 full: /images/work/slide-tangentsnowball_03.png
 ---
 Before the launch of their present site, Tangent Snowball were known by a different name, so the site had to both reassure current clients that change was for the better, and propel the new brand into public conciousness.

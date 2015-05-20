@@ -39,6 +39,7 @@
 /// Reusable components, called with a class (or classes)
 /// that can exist anywhere in the site
 @import
+    'reusable-components/_heronav',
     'reusable-components/_pagination',
     'reusable-components/_post',
     'reusable-components/_postlisting',
@@ -57,7 +58,7 @@
 /// Rules unique to a specific template or set of templates.
 /// These definitions should be set from a unique class
 @import
-    'page-layouts/_layout-template';
+    'page-layouts/_layout-home';
 
 /// Pull in 'shame' styles
 /// A temporary home for styles that need to be written

@@ -2,7 +2,7 @@ mixin post(obj,showcategory)
     -var layout = layout || 'default';
     article.post
         if obj.thumb
-            figure.post-thumb
+            figure.post-thumb(style="background-image:url('#{obj.thumb}');")
                 img(src=obj.thumb alt='Screenshot of' + obj.title)
         .post-details
             header.post-header

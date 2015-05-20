@@ -21,22 +21,30 @@ html(lang='en')
                     != config.title
             link(rel='stylesheet', href='/static/styles/styles.css')
             script(src="/static/libs/modernizr/modernizr.min.js")
-            script(src="https://code.jquery.com/jquery-1.11.3.min.js")
     body(class=viewclass)
-        header.site-header(role="banner" aria-label="Site header")
-            .site-header-inner
-                h1.site-logo: a(href=config.root)= config.title
-                nav.site-navigation(role="navigation" aria-label="Site navigation")
-                    ul
-                        each link in sitenav
-                            li: a(href=link[1])= link[0]
+        block siteheader
+            header.site-header(role="banner" aria-label="Site header")
+                .site-header-inner
+                    span.site-navtoggle
+                    h1.site-logo: a(href=config.root)= config.title
+                    nav.site-navigation(role="navigation" aria-label="Site navigation")
+                        ul
+                            each link in sitenav
+                                li
+                                    if link[1] == url_for(path)
+                                        -var current = {'class':'state--current'};
+                                    else
+                                        -var current = false;
+                                    a(href=link[1])&attributes(current)= link[0]
         main.page-content(role="main" aria-label="Page content")
             block content
         footer.site-footer(role="contentinfo" aria-label="Site footer")
             .site-footer-inner
-                h2 Find me on
+                h2 Elsewhere&hellip;
                 ul.followme
                     each link in socialnav
-                        li.followme-link: a(href=link[1])= link[0]
+                        li.followme-link(data-link=link[0]): a(href=link[2]): span= link[1]
+        script(data-main="/static/scripts/app" src="/static/libs/requirejs/require.js")
+
 
 

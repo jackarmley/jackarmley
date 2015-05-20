@@ -5,8 +5,8 @@ date: 2012.03.03
 category: work
 keycolor: D0B48E
 summary: Two popular areas of nails inc's new website were to be transposed from their desktop/mobile environment to be available in-store, on an interactive touchscreen.
-thumb: /images/work/thumb-nailsinc_instore.jpg
-full: /images/work/slide-nailsinc-couture_01.png
+thumb: /images/work/thumb-nailsinc-instore.jpg
+full: /images/work/slide-nailsinc_instore_01.jpg
 ---
 
 Two popular areas of nails inc's new website - Couture and Try It On - were to be transposed from their desktop/mobile environment to be available in-store, on an interactive touchscreen.

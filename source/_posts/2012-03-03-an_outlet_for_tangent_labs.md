@@ -5,7 +5,7 @@ date: 2012.03.03
 category: work
 keycolor: 81D069
 summary: A dev weekend was the starting point for the Tangent Labs team's new site
-thumb: /images/work/thumb-tangentlabs.jpg
+thumb: /images/work/thumb-tangentlabs.png
 full: /images/work/slide-tangentlabs_01.jpg
 ---
 

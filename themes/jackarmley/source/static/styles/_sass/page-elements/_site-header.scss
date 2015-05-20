@@ -3,43 +3,124 @@
  */
 
 .site-header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 100%;
     &-inner{
         @extend %layoutwrap;
-        display: flex;
-        justify-content: space-between;
         padding:{
-            top: 3rem;
-            bottom: 3rem;
+            top: 2rem;
+            bottom: 2rem;
         };
     }
     @at-root{
-        .site-logo a,
-        .site-navigation a{
-            display: inline-block;
-            vertical-align: top;
-            color: color(white);
-        }
         .site-logo{
-            @include font(1em 1.5em,prominent);
+            @include font(1em 2.5rem,prominent);
             margin: 0;
             text-transform: uppercase;
             a{
                 display: block;
             }
+            padding-right: 4rem;
         }
         .site-navigation{
+            display: none;
+            padding-top: 2rem;
             li{
                 display: inline;
+                @include font(.8em,prominent);
             }
             a{
-                @include font(1em,prominent);
-                margin-left: 2rem;
                 text-transform: uppercase;
+                &:after{
+                    content:'/';
+                    display: inline-block;
+                    vertical-align: bottom;
+                    padding: 0 .5em;
+                    color: color(muted);
+                }
+                &.state--current{
+                    color: color(lime);
+                }
+            }
+            li:last-child a:after{
+                display: none;
+            }
+        }
+        .site-navtoggle{
+            @include pos(a,t2rem r3rem);
+            @include setsize(2.5rem);
+            display: block;
+            cursor: pointer;
+            &:before{
+                @include setsize(100% .2rem);
+                content:' ';
+                display: block;
+                background-color: color(muted);
+                box-shadow:
+                    0 1.2rem color(muted),
+                    0 2.3rem color(muted)
+                ;
+            }
+        }
+    }
+    /**
+     * Active state
+     */
+    &.state--navactive{
+        .site-navigation{
+            display: block;
+        }
+    }
+    @include breakpoint(orange){
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        &-inner{
+            display: flex;
+            justify-content: space-between;
+            padding:{
+                top: 0;
+                bottom: 0;
+            };
+        }
+        @at-root{
+            .site-logo a,
+            .site-navigation a{
+                display: inline-block;
+                vertical-align: top;
+                color: color(white);
+            }
+            .site-logo{
+                padding-right: 0;
+                line-height: 1.5em;
+                a{
+                    padding-top: 2rem;
+                }
+            }
+            .site-navigation{
+                display: block;
+                padding-top: 0;
+                li{
+                    @include font(1em);
+                }
+                a{
+                    margin-left: 2rem;
+                    padding:{
+                        top: 2rem;
+                        bottom: 2rem;
+                    };
+                    &:after{
+                        display: none;
+                    }
+                    &.state--current{
+                        padding-top: 1.5rem;
+                        border-top: .5rem solid color(white);
+                        color: color(white);
+                    }
+                }
+            }
+            .site-navtoggle{
+                display: none;
             }
         }
     }

@@ -21,11 +21,15 @@
 
 /// Hide a text element but ensure
 /// it is still readable via assistive technology
-%visual-hide{
+%visual-hide,
+.visual-hide{
     position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
     overflow: hidden;
     white-space: nowrap;
-    text-indent: 100%;
+    text-indent: 110%;
     text-align: left;
 }
 

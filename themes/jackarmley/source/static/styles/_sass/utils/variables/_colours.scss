@@ -35,7 +35,7 @@ $mattazure: #36B1BF;
 
 /// Lime
 /// @type Color
-$lime: #4BB629;
+$lime: #75BE22;
 
 /// Pebble
 /// @type Color
@@ -53,5 +53,6 @@ $colors: (
     highlight: $tangerine,
     link: inherit,
     linkactive: inherit,
-    lime: $lime
+    lime: $lime,
+    light: $cream
 );

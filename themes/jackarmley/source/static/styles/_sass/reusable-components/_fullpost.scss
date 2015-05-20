@@ -13,16 +13,14 @@
             flex-direction: column;
             justify-content: flex-end;
             width: auto;
-            max-width: 80rem;
-            min-height: 40rem;
             margin: auto;
-            padding: 8rem 2rem 4rem;
+            padding: 4rem 2rem 2rem;
         }
     }
         &-title{
             margin: 0;
             color: color(white);
-            font-size: 2em;
+            font-size: 1.3em;
             text-transform: uppercase;
         }
     &-hero{
@@ -41,7 +39,28 @@
         margin: auto;
         padding: 4rem 2rem;
         > p:first-child{
-            font-size: 1.5em;
+            @include font(1.2em,prominent);
         }
+        a{
+            text-decoration: underline;
+        }
+    }
+    @include breakpoint(orange){
+        &-header{
+            &-inner{
+                width: auto;
+                max-width: 80rem;
+                min-height: 30rem;
+                padding-top: 8rem;
+            }
+        }
+        &-body{
+            > p:first-child{
+                @include font(1.5em);
+            }
+        }
+            &-title{
+                font-size: 4rem;
+            }
     }
 }

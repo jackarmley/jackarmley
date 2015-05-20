@@ -5,6 +5,7 @@ date: 2012.01.29
 category: work
 keycolor: D04D74
 summary: We spent a worrying amount of time trying on nail varnish in order to represent the product correctly on screen
+thumb: /images/work/thumb-nailsinc-couture.jpg
 full: /images/work/slide-nailsinc-couture_01.png
 ---
 As part of a great team at Tangent Snowball, I helped to bring the "Couture" and "Try It On" sections of the site to fruition.

@@ -5,7 +5,7 @@ date: 2012.01.10
 category: work
 keycolor: 483C47
 summary: We wanted to ensure that our projects wouldn't be swayed by a preset icon style. If we made our own, it could be customized for each new project.
-thumb: /images/work/thumb-snowcone.png
+thumb: /images/work/thumb-snowcone.gif
 full: /images/work/slide-snowcone_01.gif
 ---
 At Tangent Snowball, our focus on all website builds is on speed and flexibility. With this in mind, we set out to produce an icon set using @fontface, where icons could be scaled or coloured without the need for any additional graphics.

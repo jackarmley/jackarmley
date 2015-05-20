@@ -5,6 +5,7 @@ date: 2013.07.12
 category: work
 keycolor: 85C6E8
 thumb: /images/work/thumb-slswa.jpg
+full: /images/work/full-slswa.jpg
 summary: Revamping SLS's prescence in Western Australia
 ---
 

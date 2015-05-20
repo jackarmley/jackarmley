@@ -6,13 +6,12 @@ category: work
 keycolor: 669B35
 summary: To evoke a rustic feel the design was rich with skewmorphism
 thumb: /images/work/thumb-brownesdairy.jpg
-image_hero: /images/work/slide-brownesdairy_01.jpg
+full: /images/work/full-brownesdairy.jpg
 ---
 
-Brownes, a household name in WA for fresh dairy products, needed a farm-fresh
-new look. To evoke a rustic feel the design was rich with skewmorphism. It was quite
-the challenge to make such a richly textured design fully responsive, and (relatively)
-quick to download.
+Brownes, a household name in WA for fresh dairy products, needed a farm-fresh new look. 
+
+To evoke a rustic feel the design was rich with skewmorphism. It was quite the challenge to make such a richly textured design fully responsive, and (relatively) quick to download.
 
 I'm particularly proud of the responsive content panels. We used a simple class
 system that allowed us to switch their appearance based on a secondary class,

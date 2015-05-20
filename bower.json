@@ -1,0 +1,9 @@
+{
+  "name": "jackarmley",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "components/jquery#1.x.x",
+    "requirejs": "~2.1.x"
+  },
+  "private": true
+}
