@@ -14,6 +14,7 @@
     "hexo-renderer-marked": "^0.2.4",
     "hexo-server": "^0.1.2",
     "hexo-renderer-jade": "^0.1.0",
+    "hexo-deployer-rsync": "^0.1.0",
     "grunt": "0.4.5",
     "grunt-shell": "^1.1.2",
     "grunt-contrib-watch": "^0.6.1",

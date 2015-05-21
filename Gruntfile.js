@@ -32,6 +32,7 @@ module.exports = function (grunt) {
                 'autoprefixer',
                 'requirejs',
                 'modernizr:dist',
+                'shell:hexoClean',
                 'shell:hexoGen'
             ]
           },
@@ -40,11 +41,14 @@ module.exports = function (grunt) {
 
     ext.configure({
         shell: {
-          hexoGen: {
-              command: 'hexo generate'
+          hexoClean: {
+            command: 'hexo clean'
           },
-          clean: {
-            command: 'rm -rf public'
+          hexoGen: {
+            command: 'hexo generate'
+          },
+          hexoDeploy: {
+            command: 'hexo deploy'
           }
         }
     });
@@ -196,6 +200,17 @@ module.exports = function (grunt) {
     ext.registerTask('default', [
         'connect',
         'watch'
+    ]);
+
+    // Deploy
+    ext.registerTask('deploy', [
+        'sass:development',
+        'autoprefixer',
+        'requirejs',
+        'modernizr:dist',
+        'shell:hexoClean',
+        'shell:hexoGen',
+        'shell:hexoDeploy'
     ]);
 
     // Load grunt configuration
