@@ -72,6 +72,6 @@ deploy:
   user: jackarmley16
   root: heypete.jackarmley.com
   port: 22
-  delete: false
+  delete: true
   verbose: true
   ignore_errors: false

@@ -9,9 +9,9 @@ My personal website and blog.
 4:3 | 500x375
 
 ### Full
-16:9 | 2000x1125
-16:9 | 1500x844
-16:9 | 1440x810
+16:9 | 2000x1125 // Hi-res
+16:9 | 1500x844 // Mid-range
+16:9 | 1440x810 // Minimum page width
 
 ## Todo
 

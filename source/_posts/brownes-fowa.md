@@ -5,6 +5,7 @@ date: 2013.10.14
 category: work
 keycolor: 99cf84
 thumb: /images/work/thumb-brownes.fowa.jpg
+full: /images/work/full-brownes.fowa.jpg
 summary: Championing local WA flavoured milk over imported alternatives
 ---
 

@@ -184,6 +184,27 @@ module.exports = function (grunt) {
         }
     });
 
+    // Image minification
+    ext.configure({
+        imagemin: {
+            production: {
+                options: {
+                    optimizationLevel: 7
+                },
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= assets.compiled %>/images/',
+                        src: [
+                            '**/*.{png,jpg,gif}'
+                        ],
+                        dest: '<%= assets.compiled %>/images/'
+                    }
+                ]
+            }
+        }
+    });
+
     // Dev server
     ext.configure({
         connect: {
@@ -210,6 +231,7 @@ module.exports = function (grunt) {
         'modernizr:dist',
         'shell:hexoClean',
         'shell:hexoGen',
+        'imagemin:production',
         'shell:hexoDeploy'
     ]);
 
