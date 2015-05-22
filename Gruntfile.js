@@ -207,6 +207,7 @@ module.exports = function (grunt) {
             dist: {
               options: {
                 newFilesOnly: true,
+                upscale: false,
                 sizes: [
                     {
                       name: "small",
@@ -256,6 +257,7 @@ module.exports = function (grunt) {
         'modernizr:dist',
         'shell:hexoClean',
         'shell:hexoGen',
+        'responsive_images:dist',
         'imagemin:production',
         'shell:hexoDeploy'
     ]);
