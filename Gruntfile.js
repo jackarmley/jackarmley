@@ -202,6 +202,31 @@ module.exports = function (grunt) {
                     }
                 ]
             }
+        },
+        responsive_images: {
+            dist: {
+              options: {
+                newFilesOnly: true,
+                sizes: [
+                    {
+                      name: "small",
+                      width: 400,
+                      quality: 80
+                    },
+                    {
+                        name: "medium",
+                        width: 800,
+                        quality: 80
+                    }
+                ]
+              },
+              files: [{
+                expand: true,
+                src: ['**/*.{png,jpg,gif}'],
+                cwd: '<%= assets.compiled %>/images/',
+                dest: '<%= assets.compiled %>/images/'
+              }]
+            }
         }
     });
 
