@@ -6,7 +6,6 @@ block content
                 h1.fullpost-title= page.title
         if page.full
             figure.fullpost-hero
-                img(src=page.full)
+                +image(page.full, 'Screenshot from ' + page.title)
         .fullpost-body
             != page.content
-
