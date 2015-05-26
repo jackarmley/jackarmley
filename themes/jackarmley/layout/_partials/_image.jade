@@ -1,15 +1,18 @@
 mixin image(src,alt)
     -var i = 0;
-    -var str = ''
-    -var init = ''
+    -var str = '';
+    -var init = '';
+    -var sizes = '';
     -var alt = alt || false;
     -var imgname = src.split('.')[0]
     -var ext = '.' + src.split('.')[1]
     each val, index in site.data.images
-        -str = str + imgname + '-' + index + ext + ' ' + val + 'w';
+        -str = str + imgname + '-' + index + ext + ' ' + val.width + 'w';
+        -sizes = sizes + '(min-width:' + val.sizes + 'px) ' + val.width + 'px';
         if i === 0
             -init = imgname + '-' + index + ext;
         if i < 2
             -str = str + ',';
+            -sizes = sizes + ',';
         -i++;
-    img(src=init srcset=str alt=alt)
+    img(src=init srcset=str sizes=sizes alt=alt)

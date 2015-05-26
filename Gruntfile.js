@@ -263,7 +263,7 @@ module.exports = function (grunt) {
         'shell:hexoClean',
         'shell:hexoGen',
         'responsive_images:dist',
-        'imagemin:production',
+        //'imagemin:production',
         'shell:hexoDeploy'
     ]);
 

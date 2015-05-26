@@ -1,5 +1,14 @@
 {
-    "small": "400",
-    "medium": "800",
-    "large": "1440"
+    "small": {
+        "width": "400",
+        "sizes": "200"
+    },
+    "medium": {
+        "width": "800",
+        "sizes": "600"
+    },
+    "large": {
+        "width": "1440",
+        "sizes": "900"
+    }
 }
