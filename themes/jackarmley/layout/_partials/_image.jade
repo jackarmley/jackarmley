@@ -1,18 +1,29 @@
 mixin image(src,alt)
+
+    //- Set vars
     -var i = 0;
     -var str = '';
     -var init = '';
     -var sizes = '';
+    -var len = 0;
     -var alt = alt || false;
     -var imgname = src.split('.')[0]
     -var ext = '.' + src.split('.')[1]
+
+    //- Get the length of the images object
+    each val, index in site.data.images
+        -len++;
+
+    //- Loop through images and get attributes
     each val, index in site.data.images
         -str = str + imgname + '-' + index + ext + ' ' + val.width + 'w';
         -sizes = sizes + '(min-width:' + val.sizes + 'px) ' + val.width + 'px';
         if i === 0
             -init = imgname + '-' + index + ext;
-        if i < 2
+        if i < (len - 1)
             -str = str + ',';
             -sizes = sizes + ',';
         -i++;
+
+    //- Set markup
     img(src=init srcset=str sizes=sizes alt=alt)
