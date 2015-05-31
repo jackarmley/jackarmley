@@ -1,11 +1,25 @@
+//-
+//- Srcset mixin
+//- @requires site.data.images
+//- https://ericportis.com/posts/2014/srcset-sizes/
+//-
+
 mixin image(src,alt)
 
-    //- Set vars
+    //- 1:
+    //- Set initial vars
+
+    //- Set counters
     -var i = 0;
-    -var str = '';
-    -var init = '';
-    -var sizes = '';
     -var len = 0;
+
+    //- Set empty vars for
+    //- image src, sizes and srcset
+    -var src = '';
+    -var srcset = '';
+    -var sizes = '';
+
+    //- Grab values from mixin args
     -var alt = alt || false;
     -var imgname = src.split('.')[0]
     -var ext = '.' + src.split('.')[1]
@@ -14,16 +28,28 @@ mixin image(src,alt)
     each val, index in site.data.images
         -len++;
 
-    //- Loop through images and get attributes
+    //- 2:
+    //- Loop through images
+    //- and get attributes
     each val, index in site.data.images
-        -str = str + imgname + '-' + index + ext + ' ' + val.width + 'w';
-        -sizes = sizes + '(min-width:' + val.sizes + 'px) ' + val.width + 'px';
+        //- Create srcset and sizes strings
+        -srcset = srcset + imgname + '-' + index + ext + ' ' + val.width + 'w';
+        -sizes = sizes + val.sizes;
+        //- Use the first provided size
+        //- as the default image
         if i === 0
-            -init = imgname + '-' + index + ext;
+            -src = imgname + '-' + index + ext;
+        //- Comma sep srcset and sizes strings
         if i < (len - 1)
-            -str = str + ',';
+            -srcset = srcset + ',';
             -sizes = sizes + ',';
+        //- Add a default size to the end
+        //- of the sizes string
+        if i === (len - 1)
+            -sizes = sizes + ', 100vw'
+        //- Add to the i counter
         -i++;
 
+    //- 3.
     //- Set markup
-    img(src=init srcset=str sizes=sizes alt=alt)
+    img(src=src srcset=srcset sizes=sizes alt=alt)

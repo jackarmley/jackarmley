@@ -1,14 +1,14 @@
 {
     "small": {
         "width": "400",
-        "sizes": "200"
+        "sizes": "(min-width: 6.25em) 90vw"
     },
     "medium": {
         "width": "800",
-        "sizes": "600"
+        "sizes": "(min-width: 43em) 80vw"
     },
     "large": {
         "width": "1440",
-        "sizes": "900"
+        "sizes": "(min-width: 62.5em) 33.3vw"
     }
 }
