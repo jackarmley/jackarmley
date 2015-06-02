@@ -1,10 +1,10 @@
 extends _layouts/_master
 
-block viewclass
+block append viewclass
     if is_category() === true
-        -var viewclass = 'view-' + url_for(path).split('/')[2];
+        -viewclass = 'view-' + url_for(path).split('/')[2];
     else
-        -var viewclass = 'view-home';
+        -viewclass = 'view-home';
 block content
     if is_category() != true
         section.page-section.home-intro
@@ -20,8 +20,8 @@ block content
             h2.visual-hide See my stuff
             nav.heronav
                 ul
-                    each value in heronav
-                        li: a(href=value[1]): span= value[0]
+                    each val,index in site.data.heronav
+                        li: a(href=val): span= index
 
     else
         //- Get category name

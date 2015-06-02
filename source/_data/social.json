@@ -1,0 +1,14 @@
+{
+  "twitter":{
+    "label" : "@jackarmley",
+    "url" : "http://twitter.com/jackarmley"
+  },
+  "codepen":{
+    "label" : "/ jackarmley",
+    "url" : "http://codepen.io/jackarmley"
+  },
+  "github":{
+    "label" : "/ jackarmley",
+    "url" : "http://github.com/jackarmley"
+  }
+}
