@@ -70,7 +70,7 @@ deploy:
   type: rsync
   host: jackarmley.com
   user: jackarmley16
-  root: heypete.jackarmley.com
+  root: jackarmley.com
   port: 22
   delete: true
   verbose: true
