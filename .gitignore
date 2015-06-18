@@ -8,4 +8,4 @@ node_modules/
 public/
 .deploy*/
 themes/jackarmley/source/static/libs/
-
+.sass-cache/
