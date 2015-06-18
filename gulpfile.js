@@ -74,7 +74,6 @@ gulp.task('hexodeploy', shell.task([
 // Task: watch
 gulp.task('watch',function(){
   gulp.watch(assets.styles + '**/*.scss',['styles']);
-  gulp.watch(assets.scripts + '**/*.js',['requirejs','modernizr']);
 });
 
 // Task: server

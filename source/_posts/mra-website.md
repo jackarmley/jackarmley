@@ -22,14 +22,33 @@ A major goal was to bring all these disperate microsites into the new MRA site, 
 Theming was all handled with SASS maps (released in version 3). Using maps, the logos and colours for each theme could be handled centrally, and called with a simple function.
 
 ```
+// Theme map
 $themes:(
     theme1:(
         logo : '../images/logo.jpg',
         keycolor: 'white',
         bgcolor: 'orange'
+    ),
+    theme2:(
+        logo : '../images/logo2.jpg',
+        keycolor: 'grey',
+        bgcolor: 'green'
     )
 );
-``` 
+
+// Simple function to grab a property
+@function themeprop($prop,$theme,$map:$themes){
+    $theme: map-get($themes,$theme);
+    @return unquote(map-get($theme,$prop));
+}
+
+// Demo of usage
+.theme1-logo{
+    background-image: url('#{themeprop(logo,theme1)}');
+    color: themeprop(keycolor,theme1);
+}
+
+```
 
 ## Built with
 

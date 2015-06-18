@@ -1,0 +1,242 @@
+/**
+ * GitHub Gist Theme
+ * Author : Louis Barranqueiro - https://github.com/LouisBarranqueiro
+ */
+
+.highlight {
+    /**
+     * Layout styles
+     */
+    @include font(small);
+    display: block;
+    background: white;
+    padding: .5em;
+    border: .1rem solid #ddd;
+    border-radius: .3rem;
+    color: #333333;
+    overflow-x: auto;
+    text-size-adjust: none;
+    .gutter,
+    .code{
+      padding: .5em;
+      vertical-align: top;
+      line-height: 1.4;
+      pre{
+        margin: 0;
+      }
+    }
+    .gutter{
+      border-right: .1rem solid #eee;
+      color: #aaa;
+      background-color: #fff;
+      text-align: right;
+    }
+    /**
+     * Language theming
+     */
+    .comment,
+    &.bash .shebang,
+    &.java .javadoc,
+    &.javascript .javadoc,
+    &.rust .preprocessor {
+        color: #969896;
+    }
+    .string,
+    &.apache .sqbracket,
+    &.coffeescript .subst,
+    &.coffeescript .regexp,
+    &.cpp .preprocessor,
+    &.c .preprocessor,
+    &.javascript .regexp,
+    &.json .attribute,
+    &.makefile .variable,
+    &.markdown .value,
+    &.markdown .link_label,
+    &.markdown .strong,
+    &.markdown .emphasis,
+    &.markdown .blockquote,
+    &.nginx .regexp,
+    &.nginx .number,
+    &.objectivec .preprocessor .title,
+    &.perl .regexp,
+    &.php .regexp,
+    &.xml .value,
+    &.less .built_in,
+    &.scss .built_in {
+        color: #df5000;
+    }
+    .keyword,
+    &.css .at_rule,
+    &.css .important,
+    &.http .request,
+    &.ini .setting,
+    &.haskell .type,
+    &.java .javadoctag,
+    &.javascript .tag,
+    &.javascript .javadoctag,
+    &.nginx .title,
+    &.objectivec .preprocessor,
+    &.php .phpdoc,
+    &.sql .built_in,
+    &.less .tag,
+    &.less .at_rule,
+    &.scss .tag,
+    &.scss .at_rule,
+    &.scss .important,
+    &.stylus .at_rule,
+    &.go .typename,
+    &.swift .preprocessor {
+        color: #a71d5d;
+    }
+    &.apache .common,
+    &.apache .cbracket,
+    &.apache .keyword,
+    &.bash .literal,
+    &.bash .built_in,
+    &.coffeescript .literal,
+    &.coffeescript .built_in,
+    &.coffeescript .number,
+    &.cpp .number,
+    &.cpp .built_in,
+    &.c .number,
+    &.c .built_in,
+    &.cs .number,
+    &.cs .built_in,
+    &.css .attribute,
+    &.css .hexcolor,
+    &.css .number,
+    &.css .function,
+    &.haskell .number,
+    &.http .literal,
+    &.http .attribute,
+    &.java .number,
+    &.javascript .built_in,
+    &.javascript .literal,
+    &.javascript .number,
+    &.json .number,
+    &.makefile .keyword,
+    &.markdown .link_reference,
+    &.nginx .built_in,
+    &.objectivec .literal,
+    &.objectivec .number,
+    &.objectivec .built_in,
+    &.php .literal,
+    &.php .number,
+    &.python .number,
+    &.ruby .prompt,
+    &.ruby .constant,
+    &.ruby .number,
+    &.ruby .subst .keyword,
+    &.ruby .symbol,
+    &.rust .number,
+    &.sql .number,
+    &.puppet .function,
+    &.less .number,
+    &.less .hexcolor,
+    &.less .function,
+    &.less .attribute,
+    &.scss .preprocessor,
+    &.scss .number,
+    &.scss .hexcolor,
+    &.scss .function,
+    &.scss .attribute,
+    &.stylus .number,
+    &.stylus .hexcolor,
+    &.stylus .attribute,
+    &.stylus .params,
+    &.go .built_in,
+    &.go .constant,
+    &.swift .built_in,
+    &.swift .number {
+        color: #0086b3;
+    }
+    &.apache .tag,
+    &.cs .xmlDocTag,
+    &.css .tag,
+    &.xml .title,
+    &.stylus .tag {
+        color: #63a35c;
+    }
+    &.bash .variable,
+    &.cs .preprocessor,
+    &.cs .preprocessor .keyword,
+    &.css .attr_selector,
+    &.css .value,
+    &.ini .value,
+    &.ini .keyword,
+    &.javascript .tag .title,
+    &.makefile .constant,
+    &.nginx .variable,
+    &.xml .tag,
+    &.scss .variable {
+        color: #333333;
+    }
+
+    &.bash .title,
+    &.coffeescript .title,
+    &.cpp .title,
+    &.c .title,
+    &.cs .title,
+    &.css .id,
+    &.css .class,
+    &.css .pseudo,
+    &.ini .title,
+    &.haskell .title,
+    &.haskell .pragma,
+    &.java .title,
+    &.javascript .title,
+    &.makefile .title,
+    &.objectivec .title,
+    &.perl .sub,
+    &.php .title,
+    &.python .decorator,
+    &.python .title,
+    &.ruby .parent,
+    &.ruby .title,
+    &.rust .title,
+    &.xml .attribute,
+    &.puppet .title,
+    &.less .id,
+    &.less .pseudo,
+    &.less .class,
+    &.scss .id,
+    &.scss .pseudo,
+    &.scss .class,
+    &.stylus .class,
+    &.stylus .id,
+    &.stylus .pseudo,
+    &.stylus .title,
+    &.swift .title,
+    &.diff .chunk {
+        color: #795da3;
+    }
+
+    &.coffeescript .reserved,
+    &.coffeescript .attribute {
+        color: #1d3e81;
+    }
+
+    &.diff .chunk {
+        font-weight: bold;
+    }
+
+    &.diff .addition {
+        color: #55a532;
+        background-color: #eaffea;
+    }
+
+    &.diff .deletion {
+      color: #bd2c00;
+      background-color: #ffecec;
+    }
+
+    &.markdown .link_url {
+        text-decoration: underline;
+    }
+}
+
+
+
+
+
+
