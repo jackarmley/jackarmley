@@ -59,7 +59,8 @@
 /// Rules unique to a specific template or set of templates.
 /// These definitions should be set from a unique class
 @import
-    'page-layouts/_layout-home';
+    'page-layouts/_layout-home',
+    'page-layouts/_layout-about';
 
 /// Pull in 'shame' styles
 /// A temporary home for styles that need to be written

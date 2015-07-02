@@ -10,7 +10,7 @@ My personal website and blog.
 
 ### Full
 16:9 | 2000x1125 // Hi-res
-16:9 | 1500x844 // Mid-range
+16:9 | 1500x844 // Mid-range !! Using this
 16:9 | 1440x810 // Minimum page width
 
 ## Todo

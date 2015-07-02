@@ -2,6 +2,8 @@
 title: About me
 ---
 
+!['My head, rendered in high-contrast two colour'](/images/avatar.png)
+
 I relish the challenge of building beautiful, usable and future-proof websites that people love to use.
 
 I've been making stuff for the web in some form or another for longer than I can remember.

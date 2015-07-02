@@ -10,28 +10,34 @@ It always irked me that there was no easily maintainable way to extract the clea
 
 Thought this was quite useful, so thought I’d share the resulting mixin:
 
-    /**
-     * Clearfix
-     *
-     * @src http://css-tricks.com/snippets/css/clear-fix
-     * IE6 part not included, as we've dropped IE6 support
-     */
-        .clearfix(){
-
-            &:after{
-                display:block;
-                visibility:hidden;
-                clear:both;
-                content:" ";
-                height:0;
-                font-size:0;
-            }
-
-            /**
-            * IE7
-            */
-            *:first-child+html &{
-                zoom:1;
-            }
-
+```
+/**
+ * Clearfix
+ * @src http://css-tricks.com/snippets/css/clear-fix
+ * IE6 part not included, as we've dropped IE6 support
+ */
+    .clearfix(){
+        &:after{
+            display:block;
+            visibility:hidden;
+            clear:both;
+            content:" ";
+            height:0;
+            font-size:0;
         }
+        /**
+        * IE7
+        */
+        *:first-child+html &{
+            zoom:1;
+        }
+    }
+```
+
+## Demo
+
+```
+p{
+    .clearfix;
+}
+```

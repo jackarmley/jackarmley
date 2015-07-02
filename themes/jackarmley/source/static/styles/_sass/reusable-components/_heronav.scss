@@ -9,8 +9,8 @@ $i: 1;
 
 .heronav{
     ul{
-        display: flex;
         flex-flow: row;
+        display: flex;
     }
     li{
         @include font(1.2em,prominent);

@@ -3,6 +3,7 @@
  */
 
 .site-header{
+    background-color: color(white);
     &-inner{
         @extend %layoutwrap;
         padding:{
@@ -75,6 +76,7 @@
         left: 0;
         z-index: 2;
         width: 100%;
+        background-color: transparent;
         &-inner{
             display: flex;
             justify-content: space-between;

@@ -411,13 +411,46 @@
     @return unquote($ratio-converted);
 }
 
-/// Convert px to rems
+/// Convert px to rems. Note that the base rem size is always taken
+/// from the HTML element, hence the function uses $remsize-base.
 /// @author Jack Armley
-/// @param {Variable} $input - starting px size
-/// @param {Variable} $base [$fontsize-base] - base font size
-/// @require {Variable} fontsize-base
-@function rem($input,$base:$fontsize-base){
-  @return ($input/$base)+rem
+/// @param {Number|List} $target - starting px size
+/// @param {Bool} $supported [$remsupport] - whether or not rems are supported
+/// @param {Number} $base [$remsize-base] - base font size
+/// @require {Bool} $remsupport
+/// @require {Number} $remsize-base
+/// @example
+/// p{
+///   /* Single value */
+///   margin: rem(10);
+///   /* Multiple values, passed as a list */
+///   padding: rem(10 20);
+@function rem($target,$supported:$remsupport,$base:$remsize-base){
+  $remstring:'';
+  $i: 0;
+  $l: length($target);
+  $unit: 'rem';
+  @if $remsupport != true{
+    $unit: 'px';
+  }
+  @each $value in $target{
+    $i: $i + 1;
+    // Convert to rems
+    @if $remsupport != true{
+      $remstring: $remstring + $value;
+    }@else{
+      $remstring: $remstring + ($value/$base);
+    }
+    // Include unit
+    @if $value != 0{
+      $remstring: $remstring + $unit;
+    }
+    // Include spaces
+    @if ($i < $l){
+      $remstring: $remstring + ' ';
+    }
+  }
+  @return unquote($remstring);
 }
 
 //// Make long shadows
