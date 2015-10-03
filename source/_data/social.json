@@ -1,14 +1,17 @@
 {
   "twitter":{
-    "label" : "@jackarmley",
+    "visibleLabel" : "@jackarmley",
+    "a11yLabel": "On twitter @jackarmley",
     "url" : "http://twitter.com/jackarmley"
   },
   "codepen":{
-    "label" : "/ jackarmley",
+    "visibleLabel" : "/ jackarmley",
+    "a11yLabel" : "On Codepen as jackarmley",
     "url" : "http://codepen.io/jackarmley"
   },
   "github":{
-    "label" : "/ jackarmley",
+    "visibleLabel" : "/ jackarmley",
+    "a11yLabel" : "On Github as jackarmley",
     "url" : "http://github.com/jackarmley"
   }
 }

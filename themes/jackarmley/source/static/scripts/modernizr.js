@@ -1,6 +1,6 @@
 /*!
  * modernizr v3.0.0-alpha.4
- * Build http://modernizr.com/download/#-checked-contains-contenteditable-cors-flexbox-hidden-input-opacity-svg-target-addtest-fnbind-printshiv-testprop-dontmin
+ * Build http://modernizr.com/download/#-json-ruby-svg-addtest-fnbind-printshiv-testprop-dontmin
  *
  * Copyright (c)
  *  Faruk Ates
@@ -1150,359 +1150,24 @@
   ;
 /*!
 {
-  "name": "Content Editable",
-  "property": "contenteditable",
-  "caniuse": "contenteditable",
-  "notes": [{
-    "name": "WHATWG spec",
-    "href": "http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#contenteditable"
-  }]
-}
-!*/
-/* DOC
-Detects support for the `contenteditable` attribute of elements, allowing their DOM text contents to be edited directly by the user.
-*/
-
-  Modernizr.addTest('contenteditable', function() {
-    // early bail out
-    if (!('contentEditable' in docElement)) return;
-
-    // some mobile browsers (android < 3.0, iOS < 5) claim to support
-    // contentEditable, but but don't really. This test checks to see
-    // confirms whether or not it actually supports it.
-
-    var div = createElement('div');
-    div.contentEditable = true;
-    return div.contentEditable === 'true';
-  });
-
-/*!
-{
-  "name": "Cross-Origin Resource Sharing",
-  "property": "cors",
-  "caniuse": "cors",
-  "authors": ["Theodoor van Donge"],
+  "name": "JSON",
+  "property": "json",
+  "caniuse": "json",
   "notes": [{
     "name": "MDN documentation",
-    "href": "https://developer.mozilla.org/en-US/docs/HTTP/Access_control_CORS"
+    "href": "http://developer.mozilla.org/en/JSON"
   }],
-  "polyfills": ["pmxdr", "ppx", "flxhr"]
+  "polyfills": ["json2"]
 }
 !*/
 /* DOC
-Detects support for Cross-Origin Resource Sharing: method of performing XMLHttpRequests across domains.
+Detects native support for JSON handling functions.
 */
 
-  Modernizr.addTest('cors', 'XMLHttpRequest' in window && 'withCredentials' in new XMLHttpRequest());
+  // this will also succeed if you've loaded the JSON2.js polyfill ahead of time
+  //   ... but that should be obvious. :)
 
-
-  var attrs = {};
-  
-
-  var inputattrs = 'autocomplete autofocus list placeholder max min multiple pattern required step'.split(' ');
-  
-
-  var inputElem = createElement('input');
-  
-/*!
-{
-  "name": "Input attributes",
-  "property": "input",
-  "tags": ["forms"],
-  "authors": ["Mike Taylor"],
-  "notes": [{
-    "name": "WHATWG spec",
-    "href": "http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#input-type-attr-summary"
-  }],
-  "knownBugs": ["Some blackberry devices report false positive for input.multiple"]
-}
-!*/
-/* DOC
-Detects support for HTML5 `<input>` element attributes and exposes Boolean subproperties with the results:
-
-```javascript
-Modernizr.input.autocomplete
-Modernizr.input.autofocus
-Modernizr.input.list
-Modernizr.input.max
-Modernizr.input.min
-Modernizr.input.multiple
-Modernizr.input.pattern
-Modernizr.input.placeholder
-Modernizr.input.required
-Modernizr.input.step
-```
-*/
-
-  // Run through HTML5's new input attributes to see if the UA understands any.
-  // Mike Taylr has created a comprehensive resource for testing these attributes
-  //   when applied to all input types:
-  //   miketaylr.com/code/input-type-attr.html
-
-  // Only input placeholder is tested while textarea's placeholder is not.
-  // Currently Safari 4 and Opera 11 have support only for the input placeholder
-  // Both tests are available in feature-detects/forms-placeholder.js
-  Modernizr['input'] = (function( props ) {
-    for ( var i = 0, len = props.length; i < len; i++ ) {
-      attrs[ props[i] ] = !!(props[i] in inputElem);
-    }
-    if (attrs.list){
-      // safari false positive's on datalist: webk.it/74252
-      // see also github.com/Modernizr/Modernizr/issues/146
-      attrs.list = !!(createElement('datalist') && window.HTMLDataListElement);
-    }
-    return attrs;
-  })(inputattrs);
-
-
-  var testStyles = ModernizrProto.testStyles = injectElementWithStyles;
-  
-/*!
-{
-  "name": "CSS :checked pseudo-selector",
-  "caniuse": "css-sel3",
-  "property": "checked",
-  "tags": ["css"],
-  "notes": [{
-    "name": "Related Github Issue",
-    "href": "https://github.com/Modernizr/Modernizr/pull/879"
-  }]
-}
-!*/
-
-  Modernizr.addTest('checked', function(){
-    return testStyles('#modernizr {position:absolute} #modernizr input {margin-left:10px} #modernizr :checked {margin-left:20px;display:block}', function( elem ){
-      var cb = createElement('input');
-      cb.setAttribute('type', 'checkbox');
-      cb.setAttribute('checked', 'checked');
-      elem.appendChild(cb);
-      return cb.offsetLeft === 20;
-    });
-  });
-
-
-  // Following spec is to expose vendor-specific style properties as:
-  //   elem.style.WebkitBorderRadius
-  // and the following would be incorrect:
-  //   elem.style.webkitBorderRadius
-
-  // Webkit ghosts their properties in lowercase but Opera & Moz do not.
-  // Microsoft uses a lowercase `ms` instead of the correct `Ms` in IE8+
-  //   erik.eae.net/archives/2008/03/10/21.48.10/
-
-  // More here: github.com/Modernizr/Modernizr/issues/issue/21
-  var omPrefixes = 'Moz O ms Webkit';
-  
-
-  var cssomPrefixes = (ModernizrProto._config.usePrefixes ? omPrefixes.split(' ') : []);
-  ModernizrProto._cssomPrefixes = cssomPrefixes;
-  
-
-  var domPrefixes = (ModernizrProto._config.usePrefixes ? omPrefixes.toLowerCase().split(' ') : []);
-  ModernizrProto._domPrefixes = domPrefixes;
-  
-
-  /**
-   * testDOMProps is a generic DOM property test; if a browser supports
-   *   a certain property, it won't return undefined for it.
-   */
-  function testDOMProps( props, obj, elem ) {
-    var item;
-
-    for ( var i in props ) {
-      if ( props[i] in obj ) {
-
-        // return the property name as a string
-        if (elem === false) return props[i];
-
-        item = obj[props[i]];
-
-        // let's bind a function
-        if (is(item, 'function')) {
-          // bind to obj unless overriden
-          return fnBind(item, elem || obj);
-        }
-
-        // return the unbound function or obj or value
-        return item;
-      }
-    }
-    return false;
-  }
-
-  ;
-
-  /**
-   * testPropsAll tests a list of DOM properties we want to check against.
-   *     We specify literally ALL possible (known and/or likely) properties on
-   *     the element including the non-vendor prefixed one, for forward-
-   *     compatibility.
-   */
-  function testPropsAll( prop, prefixed, elem, value, skipValueTest ) {
-
-    var ucProp = prop.charAt(0).toUpperCase() + prop.slice(1),
-    props = (prop + ' ' + cssomPrefixes.join(ucProp + ' ') + ucProp).split(' ');
-
-    // did they call .prefixed('boxSizing') or are we just testing a prop?
-    if(is(prefixed, 'string') || is(prefixed, 'undefined')) {
-      return testProps(props, prefixed, value, skipValueTest);
-
-      // otherwise, they called .prefixed('requestAnimationFrame', window[, elem])
-    } else {
-      props = (prop + ' ' + (domPrefixes).join(ucProp + ' ') + ucProp).split(' ');
-      return testDOMProps(props, prefixed, elem);
-    }
-  }
-
-  // Modernizr.testAllProps() investigates whether a given style property,
-  //     or any of its vendor-prefixed variants, is recognized
-  // Note that the property names must be provided in the camelCase variant.
-  // Modernizr.testAllProps('boxSizing')
-  ModernizrProto.testAllProps = testPropsAll;
-
-  
-
-  /**
-   * testAllProps determines whether a given CSS property, in some prefixed
-   * form, is supported by the browser. It can optionally be given a value; in
-   * which case testAllProps will only return true if the browser supports that
-   * value for the named property; this latter case will use native detection
-   * (via window.CSS.supports) if available. A boolean can be passed as a 3rd
-   * parameter to skip the value check when native detection isn't available,
-   * to improve performance when simply testing for support of a property.
-   *
-   * @param prop - String naming the property to test (either camelCase or
-   *               kebab-case)
-   * @param value - [optional] String of the value to test
-   * @param skipValueTest - [optional] Whether to skip testing that the value
-   *                        is supported when using non-native detection
-   *                        (default: false)
-   */
-  function testAllProps (prop, value, skipValueTest) {
-    return testPropsAll(prop, undefined, undefined, value, skipValueTest);
-  }
-  ModernizrProto.testAllProps = testAllProps;
-  
-/*!
-{
-  "name": "Flexbox",
-  "property": "flexbox",
-  "caniuse": "flexbox",
-  "tags": ["css"],
-  "notes": [{
-    "name": "The _new_ flexbox",
-    "href": "http://dev.w3.org/csswg/css3-flexbox"
-  }],
-  "warnings": [
-    "A `true` result for this detect does not imply that the `flex-wrap` property is supported; see the `flexwrap` detect."
-  ]
-}
-!*/
-/* DOC
-Detects support for the Flexible Box Layout model, a.k.a. Flexbox, which allows easy manipulation of layout order and sizing within a container.
-*/
-
-  Modernizr.addTest('flexbox', testAllProps('flexBasis', '1px', true));
-
-
-  // List of property values to set for css tests. See ticket #21
-  var prefixes = (ModernizrProto._config.usePrefixes ? ' -webkit- -moz- -o- -ms- '.split(' ') : []);
-
-  // expose these for the plugin API. Look in the source for how to join() them against your input
-  ModernizrProto._prefixes = prefixes;
-
-  
-/*!
-{
-  "name": "CSS Opacity",
-  "caniuse": "css-opacity",
-  "property": "opacity",
-  "tags": ["css"]
-}
-!*/
-
-  // Browsers that actually have CSS Opacity implemented have done so
-  // according to spec, which means their return values are within the
-  // range of [0.0,1.0] - including the leading zero.
-
-  Modernizr.addTest('opacity', function() {
-    var style = createElement('a').style;
-    style.cssText = prefixes.join('opacity:.55;');
-
-    // The non-literal . in this regex is intentional:
-    // German Chrome returns this value as 0,55
-    // github.com/Modernizr/Modernizr/issues/#issue/59/comment/516632
-    return (/^0.55$/).test(style.opacity);
-  });
-
-/*!
-{
-  "name": "CSS :target pseudo-class",
-  "caniuse": "css-sel3",
-  "property": "target",
-  "tags": ["css"],
-  "notes": [{
-    "name": "MDN documentation",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/CSS/:target"
-  }],
-  "authors": ["@zachleat"],
-  "warnings": ["Opera Mini supports :target but doesn't update the hash for anchor links."]
-}
-!*/
-/* DOC
-Detects support for the ':target' CSS pseudo-class.
-*/
-
-  // querySelector
-  Modernizr.addTest('target', function() {
-    var doc = window.document;
-    if(!('querySelectorAll' in doc) ) {
-      return false;
-    }
-
-    try {
-      doc.querySelectorAll(':target');
-      return true;
-    } catch(e) {
-      return false;
-    }
-  });
-
-/*!
-{
-  "name": "[hidden] Attribute",
-  "property": "hidden",
-  "tags": ["dom"],
-  "notes": [{
-    "name": "WHATWG: The hidden attribute",
-    "href": "http://developers.whatwg.org/editing.html#the-hidden-attribute"
-  }, {
-    "name": "original implementation of detect code",
-    "href": "https://github.com/aFarkas/html5shiv/blob/bf4fcc4/src/html5shiv.js#L38"
-  }],
-  "polyfills": ["html5shiv"],
-  "authors": ["Ron Waldon (@jokeyrhyme)"]
-}
-!*/
-/* DOC
-Does the browser support the HTML5 [hidden] attribute?
-*/
-
-  Modernizr.addTest('hidden', 'hidden' in createElement('a'));
-
-/*!
-{
-  "name": "ES5 String.prototype.contains",
-  "property": "contains",
-  "authors": ["Robert Kowalski"],
-  "tags": ["es6"]
-}
-!*/
-/* DOC
-Check if browser implements ECMAScript 6 `String.prototype.contains` per specification.
-*/
-
-  Modernizr.addTest('contains', is(String.prototype.contains, 'function'));
+  Modernizr.addTest('json', 'JSON' in window && 'parse' in JSON && 'stringify' in JSON);
 
 /*!
 {
@@ -1528,6 +1193,71 @@ Detects support for SVG in `<embed>` or `<object>` elements.
 */
 
   Modernizr.addTest('svg', !!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect);
+
+/*!
+{
+  "name": "ruby, rp, rt Elements",
+  "caniuse": "ruby",
+  "property": "ruby",
+  "tags": ["elem"],
+  "builderAliases": ["elem_ruby"],
+  "authors": ["Cătălin Mariș"],
+  "notes": [{
+    "name": "WHATWG Specification",
+    "href": "http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-ruby-element"
+  }]
+}
+!*/
+
+  Modernizr.addTest('ruby', function () {
+
+    var ruby = createElement('ruby');
+    var rt = createElement('rt');
+    var rp = createElement('rp');
+    var displayStyleProperty = 'display';
+    // 'fontSize' - because it`s only used for IE6 and IE7
+    var fontSizeStyleProperty = 'fontSize';
+
+    ruby.appendChild(rp);
+    ruby.appendChild(rt);
+    docElement.appendChild(ruby);
+
+    // browsers that support <ruby> hide the <rp> via "display:none"
+    if ( getStyle(rp, displayStyleProperty) == 'none' ||                                                        // for non-IE browsers
+         // but in IE browsers <rp> has "display:inline" so, the test needs other conditions:
+         getStyle(ruby, displayStyleProperty) == 'ruby' && getStyle(rt, displayStyleProperty) == 'ruby-text' || // for IE8+
+         getStyle(rp, fontSizeStyleProperty) == '6pt' && getStyle(rt, fontSizeStyleProperty) == '6pt' ) {       // for IE6 & IE7
+
+      cleanUp();
+      return true;
+
+    } else {
+      cleanUp();
+      return false;
+    }
+
+    function getStyle( element, styleProperty ) {
+      var result;
+
+      if ( window.getComputedStyle ) {     // for non-IE browsers
+        result = document.defaultView.getComputedStyle(element,null).getPropertyValue(styleProperty);
+      } else if ( element.currentStyle ) { // for IE
+        result = element.currentStyle[styleProperty];
+      }
+
+      return result;
+    }
+
+    function cleanUp() {
+      docElement.removeChild(ruby);
+      // the removed child node still exists in memory, so ...
+      ruby = null;
+      rt = null;
+      rp = null;
+    }
+
+  });
+
 
 
   // Run each test

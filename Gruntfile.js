@@ -30,8 +30,8 @@ module.exports = function (grunt) {
             tasks: [
                 'sass:development',
                 'autoprefixer',
-                'requirejs',
-                'modernizr:dist',
+                //'requirejs',
+                //'modernizr:dist',
                 'shell:hexoClean',
                 'shell:hexoGen'
             ]

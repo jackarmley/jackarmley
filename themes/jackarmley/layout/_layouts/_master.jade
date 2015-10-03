@@ -1,12 +1,9 @@
 block dependencies
     include ../_data/_dependancies
-
 block viewclass
     -var viewclass = '';
     if page.layout
         -viewclass = 'view-' + page.layout;
-
-
 doctype html
 html(lang='en')
     head
@@ -24,16 +21,16 @@ html(lang='en')
             header.site-header(role="banner" aria-label="Site header")
                 .site-header-inner
                     span.site-navtoggle
-                    h1.site-logo: a(href=config.root)= config.title
+                    a.site-logo(href=config.root aria-label='Home')= config.title
                     nav.site-navigation(role="navigation" aria-label="Site navigation")
                         ul
                             each val,index in site.data.sitenav
                                 li
                                     if val == url_for(path)
-                                        -var current = {'class':'state--current'};
+                                        -var state = {'class':'state--current','aria-label':index + ': Current page'};
                                     else
-                                        -var current = false;
-                                    a(href=val)&attributes(current)= index
+                                        -var state = {'aria-label': index};
+                                    a(href=val)&attributes(state)= index
         main.page-content(role="main" aria-label="Page content")
             block content
         footer.site-footer(role="contentinfo" aria-label="Site footer")
@@ -41,8 +38,11 @@ html(lang='en')
                 h2 Elsewhere&hellip;
                 ul.followme
                     each val, index in site.data.social
-                        li.followme-link(data-link=index): a(href=val.url): span= val.label
-        script(data-main="/static/scripts/app" src="/static/libs/requirejs/require.js")
+                        li.followme-link(data-link=index)
+                            a(href=val.url aria-label=val.a11yLabel + ' (opens an external site)')
+                                span(aria-hidden="true")= val.visibleLabel
+        block scripts
+            script(src="/static/scripts/app.js")
 
 
 

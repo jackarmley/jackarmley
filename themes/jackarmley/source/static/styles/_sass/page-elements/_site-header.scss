@@ -14,12 +14,10 @@
     @at-root{
         .site-logo{
             @include font(1em 2.5rem,prominent);
+            display: block;
             margin: 0;
-            text-transform: uppercase;
-            a{
-                display: block;
-            }
             padding-right: 4rem;
+            text-transform: uppercase;
         }
         .site-navigation{
             display: none;
@@ -86,18 +84,19 @@
             };
         }
         @at-root{
-            .site-logo a,
+            .site-logo,
             .site-navigation a{
                 display: inline-block;
                 vertical-align: top;
                 color: color(white);
+                &:hover{
+                    color: color(white);
+                }
             }
             .site-logo{
+                padding-top: 2rem;
                 padding-right: 0;
                 line-height: 1.5em;
-                a{
-                    padding-top: 2rem;
-                }
             }
             .site-navigation{
                 display: block;
