@@ -66,12 +66,3 @@ theme: nato
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
-deploy:
-  type: rsync
-  host: jackarmley.com
-  user: jackarmley16
-  root: jackarmley.com
-  port: 22
-  delete: true
-  verbose: true
-  ignore_errors: false
