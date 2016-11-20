@@ -1,0 +1,11 @@
+//-
+//- Post listing
+//-
+
+mixin postlisting(obj,paginate)
+    ul.postlisting&attributes(attributes)
+        each post in obj.posts.toArray()
+            li.postlisting-item(style={'background-color': '#' + post.keycolor || false})
+                +post(post)
+    if paginate
+        +pagination(obj)

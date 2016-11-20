@@ -1,0 +1,49 @@
+/**
+ * Hero nav
+ * A large, squigy nav to promote stuff
+ * in a big way
+ */
+
+$len: 2;
+$i: 1;
+
+.heronav{
+    ul{
+        flex-flow: row;
+        display: flex;
+    }
+    li{
+        @include font(1.2em,prominent);
+        flex: 1 1 0;
+        display: flex;
+        text-align: center;
+        overflow: hidden;
+        background-color: color(cream);
+    }
+    a{
+        flex: 1 1;
+        display: flex;
+        padding: 4rem 2rem;
+        color: color(default);
+        background-color: color(light);
+        text-shadow: longshadow(100,darken( color(light), 10% ));
+        &:hover{
+            background-color: darken( color(light), 5% );
+            text-shadow: longshadow(100,darken( color(light), 15% ));
+        }
+    }
+    span{
+        margin: auto;
+    }
+    @include breakpoint(orange){
+        li{
+            @include font(3.5em);
+        }
+        a{
+            min-height: 30rem;
+            padding: 4rem;
+        }
+    }
+}
+
+

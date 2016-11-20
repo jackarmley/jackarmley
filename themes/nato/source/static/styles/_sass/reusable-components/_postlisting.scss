@@ -1,0 +1,25 @@
+/**
+ * Post listing
+ */
+
+.postlisting{
+    max-width: 80rem;
+    margin: auto;
+    list-style: none;
+    &-item{
+        flex: 1 1 40rem;
+        .post{
+            min-height: 100%;
+            &-details{
+                color: color(white);
+            }
+        }
+        &[style^="background-color:#undefined"]{
+            .post{
+                &-details{
+                    color: color(default);
+                }
+            }
+        }
+    }
+}

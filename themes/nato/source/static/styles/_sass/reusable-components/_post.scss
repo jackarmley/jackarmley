@@ -1,0 +1,59 @@
+/**
+ * Post
+ */
+
+.post{
+    position: relative;
+    &-thumb{
+        flex: 1 1;
+        margin-bottom: 0;
+        background:{
+            repeat: no-repeat;
+            position: center center;
+            size: cover;
+        };
+        img{
+            @include setsize(100% auto);
+            visibility: hidden;
+        }
+    }
+    &-title{
+        @include font(1em);
+        margin: 0;
+    }
+    &-details{
+        flex: 2 1;
+        padding: 2rem;
+    }
+    &-fullpostlink,
+    &-fullpostlink-tuck{
+        @include pos(a, t0 l0);
+        @include setsize(100%);
+    }
+    &-fullpostlink{
+        display: block;
+        overflow: hidden;
+        &-tuck{
+            @include pos(r);
+            transform: translateX(100%);
+            transition: .25s ease;
+            backface-visibility: hidden;
+        }
+        &-label{
+            @include pos(a,'t50%' 'l50%');
+            @include setsize(10rem);
+            display: block;
+            margin: -5rem 0 0 -5rem;
+            line-height: 10rem;
+            text-align: center;
+            span{
+                @extend %visual-hide;
+            }
+        }
+        &:hover{
+            .post-fullpostlink-tuck{
+                transform: translateX(0);
+            }
+        }
+    }
+}

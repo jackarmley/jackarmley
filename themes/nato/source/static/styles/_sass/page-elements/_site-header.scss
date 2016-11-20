@@ -1,0 +1,54 @@
+/**
+ * Site header
+ */
+
+.site-header{
+    background-color: color(white);
+    &-inner{
+        @extend %layoutwrap;
+        padding:{
+            top: 2rem;
+            bottom: 2rem;
+        };
+    }
+    @at-root{
+        .site-logo{
+            @include font(1em 2.5rem,prominent);
+            display: block;
+            margin: 0;
+            padding-right: 4rem;
+            text-transform: uppercase;
+        }
+    }
+    @include breakpoint(orange){
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        background-color: transparent;
+        &-inner{
+            display: flex;
+            justify-content: space-between;
+            padding:{
+                top: 0;
+                bottom: 0;
+            };
+        }
+        @at-root{
+            .site-logo{
+                display: inline-block;
+                vertical-align: top;
+                color: color(white);
+                &:hover{
+                    color: color(white);
+                }
+            }
+            .site-logo{
+                padding-top: 2rem;
+                padding-right: 0;
+                line-height: 1.5em;
+            }
+        }
+    }
+}

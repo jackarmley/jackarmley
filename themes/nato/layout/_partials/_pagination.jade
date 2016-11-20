@@ -1,0 +1,15 @@
+//-
+//- Pagination
+//- @param {Variable} obj - object to paginate
+//-
+
+mixin pagination(obj)
+    ul.pagination
+        if obj.prev
+            li.pagination-link
+                a(href=config.root + obj.prev_link, aria-label="Newer posts")
+                    | Newer
+        if obj.next
+            li.pagination-link
+                a(href=config.root + obj.next_link, aria-label="Older posts")
+                    | Older

@@ -1,0 +1,74 @@
+/**
+ * Shame file
+ * Add quick changes here, to be incorperated properly at a later point
+ */
+
+
+
+
+.page-section{
+    &-inner{
+        @extend %layoutwrap;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    &-header{
+        @include font(1em);
+        margin: 0 0 1em;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.browsermessage{
+    @include font(.85em);
+    background-color: #F4FF9B;
+    &-inner{
+        @extend %layoutwrap;
+        padding:{
+            top: 2rem;
+            bottom: 2rem;
+        };
+    }
+}
+
+.page{
+    &-header{
+        background-color: color(lime);
+        &-inner{
+            @extend %layoutwrap;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 4rem 2rem 2rem;
+        }
+        h1{
+            margin: 0;
+            color: color(white);
+            font-size: 1.3em;
+            text-transform: uppercase;
+        }
+    }
+    @include breakpoint(orange){
+        &-header{
+            &-inner{
+                min-height: 30rem;
+                padding-top: 8rem;
+                padding-bottom: 4rem;
+            }
+            h1{
+                font-size: 4em;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+

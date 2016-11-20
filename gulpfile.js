@@ -17,7 +17,7 @@ var
 
 // Static assets
 var
-  root = 'themes/jackarmley/source/static',
+  root = 'themes/nato/source/static',
   assets = {
     styles: root + '/styles/',
     scripts: root + '/scripts/'

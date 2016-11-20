@@ -1,0 +1,58 @@
+////
+//// Colour variables
+//// @author Hatchd Digital
+//// @group Colors
+//// @src https://color.adobe.com/Ventana-Azul-color-theme-2159606
+////
+
+/// White
+/// @type Variable
+$white: #fff;
+
+/// Black
+/// @type Variable
+$black: #000;
+
+/// Strawberry
+/// @type Color
+$strawberry: #F2385A;
+
+/// Tangerine
+/// @type Color
+$tangerine: #F5A503;
+
+/// Cream
+/// @type Color
+$cream: #E9F1DF;
+
+/// Azure
+/// @type Color
+$azure: #4AD9D9;
+
+/// Matt azure
+/// @type Color
+$mattazure: #36B1BF;
+
+/// Lime
+/// @type Color
+$lime: #75BE22;
+
+/// Pebble
+/// @type Color
+$pebble: #363942;
+
+
+
+/// Colors map tying usage to variable names
+/// @type Map
+$colors: (
+    default: $pebble,
+    black: $black,
+    white: $white,
+    muted: lighten($pebble,50%),
+    highlight: $tangerine,
+    link: inherit,
+    linkactive: inherit,
+    lime: $lime,
+    light: $cream
+);

@@ -1,0 +1,89 @@
+/**
+ * Site footer
+ */
+
+$social: twitter,github,codepen;
+
+.site-footer{
+    background-color: color(default);
+    &-inner{
+        @extend %layoutwrap;
+        padding:{
+            top: 4rem;
+            bottom: 4rem;
+        };
+    }
+    h2{
+        @include font(1em);
+        margin: 0 0 1em;
+        color: color(white);
+        text-align: center;
+        text-transform: uppercase;
+    }
+    @include breakpoint(orange){
+        &-inner{
+            padding:{
+                top: 6rem;
+                bottom: 6rem;
+            };
+        }
+    }
+    @at-root{
+        .followme{
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            list-style: none;
+            &-link{
+                flex: 1 1 0;
+                margin: 0;
+                a{
+                    display: block;
+                    padding: 2rem;
+                    color: color(white);
+                    text-align: center;
+                    &:before{
+                        @include setsize(4rem);
+                        content:' ';
+                        display: block;
+                        margin: auto;
+                        background:{
+                            color: transparent;
+                            repeat: no-repeat;
+                            position: center center;
+                            size: contain;
+                        };
+                    }
+                    &:hover{
+                        background-color: darken(color(default),5%);
+                    }
+                }
+                @each $value in $social{
+                    &[data-link="#{$value}"] a{
+                        &:before{
+                            background-image: url('../images/social-#{$value}.svg');
+                        }
+                    }
+                }
+                span{
+                    display: none;
+                }
+            }
+            @include breakpoint(orange){
+                &-link{
+                    @include font(1.5em);
+                    a{
+                        padding: 4rem;
+                        &:before{
+                            @include setsize(8rem);
+                            margin-bottom: .5em;
+                        }
+                    }
+                    span{
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+}

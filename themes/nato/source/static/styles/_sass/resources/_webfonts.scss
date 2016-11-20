@@ -1,0 +1,30 @@
+/**
+ * Webfonts
+ *
+ * Reference webfonts with an @font-face rule
+ */
+
+/**
+ * Open Sans
+ * @src: Google Fonts
+ */
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700');
+
+/**
+ * League Spartan
+ * @src: League of Movable Type
+ */
+@font-face {
+    font-family: 'League Spartan';
+    src: url('../fonts/league-spartan/leaguespartan-bold.eot');
+    src: url('../fonts/league-spartan/leaguespartan-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/league-spartan/leaguespartan-bold.woff2') format('woff2'),
+         url('../fonts/league-spartan/leaguespartan-bold.woff') format('woff'),
+         url('../fonts/league-spartan/leaguespartan-bold.ttf') format('truetype'),
+         url('../fonts/league-spartan/leaguespartan-bold.svg#league_spartanbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+

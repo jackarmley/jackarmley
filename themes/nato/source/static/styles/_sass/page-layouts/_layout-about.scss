@@ -1,0 +1,14 @@
+/**
+ * About page styles
+ */
+
+.fullpost-body{
+  img[src*="avatar"]{
+    width: rem(200);
+    float: right;
+    shape-outside: url('/images/avatar-mask.png');
+    @include breakpoint(lemon){
+      width: rem(300);
+    }
+  }
+}
