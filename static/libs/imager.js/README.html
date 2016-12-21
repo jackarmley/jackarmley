@@ -1,0 +1,185 @@
+<h1 id="Imager-js">Imager.js <a href="http://travis-ci.org/BBC-News/Imager.js"><img src="https://secure.travis-ci.org/BBC-News/Imager.js.svg?branch=master" alt="Build Status"></a></h1><blockquote>
+<p>Imager.js is an alternative solution to the issue of how to handle responsive image loading, created by developers at <a href="http://responsivenews.co.uk/">BBC News</a>.</p>
+</blockquote>
+<h2 id="Why?">Why?</h2><p>There are many responsive image solutions in the wild: <code>srcset</code>, <code>src-n</code>, <code>PictureFill</code> and so on. They are either<br><strong>verbose</strong> or <strong>hard to debug</strong> (and to maintain/integrate). Some of them don’t deal well with <em>pixel density</em><br>and suffer from <strong>double asset payload</strong> (meaning you end up downloading assets unnecessarily).</p>
+<p>We wanted something <strong>simple</strong>, which <strong>works</strong> and which is <strong>fast</strong> as well as network friendly (only download what you need, when you need it).</p>
+<p>Imager implements the  <a href="http://responsivenews.co.uk/post/50092458307/images">BBC Responsive News technique</a> which incorporates:</p>
+<ul>
+<li>loading any image once</li>
+<li>loading the most suitable sized image</li>
+</ul>
+<h2 id="How_does_it_work?">How does it work?</h2><p>Imager runs through the following workflow:</p>
+<ol>
+<li>lookup <strong>placeholder elements</strong></li>
+<li>replace <strong>placeholders</strong> with transparent images</li>
+<li>update <code>src</code> attribute for each image and assign the best quality/size ratio URL</li>
+</ol>
+<p>Finally, it will lazy load images to speed up page load time even further.</p>
+<h2 id="Compatibility">Compatibility</h2><p>Imager is tested against the following mobile and desktop browsers:</p>
+<ul>
+<li>Chrome stable</li>
+<li>Firefox stable</li>
+<li>IE 8, 9, 10 and 11</li>
+<li>Safari 5, 6 and 7</li>
+<li>Mobile Safari 4, 5, 6 and 7</li>
+<li>Android 2, 3 and 4</li>
+</ul>
+<h2 id="Install">Install</h2><table>
+<thead>
+<tr>
+<th>npm</th>
+<th>bower</th>
+<th>old school</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>npm install --save imager.js</code></td>
+<td><code>bower install --save imager.js</code></td>
+<td><a href="https://github.com/BBC-News/Imager.js/archive/master.zip">download zip file</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Using">Using</h2><pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"width: 240px"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"delayed-image-load"</span> <span class="attribute">data-src</span>=<span class="value">"http://placehold.it/{width}"</span> <span class="attribute">data-alt</span>=<span class="value">"alternative text"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="less">
+    <span class="tag">new</span> <span class="tag">Imager</span>({ <span class="attribute">availableWidths</span>: [<span class="number">200</span>, <span class="number">260</span>, <span class="number">320</span>, <span class="number">600</span>] });
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre>
+<p>This will result in the following HTML output:</p>
+<pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"width: 240px"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"http://placehold.it/260"</span> <span class="attribute">data-src</span>=<span class="value">"http://placehold.it/{width}"</span> <span class="attribute">alt</span>=<span class="value">"alternative text"</span> <span class="attribute">class</span>=<span class="value">"image-replace"</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="less">
+    <span class="tag">new</span> <span class="tag">Imager</span>({ <span class="attribute">availableWidths</span>: [<span class="number">200</span>, <span class="number">260</span>, <span class="number">320</span>, <span class="number">600</span>] });
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre>
+<p><code>260</code> has been elected as the best available width (as it is the closest upper size relative to <code>240</code> pixels).</p>
+<h3 id="Pixel_Ratio_/_HiDPI_/_Retina">Pixel Ratio / HiDPI / Retina</h3><p>Let’s say we have generated 4 sizes of images (<code>200</code>, <code>260</code>, <code>320</code> and <code>600</code>)<br>in 3 different pixel ratio flavours (<code>1</code>, <code>1.3</code> and <code>2</code>):</p>
+<pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"width: 240px"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"delayed-image-load"</span> <span class="attribute">data-src</span>=<span class="value">"http://example.com/assets/{width}/imgr{pixel_ratio}.png"</span> <span class="attribute">data-alt</span>=<span class="value">"alternative text"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="less">
+    <span class="tag">new</span> <span class="tag">Imager</span>({ <span class="attribute">availableWidths</span>: [<span class="number">200</span>, <span class="number">260</span>, <span class="number">320</span>, <span class="number">600</span>], <span class="attribute">availablePixelRatios</span>: [<span class="number">1</span>, <span class="number">1.3</span>, <span class="number">2</span>] });
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre>
+<p>The <code>img[src]</code> will be computed as following (according to the reported <code>window.devicePixelRatio</code> value by the device):</p>
+<ul>
+<li><code>http://example.com/assets/260/imgr.png</code> if no pixel ratio is detected, or advertised as <code>1</code></li>
+<li><code>http://example.com/assets/260/imgr-2x.png</code> if pixel ratio is advertised as <code>2</code> (or any value greater than 2)</li>
+<li><code>http://example.com/assets/260/imgr-1.3x.png</code> if pixel ratio is advertised as <code>1.3</code></li>
+</ul>
+<p>Head to this <a href="http://bjango.com/articles/min-device-pixel-ratio/">device pixel density test</a> resource to learn more about the available pixel ratio for your device.</p>
+<h3 id="Interpolating_{width}_value">Interpolating <code>{width}</code> value</h3><p>Imager has the ability to replace <code>{width}</code> with a non-numeric value if you<br>provide the <code>widthInterpolator</code> option, which is a function that returns the<br>string to be injected into the image URL for a given width. This feature allows you to use a human readable name or integrate with third-party image providers.</p>
+<pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"width: 240px"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"delayed-image-load"</span> <span class="attribute">data-src</span>=<span class="value">"http://example.com/assets/imgr-{width}.png"</span> <span class="attribute">data-alt</span>=<span class="value">"alternative text"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="actionscript">
+    <span class="keyword">new</span> Imager({
+        availableWidths: [<span class="number">200</span>, <span class="number">260</span>, <span class="number">320</span>, <span class="number">600</span>],
+        widthInterpolator: <span class="function"><span class="keyword">function</span><span class="params">(width, pixelRatio)</span> </span>{
+          <span class="keyword">return</span> width + <span class="string">'x'</span> + (width / <span class="number">2</span>);
+        }
+    });
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre>
+<p>The <code>img[src]</code> will be computed as <code>http://example.com/assets/imgr-260x130.png</code> instead of <code>http://example.com/assets/imgr-260.png</code>.</p>
+<p>Alternatively you can define <code>availableWidths</code> as an <code>Object</code> where the key is the width, and the value is the string to be injected into the image URL.</p>
+<pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"width: 240px"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"delayed-image-load"</span> <span class="attribute">data-src</span>=<span class="value">"http://example.com/assets/imgr-{width}.png"</span> <span class="attribute">data-alt</span>=<span class="value">"alternative text"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="less">
+    <span class="tag">new</span> <span class="tag">Imager</span>({
+        <span class="tag">availableWidths</span>: {
+            <span class="attribute">200</span>: <span class="string">'square'</span>,
+            <span class="number">260</span>: <span class="string">'small'</span>,
+            <span class="number">320</span>: <span class="string">'medium'</span>,
+            <span class="number">600</span>: <span class="string">'large'</span>
+        }
+    });
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre>
+<p>The <code>img[src]</code> will be computed as <code>http://example.com/assets/imgr-small.png</code> instead of <code>http://example.com/assets/imgr-260.png</code>.</p>
+<h3 id="Mixing_various_configurations">Mixing various configurations</h3><p>You might want to generate HiDPI responsive images. But what if you also include images from another provider which<br>serves a totally different set of sizes, without pixel ratio?</p>
+<p>Here is an example to serve your own images alongside <a href="http://www.flickr.com/">Flickr images</a>.</p>
+<pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"width: 240px"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"delayed-image-load"</span>        <span class="attribute">data-src</span>=<span class="value">"http://placehold.it/{width}"</span> <span class="attribute">data-alt</span>=<span class="value">"alternative text 1"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"delayed-flickr-image-load"</span> <span class="attribute">data-src</span>=<span class="value">"//farm5.staticflickr.com/4148/4990539658_a38ed4ec6e_{width}.jpg"</span> <span class="attribute">data-alt</span>=<span class="value">"alternative text 2"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="actionscript">
+    <span class="keyword">var</span> imgrPlaceholder = <span class="keyword">new</span> Imager(<span class="string">'.delayed-image-load'</span>, {
+        availableWidths: [<span class="number">200</span>, <span class="number">260</span>, <span class="number">320</span>, <span class="number">600</span>]
+    });
+
+    <span class="keyword">var</span> imgrFlickr = <span class="keyword">new</span> Imager(<span class="string">'.delayed-flickr-image-load'</span>, {
+        availableWidths: {
+            <span class="number">150</span>: <span class="string">'t_d'</span>,
+            <span class="number">500</span>: <span class="string">'d'</span>,
+            <span class="number">640</span>: <span class="string">'z_d'</span>
+        }
+    });
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre>
+<p>This will result in the following HTML output:</p>
+<pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"width: 240px"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"http://placehold.it/260"</span> <span class="attribute">data-src</span>=<span class="value">"http://placehold.it/{width}"</span> <span class="attribute">alt</span>=<span class="value">"alternative text 1"</span> <span class="attribute">class</span>=<span class="value">"image-replace"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"//farm5.staticflickr.com/4148/4990539658_a38ed4ec6e_d.jpg"</span> <span class="attribute">data-src</span>=<span class="value">"//farm5.staticflickr.com/4148/4990539658_a38ed4ec6e_{width}.jpg"</span> <span class="attribute">alt</span>=<span class="value">"alternative text 2"</span> <span class="attribute">class</span>=<span class="value">"image-replace"</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
+<h3 id="Passing_a_collection_of_elements">Passing a collection of elements</h3><p>You might want to pass a NodeList or an array of <strong>placeholder elements</strong> as the first argument rather than a class selector.</p>
+<pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"width: 240px"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"delayed-image-load"</span> <span class="attribute">data-src</span>=<span class="value">"http://placehold.it/{width}"</span> <span class="attribute">data-alt</span>=<span class="value">"alternative text"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="dart">
+    <span class="keyword">var</span> placeholderElems = <span class="built_in">document</span>.<span class="built_in">querySelectorAll</span>(<span class="string">'.delayed-image-load'</span>);
+    <span class="keyword">var</span> imgrPlaceholder = <span class="keyword">new</span> Imager(placeholderElems, {
+        availableWidths: [<span class="number">200</span>, <span class="number">260</span>, <span class="number">320</span>, <span class="number">600</span>]
+    });
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre>
+<p>This will result in the following HTML output:</p>
+<pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"width: 240px"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"http://placehold.it/260"</span> <span class="attribute">data-src</span>=<span class="value">"http://placehold.it/{width}"</span> <span class="attribute">alt</span>=<span class="value">"alternative text"</span> <span class="attribute">class</span>=<span class="value">"image-replace"</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
+<h1 id="Documentation">Documentation</h1><p>Browse Imager public APIs and options – versioned alongside the source code of the project:</p>
+<ul>
+<li><a href="docs/html-api.md">HTML options</a></li>
+<li><a href="docs/js-options.md">JavaScript options</a></li>
+<li><a href="docs/js-api.md">JavaScript API</a></li>
+</ul>
+<h1 id="Demos">Demos</h1><p>Additional and fully working examples lie in the <a href="demos/"><code>demos</code> folder</a>.</p>
+<h1 id="They_are_using_it">They are using it</h1><ul>
+<li><a href="http://m.bbc.co.uk/news">BBC News</a></li>
+<li><a href="http://m.bbc.co.uk/sport">BBC Sport</a></li>
+<li><a href="http://www.theguardian.com/">The Guardian</a></li>
+<li><a href="https://github.com/addyosmani/x-imager"><code>x-imager</code> Web Component</a></li>
+<li><a href="https://www.npmjs.com/package/imager.jsx">Imager.jsx React Component</a></li>
+</ul>
+<h1 id="Background">Background</h1><p>This is an experiment in offering developers an interim solution to responsive images based on the <a href="https://gist.github.com/Integralist/6157139">ImageEnhancer</a> concept researched and developed by the team at BBC News.</p>
+<p>At present, support for <code>srcset</code> and <code>PictureFill</code> are not widespread and the polyfills for these solutions also come with a number of drawbacks.</p>
+<p><a href="http://twitter.com/Integralist">Mark McDonnell (@integralist)</a> documented the process and rewrote the original code so it could be evolved and improved with the help of the open-source community.</p>
+<p>The goal of this project is to automate the process with the help of the <a href="http://gruntjs.com/">Grunt</a> JavaScript task runner (potentially via <code>grunt-responsive-images</code> for image generation based on a source directory).</p>
+<p>Much of this work can be repurposed to work with a more standards-based approach once support improves in modern browsers.</p>
+<p>For the purposes of maintaining a distinguishment between the ImageEnhancer concept built by BBC News and this project, we’re calling it <strong>Imager.js</strong></p>
+<p><strong><a href="http://responsivenews.co.uk/post/58244240772/imager-js">Read more on BBC Responsive News blog</a></strong>.</p>
+<h1 id="Credits">Credits</h1><ul>
+<li><a href="http://twitter.com/integralist">Mark McDonnell</a></li>
+<li><a href="http://twitter.com/tmaslen">Tom Maslen</a></li>
+<li><a href="https://twitter.com/oncletom">Thomas Parisot</a></li>
+<li><a href="http://twitter.com/addyosmani">Addy Osmani</a></li>
+</ul>
+<h1 id="Licence">Licence</h1><blockquote>
+<p>Copyright 2015 British Broadcasting Corporation</p>
+<p>Licensed under the Apache License, Version 2.0 (the “License”); you may not use this file except in compliance with the License. You may obtain a copy of the License at</p>
+<p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+<p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</p>
+</blockquote>

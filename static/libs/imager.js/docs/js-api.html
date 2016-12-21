@@ -1,0 +1,52 @@
+<h1 id="Imager-js_documentation">Imager.js documentation</h1><ul>
+<li><a href="html-api.md">HTML options</a></li>
+<li><a href="js-options.md">JavaScript options</a></li>
+<li><a href="js-api.md">JavaScript API</a></li>
+</ul>
+<h2 id="JavaScript_API">JavaScript API</h2><p>The <em>JavaScript API</em> helps you instantiate and control how Imager works from a <em>business logic point of view</em>.</p>
+<h3 id="new_Imager([selector|elements,_[options]])"><code>new Imager([selector|elements, [options]])</code></h3><p>Calling the constructor will initialise responsive images for the provided <code>elements</code> or the HTML elements concerned by the <code>selector</code>.</p>
+<p>The <code>options</code> bit is an object documented in the <a href="js-options.md">JavaScript Options section</a>.</p>
+<pre><code class="js"><span class="keyword">new</span> Imager(<span class="string">'.responsive-image-placeholder'</span>);
+</code></pre>
+<p>The constructor can be saved in a variable for later use…</p>
+<pre><code class="js"><span class="keyword">var</span> imgr = <span class="keyword">new</span> Imager(<span class="string">'.responsive-image-placeholder'</span>, { onResize: <span class="literal">false</span> });
+
+<span class="comment">// Using jQuery to set-up the event handling and help keep the correct scope when executing the callback</span>
+$(<span class="built_in">window</span>).on(<span class="string">'resize scroll.debounced'</span>, $.proxy(imgr.checkImagesNeedReplacing, imgr));
+</code></pre>
+<p>For legacy reasons the first argument is optional and defaulted to <code>.delayed-image-load</code>:</p>
+<pre><code class="js"><span class="keyword">new</span> Imager();
+</code></pre>
+<h3 id="-ready(fn)"><code>.ready(fn)</code></h3><p>Executes a function when Imager is ready to work.</p>
+<pre><code class="js"><span class="keyword">new</span> Imager({ ... }).ready(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+  <span class="built_in">console</span>.log(<span class="string">'Placeholders divs have been replaced'</span>);
+});
+</code></pre>
+<h3 id="-add(elements_|_selector)"><code>.add(elements | selector)</code></h3><p>Add new elements to the existing pool of responsive images.</p>
+<pre><code class="js"><span class="keyword">var</span> imgr = <span class="keyword">new</span> Imager(<span class="string">'.delayed-image-load'</span>);
+
+imgr.add(<span class="string">'.new-delayed-image-load-selector'</span>);
+imgr.add(newElements);
+imgr.add();     <span class="comment">// reuses the constructor selector ('.delayed-image-load')</span>
+</code></pre>
+<h3 id="Imager-checkImagesNeedReplacing()"><code>Imager.checkImagesNeedReplacing()</code></h3><p>Updates the <code>img[src]</code> attribute if the container width has changed, and if it matches a different <code>availableWidths</code> value.</p>
+<p>It is relevant to use this method if an unwatched event occurred and impacts responsive image widths.</p>
+<pre><code class="js"><span class="keyword">var</span> imgr = <span class="keyword">new</span> Imager();
+
+<span class="comment">// Using jQuery to set-up the event handling and help keep the correct scope when executing the callback</span>
+$(<span class="built_in">document</span>).on(<span class="string">'customEvent'</span>, $.proxy(imgr.checkImagesNeedReplacing, imgr));
+</code></pre>
+<h3 id="Imager-registerResizeEvent()"><code>Imager.registerResizeEvent()</code></h3><p>Registers a <code>window.onresize</code> handler which will update the relevant <code>img[src]</code> (using <code>Imager.checkImagesNeedReplacing</code>)<br>when the window size changes.</p>
+<p>This covers window resizing, device orientation change and entering full screen mode.</p>
+<pre><code class="js"><span class="keyword">var</span> imgr = <span class="keyword">new</span> Imager();
+
+<span class="comment">// Using jQuery to set-up the event handling and help keep the correct scope when executing the callback</span>
+$(<span class="built_in">document</span>).on(<span class="string">'load'</span>, $.proxy(imgr.registerResizeEvent, imgr));
+</code></pre>
+<h3 id="Imager-registerScrollEvent()"><code>Imager.registerScrollEvent()</code></h3><p>Registers a <code>window.onscroll</code> handler which will update the relevant <code>img[src]</code> (using <code>Imager.checkImagesNeedReplacing</code>)<br>when the content is scrolled.</p>
+<p>A default 250ms <a href="http://benalman.com/projects/jquery-throttle-debounce-plugin/">debounce</a> is performed to avoid<br>trashing the rendering performance. You can alter this value by setting the <code>scrollDelay</code> option.</p>
+<pre><code class="js"><span class="keyword">var</span> imgr = <span class="keyword">new</span> Imager();
+
+<span class="comment">// Using jQuery to set-up the event handling and help keep the correct scope when executing the callback</span>
+$(<span class="built_in">document</span>).on(<span class="string">'load'</span>, $.proxy(imgr.registerScrollEvent, imgr));
+</code></pre>

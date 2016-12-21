@@ -1,0 +1,38 @@
+<h1 id="Imager-js_documentation">Imager.js documentation</h1><ul>
+<li><a href="html-api.md">HTML options</a></li>
+<li><a href="js-options.md">JavaScript options</a></li>
+<li><a href="js-api.md">JavaScript API</a></li>
+</ul>
+<h2 id="HTML_Attributes">HTML Attributes</h2><p>The <em>HTML API</em> helps you control how Imager works from the <em>content point of view</em>.</p>
+<h3 id="data-src"><code>data-src</code></h3><p>Available placeholders are:</p>
+<ul>
+<li><code>{width}</code>: best available image width (numeric value)</li>
+<li><code>{pixel_ratio}</code>: device pixel ratio (either <em>blank</em> or <code>-1.3x</code>, <code>-2x</code>, <code>-3x</code> etc.)</li>
+</ul>
+<p>So the following HTML…</p>
+<pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">data-src</span>=<span class="value">"http://placehold.it/{width}"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
+<p>…is converted to…</p>
+<pre><code class="html"><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"http://placehold.it/260"</span> <span class="attribute">data-src</span>=<span class="value">"http://placehold.it/{width}"</span> <span class="attribute">class</span>=<span class="value">"image-replace"</span>&gt;</span>
+</code></pre>
+<h3 id="data-width"><code>data-width</code></h3><p><code>data-width</code> is the enforced size of the image placeholder; where the actual image will eventually be loaded.</p>
+<p>This can be especially useful if you don’t want to depend on the image container width.</p>
+<p>So the following HTML…</p>
+<pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"width:600px"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">data-src</span>=<span class="value">"http://placehold.it/{width}"</span> <span class="attribute">data-width</span>=<span class="value">"300"</span> <span class="attribute">data-alt</span>=<span class="value">"alternative text"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
+<p>…is converted to…</p>
+<pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"width:600px"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"http://placehold.it/300"</span> <span class="attribute">data-src</span>=<span class="value">"http://placehold.it/{width}"</span> <span class="attribute">width</span>=<span class="value">"300"</span> <span class="attribute">alt</span>=<span class="value">"alternative text"</span> <span class="attribute">class</span>=<span class="value">"image-replace"</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
+<h3 id="data-alt_and_data-class"><code>data-alt</code> and <code>data-class</code></h3><p>These two <code>data-*</code> attributes are copied from the responsive placeholder to the response <code>img</code> element.nnot process images or who have image loading disabled. It is converted to the <code>alt</code> attribute of the `img element.</p>
+<p>So the following HTML…</p>
+<pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">data-src</span>=<span class="value">"http://placehold.it/{width}"</span> <span class="attribute">data-alt</span>=<span class="value">"alternative text"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">data-src</span>=<span class="value">"http://placehold.it/{width}"</span> <span class="attribute">data-class</span>=<span class="value">"london calling"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
+<p>…is converted to…</p>
+<pre><code class="html"><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"http://placehold.it/260"</span> <span class="attribute">data-src</span>=<span class="value">"http://placehold.it/{width}"</span> <span class="attribute">alt</span>=<span class="value">"alternative text"</span> <span class="attribute">class</span>=<span class="value">"image-replace"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"http://placehold.it/260"</span> <span class="attribute">data-src</span>=<span class="value">"http://placehold.it/{width}"</span> <span class="attribute">alt</span>=<span class="value">""</span> <span class="attribute">class</span>=<span class="value">"london calling image-replace"</span>&gt;</span>
+</code></pre>

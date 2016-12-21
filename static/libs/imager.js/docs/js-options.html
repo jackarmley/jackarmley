@@ -1,0 +1,64 @@
+<h1 id="Imager-js_documentation">Imager.js documentation</h1><ul>
+<li><a href="html-api.md">HTML options</a></li>
+<li><a href="js-options.md">JavaScript options</a></li>
+<li><a href="js-api.md">JavaScript API</a></li>
+</ul>
+<h2 id="JavaScript_Configuration">JavaScript Configuration</h2><p>You can create one or several concurrent configurations of Imager within the same page. Its configuration options are<br>described below.</p>
+<h3 id="availableWidths"><code>availableWidths</code></h3><p>This option is intended to reflect the available widths of each responsive image. These values will be used as replacements<br>for the <code>{width}</code> variable in <code>data-src</code> placeholders.</p>
+<p>The following examples demonstrate the results of passing through different object types for the <code>availableWidths</code> option…</p>
+<p><code>Array</code>: the widths are represented as numeric values</p>
+<pre><code class="js"><span class="keyword">new</span> Imager({
+    availableWidths: [<span class="number">240</span>, <span class="number">320</span>, <span class="number">640</span>]
+});
+</code></pre>
+<p><code>Object</code>: the widths associate a string value for their numeric counterpart</p>
+<pre><code class="js"><span class="keyword">new</span> Imager({
+    availableWidths: {
+        <span class="number">240</span>: <span class="string">'small'</span>,
+        <span class="number">320</span>: <span class="string">'medium'</span>,
+        <span class="number">640</span>: <span class="string">'large'</span>
+    }
+});
+</code></pre>
+<p><code>Function</code>: must return a value for the provided width argument</p>
+<pre><code class="js"><span class="comment">// will return a double sized image width as a numeric value</span>
+<span class="keyword">new</span> Imager({
+    availableWidths: <span class="function"><span class="keyword">function</span> <span class="params">(image)</span> </span>{
+        <span class="keyword">return</span> image.clientWidth * <span class="number">2</span>;
+    }
+});
+</code></pre>
+<h3 id="availablePixelRatios"><code>availablePixelRatios</code></h3><p>An Array which indicates what are the available pixel ratios available for your responsive images.</p>
+<p>These values will be used as replacements for the <code>{pixel_ratio}</code> variable in <code>data-src</code> placeholders.</p>
+<pre><code class="js"><span class="keyword">new</span> Imager({ availablePixelRatios: [<span class="number">1</span>, <span class="number">2</span>] });
+</code></pre>
+<p><strong>Default value</strong>: <code>[1, 2]</code></p>
+<h3 id="className"><code>className</code></h3><p>A String which indicates what the <code>className</code> value will be added on the newly created responsive image.</p>
+<pre><code class="js"><span class="keyword">new</span> Imager({ className: <span class="string">'image-replace'</span> });
+</code></pre>
+<p><strong>Default value</strong>: <code>image-replace</code></p>
+<h3 id="scrollDelay"><code>scrollDelay</code></h3><p>An Integer value (in milliseconds) to indicate when Imager will check if a scroll has ended. If a scroll has stopped after this delay and the <code>lazyload</code> option is <code>true</code>, Imager will update the <code>src</code> attribute of the relevant images.</p>
+<p><strong>Default value</strong>: <code>250</code></p>
+<pre><code class="js"><span class="keyword">new</span> Imager({ scrollDelay: <span class="number">250</span> });
+</code></pre>
+<p><strong>Notice</strong>: set the <code>scrollDelay</code> value to <code>0</code> at your own risk; unless you know what you’re doing, setting the value to zero will make the user experience totally janky! (and that would be an odd thing to do as you have chosen to use Imager to improve the user experience)</p>
+<h3 id="onResize"><code>onResize</code></h3><p>A Boolean value. If set to <code>true</code>, Imager will update the <code>src</code> attribute of the relevant images.</p>
+<p><strong>Default value</strong>: <code>true</code></p>
+<pre><code class="js"><span class="keyword">new</span> Imager({ onResize: <span class="literal">true</span> });
+</code></pre>
+<h3 id="lazyload"><code>lazyload</code></h3><p>An <em>experimental</em> Boolean value. If set to <code>true</code>, Imager will update the <code>src</code> attribute only of visible (and nearly visible) images.</p>
+<p><strong>Default value</strong>: <code>false</code></p>
+<pre><code class="js"><span class="keyword">new</span> Imager({ lazyload: <span class="literal">true</span> });
+</code></pre>
+<h3 id="lazyloadOffset"><code>lazyloadOffset</code></h3><p>A <code>Number</code> of extra pixels below the fold taken in account by the lazyloading mechanism.</p>
+<p><strong>Default value</strong>: <code>0</code></p>
+<pre><code class="js"><span class="keyword">new</span> Imager({ lazyload: <span class="literal">true</span>, lazyloadOffset: <span class="number">300</span> });
+</code></pre>
+<h3 id="onImagesReplaced"><code>onImagesReplaced</code></h3><p>A callback <code>Function</code>. Runs after Imager updates the <code>src</code> attribute of all relevant images.</p>
+<p>Its first and unique argument is an <code>Array</code> of <code>HTMLImageElement</code>, the ones processed by Imager.</p>
+<pre><code class="js"><span class="keyword">new</span> Imager({
+    onImagesReplaced: <span class="function"><span class="keyword">function</span><span class="params">(images)</span> </span>{
+        <span class="built_in">console</span>.log(<span class="string">'the src of all relevant images has been updated'</span>);
+    }
+});
+</code></pre>
