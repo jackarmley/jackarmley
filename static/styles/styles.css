@@ -1,493 +1,541 @@
+@charset "UTF-8";
+/*
+ *  Empty-coop:
+ *  A front-end starting point from the team at Hatchd
+ *
+ *  @Author Hatchd Digital
+ *
+ *  ...HHH...........................................HH ................DDD....
+ *  ...HHH.......................TT .................HH.................DDD....
+ *  ...HHH.......................TT..................HH.................DDD....
+ *  ...HHHHHHHH..... AAAAAA......TTTTTT....CCCCCC....HHHHHHHN..... DDDDDDDD....
+ *  ...HHHHHHHHH ...AAAAAAAAA....TTTTTT...CCCCCCCC...HHHHHHHHH... DDDDDDDDD....
+ *  ...HHH... HH..........AAA....TTT..... CCC........HH....HHH....DD....DDD....
+ *  ...HHH... HH.....AAAAAAAA....TTT......CC.........HH....HHH...DDD....DDD....
+ *  ...HHH... HH....AAA...AAA....TTT......CC ........HH....HHH...DDD....DDD....
+ *  ...HHH... HH....AAA...AAA....TTT..... CCC........HH....HHH....DD....DDD....
+ *  ...HHH... HH....AAA..AAAA....TTT..... CCCC..CC...HH....HHH....DDD..DDDD....
+ *  ...HHH... HH.....AAAAAAAA....TTTTTT....CCCCCCC...HH....HHH.... DDDDDDD.....
+ *
+ */
+/**
+* Eggbox @font-face declaration
+**/
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700");
-
 @font-face {
-	font-family: "eggbox";
-	src: url("../fonts/eggbox/eggbox.eot");
-	src: url("../fonts/eggbox/eggbox.eot?#iefix") format("embedded-opentype"),url("../fonts/eggbox/eggbox.woff") format("woff"),url("../fonts/eggbox/eggbox.ttf") format("truetype");
-	font-weight: normal;
-	font-style: normal;
+  font-family: "eggbox";
+  src: url("../fonts/eggbox/eggbox.eot");
+  src: url("../fonts/eggbox/eggbox.eot?#iefix") format("embedded-opentype"), url("../fonts/eggbox/eggbox.woff") format("woff"), url("../fonts/eggbox/eggbox.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
-
+/**
+ * Eggbox classes
+ * An alternative to using the mixin
+ * (which is the preferred option)
+ */
 [data-eggbox]:before {
-	display: inline-block;
-	font-family: eggbox;
-	font-weight: normal;
-	font-style: normal;
-	text-decoration: inherit;
-	text-transform: none;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	speak: none;
+  display: inline-block;
+  font-family: eggbox;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  speak: none;
 }
 
 [data-eggbox="alert-fill"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="arrow-full-down"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="arrow-full-left"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="arrow-full-right"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="arrow-full-up"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="arrow-fullinverted-down"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="arrow-fullinverted-left"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="arrow-fullinverted-right"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="arrow-fullinverted-up"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="arrow-hairline-down"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="arrow-hairline-left"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="arrow-hairline-right"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="arrow-hairline-up"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="arrow-keyline-down"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="arrow-keyline-left"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="arrow-keyline-right"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="arrow-keyline-up"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="arrow-outline-down"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="arrow-outline-left"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="arrow-outline-right"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="arrow-outline-up"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="battery-50"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="battery-full"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="battery-low"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="bell"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="book-closed"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="book-open"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="bookmark"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="calendar"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="check"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="checkbox-blank"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="checkbox-checked"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="clock"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="coffeecup"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="comment"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="contract"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="conversation"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="cross-large"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="cross-small"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="documents"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="download"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="edit"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="email-closed"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="email-open"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="equaliser-horz"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="equaliser-vert"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="expand"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="facebook-fill"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="facebook"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="favourite"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="flag"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="forbidden"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="foursquare-inverted"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="foursquare"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="googleplus"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="handshake"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="heart"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="help-inverse"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="help"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="home"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="image"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="info-fill"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="info"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="instagram-video"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="instagram"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="link"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="linked"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="linkedin-fill"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="location-pointer"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="lock-locked"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="lock-unlocked"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="logout-1"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="logout-2"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="mapmarker"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="menutoggle"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="microphone"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="minus"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="paperclip"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="phone"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="plus"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="presentation"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="print"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="profile-2"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="profile"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="refresh"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="reply"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="retweet"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="rss-fill"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="rss"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="search"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="settings-spanner"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="settings"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="stopwatch"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="sync-1"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="sync-2"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="tab"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="timer"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="trash"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="twitter-fill"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="twitter"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="upload"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="vcard"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="view"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="youtube"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="zoom-in"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="zoom-out"]:before {
-	content: "";
+  content: "";
 }
 
 [data-eggbox="sample"]:before {
-	content: "";
+  content: "";
 }
 
-.post-fullpostlink-label span,
 .visual-hide {
-	position: absolute;
-	display: block;
-	width: 0;
-	height: 0;
-	overflow: hidden;
-	white-space: nowrap;
-	text-indent: 110%;
-	text-align: left;
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 110%;
+  text-align: left;
 }
 
-.fullpost-hero,
-.site-header-inner,
-.site-footer-inner,
-.page-section-inner,
-.browsermessage-inner,
-.page-header-inner {
-	position: relative;
-	width: auto;
-	max-width: 110rem;
-	margin: auto;
-	padding-right: 3rem;
-	padding-left: 3rem;
+.postlisting-item .post, .fullpost-hero, .site-header-inner, .site-footer-inner, .page-section-inner, .browsermessage-inner, .page-header-inner {
+  position: relative;
+  width: auto;
+  max-width: 110rem;
+  margin: auto;
+  padding-right: 3rem;
+  padding-left: 3rem;
 }
 
+/**
+ * Webfonts
+ *
+ * Reference webfonts with an @font-face rule
+ */
+/**
+ * Open Sans
+ * @src: Google Fonts
+ */
+/**
+ * League Spartan
+ * @src: League of Movable Type
+ */
 @font-face {
-	font-family: 'League Spartan';
-	src: url("../fonts/league-spartan/leaguespartan-bold.eot");
-	src: url("../fonts/league-spartan/leaguespartan-bold.eot?#iefix") format("embedded-opentype"),url("../fonts/league-spartan/leaguespartan-bold.woff2") format("woff2"),url("../fonts/league-spartan/leaguespartan-bold.woff") format("woff"),url("../fonts/league-spartan/leaguespartan-bold.ttf") format("truetype"),url("../fonts/league-spartan/leaguespartan-bold.svg#league_spartanbold") format("svg");
-	font-weight: bold;
-	font-style: normal;
+  font-family: 'League Spartan';
+  src: url("../fonts/league-spartan/leaguespartan-bold.eot");
+  src: url("../fonts/league-spartan/leaguespartan-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/league-spartan/leaguespartan-bold.woff2") format("woff2"), url("../fonts/league-spartan/leaguespartan-bold.woff") format("woff"), url("../fonts/league-spartan/leaguespartan-bold.ttf") format("truetype"), url("../fonts/league-spartan/leaguespartan-bold.svg#league_spartanbold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+/**
+ * normalize.css v2.1.3
+ * MIT License
+ * @src git.io/normalize
+ *
+ * All unneeded components, and ones addressing presentation that are
+ * handled elsewhere have been stripped out. (With a // LESS comment)
+ */
+/**
+ * HTML5 display definitions
+ *
+ */
+/**
+*  Default box-sizing to border-box
+*/
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
-	box-sizing: border-box;
-}
-
+/**
+* Corrects `block` display not defined in IE6/7/8/9 & FF3.
+*/
 article,
 aside,
 details,
@@ -500,1265 +548,1460 @@ main,
 nav,
 section,
 summary {
-	display: block;
+  display: block;
 }
 
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
 audio,
 canvas,
 video {
-	display: inline-block;
+  display: inline-block;
 }
 
+/**
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS5 devices.
+ */
 audio:not([controls]) {
-	display: none;
-	height: 0;
+  display: none;
+  height: 0;
 }
 
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
 [hidden],
 template {
-	display: none;
+  display: none;
 }
 
+/**
+ * Remove list-style and margin on nav
+ *
+ * Added by the Hatchd team
+ *
+ */
 nav ul,
 nav ol {
-	margin: 0;
-	list-style: none;
+  margin: 0;
+  list-style: none;
 }
 
 nav li {
-	margin: 0;
+  margin: 0;
 }
 
+/**
+ * Base
+ *
+ */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
 html {
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
 
+/**
+ * Remove default margin.
+ */
 body {
-	margin: 0;
+  margin: 0;
 }
 
+/**
+ * Links
+ *
+ */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
 a {
-	background: transparent;
+  background: transparent;
 }
 
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
 a:focus {
-	outline: thin dotted;
+  outline: thin dotted;
 }
 
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
 a:active,
 a:hover {
-	outline: 0;
+  outline: 0;
 }
 
+/**
+ * Typography
+ */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
 abbr[title] {
-	border-bottom: 1px dotted;
+  border-bottom: 1px dotted;
 }
 
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/**
+ * Address differences between Firefox and other browsers.
+ */
 hr {
-	box-sizing: content-box;
-	height: 0;
+  box-sizing: content-box;
+  height: 0;
 }
 
+/**
+ * Address styling not present in IE 8/9.
+ */
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
 code,
 kbd,
 pre,
 samp {
-	font-family: monospace, serif;
-	font-size: 1em;
+  font-family: monospace, serif;
+  font-size: 1em;
 }
 
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
 pre {
-	white-space: pre-wrap;
+  white-space: pre-wrap;
 }
 
+/**
+ * Set consistent quote types.
+ */
 q {
-	quotes: "\201C" "\201D" "\2018" "\2019";
+  quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
 small {
-	font-size: 80%;
+  font-size: 80%;
 }
 
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
 sub,
 sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
 sup {
-	top: -0.5em;
+  top: -0.5em;
 }
 
 sub {
-	bottom: -0.25em;
+  bottom: -0.25em;
 }
 
+/**
+ * Embedded content
+ */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
 svg:not(:root) {
-	overflow: hidden;
+  overflow: hidden;
 }
 
+/**
+ * Figures
+ */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
 figure {
-	margin: 0;
+  margin: 0;
 }
 
+/**
+ * Forms
+ *
+ */
+/**
+ * Define consistent border, margin, and padding.
+ */
 fieldset {
-	border: 1px solid #c0c0c0;
-	margin: 0 2px;
-	padding: 0.35em 0.625em 0.75em;
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
 }
 
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
 legend {
-	border: 0;
-	padding: 0;
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
 }
 
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
 button,
 input,
 select,
 textarea {
-	font-family: inherit;
-	font-size: 100%;
-	margin: 0;
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
 }
 
-.touch input,
-.touch textarea,
-.touch select {
-	font-size: 16px !important;
+/**
+ * Stops iOS safari to zoom in on focus
+ */
+.touch input, .touch
+textarea, .touch
+select {
+  font-size: 16px !important;
 }
 
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
 button,
 input {
-	line-height: normal;
+  line-height: normal;
 }
 
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
 button,
 select {
-	text-transform: none;
+  text-transform: none;
 }
 
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
 button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	-webkit-appearance: button;
-	cursor: pointer;
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
 }
 
+/**
+ * Re-set default cursor for disabled elements.
+ */
 button[disabled],
 html input[disabled] {
-	cursor: default;
+  cursor: default;
 }
 
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
 input[type="checkbox"],
 input[type="radio"] {
-	box-sizing: border-box;
-	padding: 0;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
 }
 
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
 input[type="search"] {
-	-webkit-appearance: textfield;
-	box-sizing: content-box;
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
 }
 
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-	-webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
+  border: 0;
+  padding: 0;
 }
 
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
 textarea {
-	overflow: auto;
-	vertical-align: top;
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
 }
 
+/**
+ * Tables
+ *
+ */
+/**
+ * Remove most spacing between table cells.
+ */
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
+/**
+ * Base type styles
+ */
+/**
+ * Set base font size/line-height and declare the px size of an em unit
+ */
 html {
-	font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-	font-size: 180%;
-	line-height: 1.5em;
-	font-family: "Open Sans",sans-serif;
-	color: #363942;
+  font-size: 180%;
+  line-height: 1.5em;
+  font-family: "Open Sans", sans-serif;
+  color: #363942;
 }
 
-p,
-li,
-dt,
-dd,
-input,
-textarea,
-button {
-	line-height: 1.5em;
+p, li, dt, dd, input, textarea, button {
+  line-height: 1.5em;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	line-height: 1.3em;
-	font-family: "League Spartan",sans-serif;
-	font-weight: normal;
-	margin: 1em 0 .5em;
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3em;
+  font-family: "League Spartan", sans-serif;
+  font-weight: normal;
+  margin: 1em 0 .5em;
 }
-
 h1 {
-	font-size: 3em;
+  font-size: 3em;
 }
 
 h2 {
-	font-size: 2em;
+  font-size: 2em;
 }
 
 h3 {
-	font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 h4 {
-	font-size: 1em;
+  font-size: 1em;
 }
 
 h5 {
-	font-size: 1em;
+  font-size: 1em;
 }
 
 h6 {
-	font-size: 1em;
+  font-size: 1em;
 }
 
+/**
+ * Block elements
+ */
 p {
-	margin: 0 0 1em 0;
+  margin: 0 0 1em 0;
 }
 
 hr {
-	height: 0;
-	margin: 0 0 1em 0;
-	padding: 0;
-	border: none;
-	border-top: 1px solid #b5b8c2;
+  height: 0;
+  margin: 0 0 1em 0;
+  padding: 0;
+  border: none;
+  border-top: 1px solid #b5b8c2;
 }
 
+/**
+ * Quotes
+ */
+/**
+ * Blockquotes
+ */
 blockquote {
-	margin: 0 0 1em 3em;
+  margin: 0 0 1em 3em;
 }
-
-blockquote>p {
-	margin-bottom: .60em;
-	font-size: 1.4em;
+blockquote > p {
+  margin-bottom: .60em;
+  font-size: 1.4em;
 }
-
-blockquote>p:first-child:before {
-	content: '\201C';
+blockquote > p:first-child:before {
+  content: '\201C';
 }
-
-blockquote>p:first-child:after {
-	content: '\201D';
+blockquote > p:first-child:after {
+  content: '\201D';
 }
-
 blockquote footer p {
-	margin: -.5em 0 0 0;
-	font-size: .85em;
-	font-style: italic;
+  margin: -.5em 0 0 0;
+  font-size: .85em;
+  font-style: italic;
 }
-
 blockquote footer p:before {
-	content: '-';
+  content: '-';
 }
 
+/**
+ * Inline quotes
+ */
 q {
-	color: inherit;
-	font-style: italic;
+  color: inherit;
+  font-style: italic;
 }
 
 cite {
-	font-style: italic;
+  font-style: italic;
 }
 
-ul,
-ol,
-dl {
-	margin: 0 0 1em 2em;
-	padding: 0;
+/**
+ * Lists
+ */
+/**
+ * Globals
+ */
+ul, ol, dl {
+  margin: 0 0 1em 2em;
+  padding: 0;
 }
-
 li {
-	margin: 0 0 .25em 0;
+  margin: 0 0 .25em 0;
 }
 
+/**
+ * Unordered lists
+ */
 ul {
-	list-style: disc outside;
+  list-style: disc outside;
 }
-
 ul ul {
-	margin: .25em 0 .5em 1em;
+  margin: .25em 0 .5em 1em;
 }
 
+/**
+ * Ordered lists
+ */
 ol {
-	list-style: decimal outside;
+  list-style: decimal outside;
 }
-
 ol ol {
-	margin: .25em 0 .5em 1.5em;
-	list-style-type: lower-roman;
+  margin: .25em 0 .5em 1.5em;
+  list-style-type: lower-roman;
 }
 
+/**
+ * Definiton lists
+ */
 dl {
-	margin-left: 0;
+  margin-left: 0;
 }
-
 dt {
-	margin: 0 0 .5em 0;
-	font-weight: bold;
+  margin: 0 0 .5em 0;
+  font-weight: bold;
 }
 
 dd {
-	margin: 0 0 .5em 0;
+  margin: 0 0 .5em 0;
 }
 
+/**
+ * Inline elements
+ */
+/**
+ * Superscript/subscript
+ */
 sup,
 sub {
-	position: relative;
-	vertical-align: baseline;
-	font-size: 75%;
-	line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
 }
-
 sup {
-	top: -.5em;
+  top: -.5em;
 }
 
 sub {
-	bottom: -.25em;
+  bottom: -.25em;
 }
 
+/**
+ * For marking up content relevency/edits and highlighting content
+ */
 ins {
-	background-color: #F5A503;
+  background-color: #F5A503;
 }
 
 del {
-	text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 s {
-	color: #b5b8c2;
-	text-decoration: line-through;
+  color: #b5b8c2;
+  text-decoration: line-through;
 }
 
 mark {
-	background-color: #F5A503;
-	color: inherit;
-	font-weight: normal;
+  background-color: #F5A503;
+  color: inherit;
+  font-weight: normal;
 }
 
+/**
+ * Small print
+ */
 small {
-	font-weight: normal;
-	font-style: normal;
+  font-weight: normal;
+  font-style: normal;
 }
 
-strong,
-b {
-	font-weight: bold;
+/**
+ * Phrase tags
+ */
+strong, b {
+  font-weight: bold;
 }
 
-em,
-i {
-	font-style: italic;
+em, i {
+  font-style: italic;
 }
 
-dfn,
-abbr {
-	position: relative;
-	font-style: inherit;
+dfn, abbr {
+  position: relative;
+  font-style: inherit;
 }
 
+/**
+ * Base link and text selection styles
+ */
+/**
+ * Link styles
+ */
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
-
 a:hover {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
-
 a[href^="tel"] {
-	color: inherit;
+  color: inherit;
 }
 
 :focus {
-	outline: none;
+  outline: none;
 }
 
+/**
+ * Selection styles
+ */
 ::-moz-selection {
-	color: #fff;
-	background: #363942;
+  color: #fff;
+  background: #363942;
 }
-
 ::selection {
-	color: #fff;
-	background: #363942;
+  color: #fff;
+  background: #363942;
 }
 
 ::-webkit-selection {
-	color: #fff;
-	background: #363942;
+  color: #fff;
+  background: #363942;
 }
 
 ::-moz-selection {
-	color: #fff;
-	background: #363942;
+  color: #fff;
+  background: #363942;
 }
 
 ::-ms-selection {
-	color: #fff;
-	background: #363942;
+  color: #fff;
+  background: #363942;
 }
 
+/**
+ * Form elements
+ */
 form {
-	position: relative;
-	margin: 0 0 1em 0;
+  position: relative;
+  margin: 0 0 1em 0;
 }
-
 fieldset {
-	margin: 0;
-	padding: 0;
-	border: none;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 legend {
-	margin: 0 0 .5em 0;
-	padding: 0;
-	font-size: 1;
+  margin: 0 0 .5em 0;
+  padding: 0;
+  font-size: 1;
 }
 
 label {
-	display: inline-block;
-	margin: 0 0 .25em 0;
+  display: inline-block;
+  margin: 0 0 .25em 0;
 }
 
 input,
 textarea,
 select {
-	display: block;
-	box-sizing: border-box;
-	width: 100%;
-	margin: 0;
-	color: #363942;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  color: #363942;
 }
 
 input,
 textarea {
-	padding: 10px 15px;
-	border: 1px solid #b5b8c2;
-	border-radius: 0;
+  padding: 10px 15px;
+  border: 1px solid #b5b8c2;
+  border-radius: 0;
 }
 
 input:not([type="radio"]):not([type="checkbox"]),
 textarea {
-	-webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-	display: inline-block;
-	width: auto;
-	float: left;
-	border: none;
-	margin: .25em .5em 0 0;
+  display: inline-block;
+  width: auto;
+  float: left;
+  border: none;
+  margin: .25em .5em 0 0;
 }
 
 input[type="file"] {
-	padding: 0;
-	border: none;
+  padding: 0;
+  border: none;
 }
 
 input[type="date"] {
-	padding-right: 0;
+  padding-right: 0;
 }
 
 button,
 input[type="submit"] {
-	padding: .5em;
-	cursor: pointer;
+  padding: .5em;
+  cursor: pointer;
 }
 
 ::-webkit-input-placeholder {
-	color: inherit;
+  color: inherit;
 }
 
 :-moz-placeholder {
-	color: inherit;
-	opacity: 1;
+  color: inherit;
+  opacity: 1;
 }
 
 ::-moz-placeholder {
-	color: inherit;
-	opacity: 1;
+  color: inherit;
+  opacity: 1;
 }
 
 :-ms-input-placeholder {
-	color: inherit;
+  color: inherit;
 }
 
+/**
+ * Base image styles
+ */
+/**
+ * Image on its own
+ */
 img {
-	display: block;
-	width: auto;
-	max-width: 100%;
-	border: 0;
-	margin: 0 0 1em 0;
+  display: block;
+  width: auto;
+  max-width: 100%;
+  border: 0;
+  margin: 0 0 1em 0;
+  /**
+   * Prevent google maps ui elements from being resized
+   */
 }
-
 img[src*="maps.gstatic.com"] {
-	max-width: none;
+  max-width: none;
 }
 
+/**
+ * Image within a figure tag
+ * Used when the image is supporting some related copy
+ */
 figure {
-	display: block;
-	margin: 0 0 1em 0;
-	padding: 0;
+  display: block;
+  margin: 0 0 1em 0;
+  padding: 0;
 }
-
 figure img {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
-
 figcaption {
-	margin-top: .5em;
-	font-style: italic;
+  margin-top: .5em;
+  font-style: italic;
 }
 
+/**
+ * GitHub Gist Theme
+ * Author : Louis Barranqueiro - https://github.com/LouisBarranqueiro
+ */
 .highlight {
-	font-size: 0.85em;
-	display: block;
-	background: white;
-	padding: .5em;
-	border: .1rem solid #ddd;
-	border-radius: .3rem;
-	color: #333333;
-	overflow-x: auto;
-	-webkit-text-size-adjust: none;
-	-ms-text-size-adjust: none;
-	text-size-adjust: none;
+  /**
+   * Layout styles
+   */
+  font-size: 0.85em;
+  display: block;
+  background: white;
+  padding: .5em;
+  border: .1rem solid #ddd;
+  border-radius: .3rem;
+  color: #333333;
+  overflow-x: auto;
+  -webkit-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
+  /**
+   * Language theming
+   */
 }
-
 .highlight .gutter,
 .highlight .code {
-	padding: .5em;
-	vertical-align: top;
-	line-height: 1.4;
+  padding: .5em;
+  vertical-align: top;
+  line-height: 1.4;
 }
-
 .highlight .gutter pre,
 .highlight .code pre {
-	margin: 0;
+  margin: 0;
 }
-
 .highlight .gutter {
-	border-right: .1rem solid #eee;
-	color: #aaa;
-	background-color: #fff;
-	text-align: right;
+  border-right: .1rem solid #eee;
+  color: #aaa;
+  background-color: #fff;
+  text-align: right;
 }
-
-.highlight .comment,
-.highlight.bash .shebang,
-.highlight.java .javadoc,
-.highlight.javascript .javadoc,
-.highlight.rust .preprocessor {
-	color: #969896;
+.highlight .comment, .highlight.bash .shebang, .highlight.java .javadoc, .highlight.javascript .javadoc, .highlight.rust .preprocessor {
+  color: #969896;
 }
-
-.highlight .string,
-.highlight.apache .sqbracket,
-.highlight.coffeescript .subst,
-.highlight.coffeescript .regexp,
-.highlight.cpp .preprocessor,
-.highlight.c .preprocessor,
-.highlight.javascript .regexp,
-.highlight.json .attribute,
-.highlight.makefile .variable,
-.highlight.markdown .value,
-.highlight.markdown .link_label,
-.highlight.markdown .strong,
-.highlight.markdown .emphasis,
-.highlight.markdown .blockquote,
-.highlight.nginx .regexp,
-.highlight.nginx .number,
-.highlight.objectivec .preprocessor .title,
-.highlight.perl .regexp,
-.highlight.php .regexp,
-.highlight.xml .value,
-.highlight.less .built_in,
-.highlight.scss .built_in {
-	color: #df5000;
+.highlight .string, .highlight.apache .sqbracket, .highlight.coffeescript .subst, .highlight.coffeescript .regexp, .highlight.cpp .preprocessor, .highlight.c .preprocessor, .highlight.javascript .regexp, .highlight.json .attribute, .highlight.makefile .variable, .highlight.markdown .value, .highlight.markdown .link_label, .highlight.markdown .strong, .highlight.markdown .emphasis, .highlight.markdown .blockquote, .highlight.nginx .regexp, .highlight.nginx .number, .highlight.objectivec .preprocessor .title, .highlight.perl .regexp, .highlight.php .regexp, .highlight.xml .value, .highlight.less .built_in, .highlight.scss .built_in {
+  color: #df5000;
 }
-
-.highlight .keyword,
-.highlight.css .at_rule,
-.highlight.css .important,
-.highlight.http .request,
-.highlight.ini .setting,
-.highlight.haskell .type,
-.highlight.java .javadoctag,
-.highlight.javascript .tag,
-.highlight.javascript .javadoctag,
-.highlight.nginx .title,
-.highlight.objectivec .preprocessor,
-.highlight.php .phpdoc,
-.highlight.sql .built_in,
-.highlight.less .tag,
-.highlight.less .at_rule,
-.highlight.scss .tag,
-.highlight.scss .at_rule,
-.highlight.scss .important,
-.highlight.stylus .at_rule,
-.highlight.go .typename,
-.highlight.swift .preprocessor {
-	color: #a71d5d;
+.highlight .keyword, .highlight.css .at_rule, .highlight.css .important, .highlight.http .request, .highlight.ini .setting, .highlight.haskell .type, .highlight.java .javadoctag, .highlight.javascript .tag, .highlight.javascript .javadoctag, .highlight.nginx .title, .highlight.objectivec .preprocessor, .highlight.php .phpdoc, .highlight.sql .built_in, .highlight.less .tag, .highlight.less .at_rule, .highlight.scss .tag, .highlight.scss .at_rule, .highlight.scss .important, .highlight.stylus .at_rule, .highlight.go .typename, .highlight.swift .preprocessor {
+  color: #a71d5d;
 }
-
-.highlight.apache .common,
-.highlight.apache .cbracket,
-.highlight.apache .keyword,
-.highlight.bash .literal,
-.highlight.bash .built_in,
-.highlight.coffeescript .literal,
-.highlight.coffeescript .built_in,
-.highlight.coffeescript .number,
-.highlight.cpp .number,
-.highlight.cpp .built_in,
-.highlight.c .number,
-.highlight.c .built_in,
-.highlight.cs .number,
-.highlight.cs .built_in,
-.highlight.css .attribute,
-.highlight.css .hexcolor,
-.highlight.css .number,
-.highlight.css .function,
-.highlight.haskell .number,
-.highlight.http .literal,
-.highlight.http .attribute,
-.highlight.java .number,
-.highlight.javascript .built_in,
-.highlight.javascript .literal,
-.highlight.javascript .number,
-.highlight.json .number,
-.highlight.makefile .keyword,
-.highlight.markdown .link_reference,
-.highlight.nginx .built_in,
-.highlight.objectivec .literal,
-.highlight.objectivec .number,
-.highlight.objectivec .built_in,
-.highlight.php .literal,
-.highlight.php .number,
-.highlight.python .number,
-.highlight.ruby .prompt,
-.highlight.ruby .constant,
-.highlight.ruby .number,
-.highlight.ruby .subst .keyword,
-.highlight.ruby .symbol,
-.highlight.rust .number,
-.highlight.sql .number,
-.highlight.puppet .function,
-.highlight.less .number,
-.highlight.less .hexcolor,
-.highlight.less .function,
-.highlight.less .attribute,
-.highlight.scss .preprocessor,
-.highlight.scss .number,
-.highlight.scss .hexcolor,
-.highlight.scss .function,
-.highlight.scss .attribute,
-.highlight.stylus .number,
-.highlight.stylus .hexcolor,
-.highlight.stylus .attribute,
-.highlight.stylus .params,
-.highlight.go .built_in,
-.highlight.go .constant,
-.highlight.swift .built_in,
-.highlight.swift .number {
-	color: #0086b3;
+.highlight.apache .common, .highlight.apache .cbracket, .highlight.apache .keyword, .highlight.bash .literal, .highlight.bash .built_in, .highlight.coffeescript .literal, .highlight.coffeescript .built_in, .highlight.coffeescript .number, .highlight.cpp .number, .highlight.cpp .built_in, .highlight.c .number, .highlight.c .built_in, .highlight.cs .number, .highlight.cs .built_in, .highlight.css .attribute, .highlight.css .hexcolor, .highlight.css .number, .highlight.css .function, .highlight.haskell .number, .highlight.http .literal, .highlight.http .attribute, .highlight.java .number, .highlight.javascript .built_in, .highlight.javascript .literal, .highlight.javascript .number, .highlight.json .number, .highlight.makefile .keyword, .highlight.markdown .link_reference, .highlight.nginx .built_in, .highlight.objectivec .literal, .highlight.objectivec .number, .highlight.objectivec .built_in, .highlight.php .literal, .highlight.php .number, .highlight.python .number, .highlight.ruby .prompt, .highlight.ruby .constant, .highlight.ruby .number, .highlight.ruby .subst .keyword, .highlight.ruby .symbol, .highlight.rust .number, .highlight.sql .number, .highlight.puppet .function, .highlight.less .number, .highlight.less .hexcolor, .highlight.less .function, .highlight.less .attribute, .highlight.scss .preprocessor, .highlight.scss .number, .highlight.scss .hexcolor, .highlight.scss .function, .highlight.scss .attribute, .highlight.stylus .number, .highlight.stylus .hexcolor, .highlight.stylus .attribute, .highlight.stylus .params, .highlight.go .built_in, .highlight.go .constant, .highlight.swift .built_in, .highlight.swift .number {
+  color: #0086b3;
 }
-
-.highlight.apache .tag,
-.highlight.cs .xmlDocTag,
-.highlight.css .tag,
-.highlight.xml .title,
-.highlight.stylus .tag {
-	color: #63a35c;
+.highlight.apache .tag, .highlight.cs .xmlDocTag, .highlight.css .tag, .highlight.xml .title, .highlight.stylus .tag {
+  color: #63a35c;
 }
-
-.highlight.bash .variable,
-.highlight.cs .preprocessor,
-.highlight.cs .preprocessor .keyword,
-.highlight.css .attr_selector,
-.highlight.css .value,
-.highlight.ini .value,
-.highlight.ini .keyword,
-.highlight.javascript .tag .title,
-.highlight.makefile .constant,
-.highlight.nginx .variable,
-.highlight.xml .tag,
-.highlight.scss .variable {
-	color: #333333;
+.highlight.bash .variable, .highlight.cs .preprocessor, .highlight.cs .preprocessor .keyword, .highlight.css .attr_selector, .highlight.css .value, .highlight.ini .value, .highlight.ini .keyword, .highlight.javascript .tag .title, .highlight.makefile .constant, .highlight.nginx .variable, .highlight.xml .tag, .highlight.scss .variable {
+  color: #333333;
 }
-
-.highlight.bash .title,
-.highlight.coffeescript .title,
-.highlight.cpp .title,
-.highlight.c .title,
-.highlight.cs .title,
-.highlight.css .id,
-.highlight.css .class,
-.highlight.css .pseudo,
-.highlight.ini .title,
-.highlight.haskell .title,
-.highlight.haskell .pragma,
-.highlight.java .title,
-.highlight.javascript .title,
-.highlight.makefile .title,
-.highlight.objectivec .title,
-.highlight.perl .sub,
-.highlight.php .title,
-.highlight.python .decorator,
-.highlight.python .title,
-.highlight.ruby .parent,
-.highlight.ruby .title,
-.highlight.rust .title,
-.highlight.xml .attribute,
-.highlight.puppet .title,
-.highlight.less .id,
-.highlight.less .pseudo,
-.highlight.less .class,
-.highlight.scss .id,
-.highlight.scss .pseudo,
-.highlight.scss .class,
-.highlight.stylus .class,
-.highlight.stylus .id,
-.highlight.stylus .pseudo,
-.highlight.stylus .title,
-.highlight.swift .title,
+.highlight.bash .title, .highlight.coffeescript .title, .highlight.cpp .title, .highlight.c .title, .highlight.cs .title, .highlight.css .id, .highlight.css .class, .highlight.css .pseudo, .highlight.ini .title, .highlight.haskell .title, .highlight.haskell .pragma, .highlight.java .title, .highlight.javascript .title, .highlight.makefile .title, .highlight.objectivec .title, .highlight.perl .sub, .highlight.php .title, .highlight.python .decorator, .highlight.python .title, .highlight.ruby .parent, .highlight.ruby .title, .highlight.rust .title, .highlight.xml .attribute, .highlight.puppet .title, .highlight.less .id, .highlight.less .pseudo, .highlight.less .class, .highlight.scss .id, .highlight.scss .pseudo, .highlight.scss .class, .highlight.stylus .class, .highlight.stylus .id, .highlight.stylus .pseudo, .highlight.stylus .title, .highlight.swift .title, .highlight.diff .chunk {
+  color: #795da3;
+}
+.highlight.coffeescript .reserved, .highlight.coffeescript .attribute {
+  color: #1d3e81;
+}
 .highlight.diff .chunk {
-	color: #795da3;
+  font-weight: bold;
 }
-
-.highlight.coffeescript .reserved,
-.highlight.coffeescript .attribute {
-	color: #1d3e81;
-}
-
-.highlight.diff .chunk {
-	font-weight: bold;
-}
-
 .highlight.diff .addition {
-	color: #55a532;
-	background-color: #eaffea;
+  color: #55a532;
+  background-color: #eaffea;
 }
-
 .highlight.diff .deletion {
-	color: #bd2c00;
-	background-color: #ffecec;
+  color: #bd2c00;
+  background-color: #ffecec;
 }
-
 .highlight.markdown .link_url {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
+/**
+ * Hero nav
+ * A large, squigy nav to promote stuff
+ * in a big way
+ */
 .heronav ul {
-	-webkit-flex-flow: row;
-	-ms-flex-flow: row;
-	flex-flow: row;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
+  -webkit-flex-flow: row;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
-
 .heronav li {
-	font-size: 1.2em;
-	font-family: "League Spartan",sans-serif;
-	-webkit-flex: 1 1 0;
-	-ms-flex: 1 1 0;
-	flex: 1 1 0;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	text-align: center;
-	overflow: hidden;
-	background-color: false;
+  font-size: 1.2em;
+  font-family: "League Spartan", sans-serif;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+      -ms-flex: 1 1 0;
+          flex: 1 1 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  overflow: hidden;
+  background-color: false;
 }
-
 .heronav a {
-	-webkit-flex: 1 1;
-	-ms-flex: 1 1;
-	flex: 1 1;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	padding: 4rem 2rem;
-	color: #363942;
-	background-color: #E9F1DF;
-	text-shadow: 1px 2px #d1e1bc, 2px 4px #d1e1bc, 3px 6px #d1e1bc, 4px 8px #d1e1bc, 5px 10px #d1e1bc, 6px 12px #d1e1bc, 7px 14px #d1e1bc, 8px 16px #d1e1bc, 9px 18px #d1e1bc, 10px 20px #d1e1bc, 11px 22px #d1e1bc, 12px 24px #d1e1bc, 13px 26px #d1e1bc, 14px 28px #d1e1bc, 15px 30px #d1e1bc, 16px 32px #d1e1bc, 17px 34px #d1e1bc, 18px 36px #d1e1bc, 19px 38px #d1e1bc, 20px 40px #d1e1bc, 21px 42px #d1e1bc, 22px 44px #d1e1bc, 23px 46px #d1e1bc, 24px 48px #d1e1bc, 25px 50px #d1e1bc, 26px 52px #d1e1bc, 27px 54px #d1e1bc, 28px 56px #d1e1bc, 29px 58px #d1e1bc, 30px 60px #d1e1bc, 31px 62px #d1e1bc, 32px 64px #d1e1bc, 33px 66px #d1e1bc, 34px 68px #d1e1bc, 35px 70px #d1e1bc, 36px 72px #d1e1bc, 37px 74px #d1e1bc, 38px 76px #d1e1bc, 39px 78px #d1e1bc, 40px 80px #d1e1bc, 41px 82px #d1e1bc, 42px 84px #d1e1bc, 43px 86px #d1e1bc, 44px 88px #d1e1bc, 45px 90px #d1e1bc, 46px 92px #d1e1bc, 47px 94px #d1e1bc, 48px 96px #d1e1bc, 49px 98px #d1e1bc, 50px 100px #d1e1bc, 51px 102px #d1e1bc, 52px 104px #d1e1bc, 53px 106px #d1e1bc, 54px 108px #d1e1bc, 55px 110px #d1e1bc, 56px 112px #d1e1bc, 57px 114px #d1e1bc, 58px 116px #d1e1bc, 59px 118px #d1e1bc, 60px 120px #d1e1bc, 61px 122px #d1e1bc, 62px 124px #d1e1bc, 63px 126px #d1e1bc, 64px 128px #d1e1bc, 65px 130px #d1e1bc, 66px 132px #d1e1bc, 67px 134px #d1e1bc, 68px 136px #d1e1bc, 69px 138px #d1e1bc, 70px 140px #d1e1bc, 71px 142px #d1e1bc, 72px 144px #d1e1bc, 73px 146px #d1e1bc, 74px 148px #d1e1bc, 75px 150px #d1e1bc, 76px 152px #d1e1bc, 77px 154px #d1e1bc, 78px 156px #d1e1bc, 79px 158px #d1e1bc, 80px 160px #d1e1bc, 81px 162px #d1e1bc, 82px 164px #d1e1bc, 83px 166px #d1e1bc, 84px 168px #d1e1bc, 85px 170px #d1e1bc, 86px 172px #d1e1bc, 87px 174px #d1e1bc, 88px 176px #d1e1bc, 89px 178px #d1e1bc, 90px 180px #d1e1bc, 91px 182px #d1e1bc, 92px 184px #d1e1bc, 93px 186px #d1e1bc, 94px 188px #d1e1bc, 95px 190px #d1e1bc, 96px 192px #d1e1bc, 97px 194px #d1e1bc, 98px 196px #d1e1bc, 99px 198px #d1e1bc, 100px 200px #d1e1bc;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4rem 2rem;
+  color: #363942;
+  background-color: #E9F1DF;
+  text-shadow: 1px 2px #d1e1bc, 2px 4px #d1e1bc, 3px 6px #d1e1bc, 4px 8px #d1e1bc, 5px 10px #d1e1bc, 6px 12px #d1e1bc, 7px 14px #d1e1bc, 8px 16px #d1e1bc, 9px 18px #d1e1bc, 10px 20px #d1e1bc, 11px 22px #d1e1bc, 12px 24px #d1e1bc, 13px 26px #d1e1bc, 14px 28px #d1e1bc, 15px 30px #d1e1bc, 16px 32px #d1e1bc, 17px 34px #d1e1bc, 18px 36px #d1e1bc, 19px 38px #d1e1bc, 20px 40px #d1e1bc, 21px 42px #d1e1bc, 22px 44px #d1e1bc, 23px 46px #d1e1bc, 24px 48px #d1e1bc, 25px 50px #d1e1bc, 26px 52px #d1e1bc, 27px 54px #d1e1bc, 28px 56px #d1e1bc, 29px 58px #d1e1bc, 30px 60px #d1e1bc, 31px 62px #d1e1bc, 32px 64px #d1e1bc, 33px 66px #d1e1bc, 34px 68px #d1e1bc, 35px 70px #d1e1bc, 36px 72px #d1e1bc, 37px 74px #d1e1bc, 38px 76px #d1e1bc, 39px 78px #d1e1bc, 40px 80px #d1e1bc, 41px 82px #d1e1bc, 42px 84px #d1e1bc, 43px 86px #d1e1bc, 44px 88px #d1e1bc, 45px 90px #d1e1bc, 46px 92px #d1e1bc, 47px 94px #d1e1bc, 48px 96px #d1e1bc, 49px 98px #d1e1bc, 50px 100px #d1e1bc, 51px 102px #d1e1bc, 52px 104px #d1e1bc, 53px 106px #d1e1bc, 54px 108px #d1e1bc, 55px 110px #d1e1bc, 56px 112px #d1e1bc, 57px 114px #d1e1bc, 58px 116px #d1e1bc, 59px 118px #d1e1bc, 60px 120px #d1e1bc, 61px 122px #d1e1bc, 62px 124px #d1e1bc, 63px 126px #d1e1bc, 64px 128px #d1e1bc, 65px 130px #d1e1bc, 66px 132px #d1e1bc, 67px 134px #d1e1bc, 68px 136px #d1e1bc, 69px 138px #d1e1bc, 70px 140px #d1e1bc, 71px 142px #d1e1bc, 72px 144px #d1e1bc, 73px 146px #d1e1bc, 74px 148px #d1e1bc, 75px 150px #d1e1bc, 76px 152px #d1e1bc, 77px 154px #d1e1bc, 78px 156px #d1e1bc, 79px 158px #d1e1bc, 80px 160px #d1e1bc, 81px 162px #d1e1bc, 82px 164px #d1e1bc, 83px 166px #d1e1bc, 84px 168px #d1e1bc, 85px 170px #d1e1bc, 86px 172px #d1e1bc, 87px 174px #d1e1bc, 88px 176px #d1e1bc, 89px 178px #d1e1bc, 90px 180px #d1e1bc, 91px 182px #d1e1bc, 92px 184px #d1e1bc, 93px 186px #d1e1bc, 94px 188px #d1e1bc, 95px 190px #d1e1bc, 96px 192px #d1e1bc, 97px 194px #d1e1bc, 98px 196px #d1e1bc, 99px 198px #d1e1bc, 100px 200px #d1e1bc;
 }
-
 .heronav a:hover {
-	background-color: #dde9cd;
-	text-shadow: 1px 2px #c4daaa, 2px 4px #c4daaa, 3px 6px #c4daaa, 4px 8px #c4daaa, 5px 10px #c4daaa, 6px 12px #c4daaa, 7px 14px #c4daaa, 8px 16px #c4daaa, 9px 18px #c4daaa, 10px 20px #c4daaa, 11px 22px #c4daaa, 12px 24px #c4daaa, 13px 26px #c4daaa, 14px 28px #c4daaa, 15px 30px #c4daaa, 16px 32px #c4daaa, 17px 34px #c4daaa, 18px 36px #c4daaa, 19px 38px #c4daaa, 20px 40px #c4daaa, 21px 42px #c4daaa, 22px 44px #c4daaa, 23px 46px #c4daaa, 24px 48px #c4daaa, 25px 50px #c4daaa, 26px 52px #c4daaa, 27px 54px #c4daaa, 28px 56px #c4daaa, 29px 58px #c4daaa, 30px 60px #c4daaa, 31px 62px #c4daaa, 32px 64px #c4daaa, 33px 66px #c4daaa, 34px 68px #c4daaa, 35px 70px #c4daaa, 36px 72px #c4daaa, 37px 74px #c4daaa, 38px 76px #c4daaa, 39px 78px #c4daaa, 40px 80px #c4daaa, 41px 82px #c4daaa, 42px 84px #c4daaa, 43px 86px #c4daaa, 44px 88px #c4daaa, 45px 90px #c4daaa, 46px 92px #c4daaa, 47px 94px #c4daaa, 48px 96px #c4daaa, 49px 98px #c4daaa, 50px 100px #c4daaa, 51px 102px #c4daaa, 52px 104px #c4daaa, 53px 106px #c4daaa, 54px 108px #c4daaa, 55px 110px #c4daaa, 56px 112px #c4daaa, 57px 114px #c4daaa, 58px 116px #c4daaa, 59px 118px #c4daaa, 60px 120px #c4daaa, 61px 122px #c4daaa, 62px 124px #c4daaa, 63px 126px #c4daaa, 64px 128px #c4daaa, 65px 130px #c4daaa, 66px 132px #c4daaa, 67px 134px #c4daaa, 68px 136px #c4daaa, 69px 138px #c4daaa, 70px 140px #c4daaa, 71px 142px #c4daaa, 72px 144px #c4daaa, 73px 146px #c4daaa, 74px 148px #c4daaa, 75px 150px #c4daaa, 76px 152px #c4daaa, 77px 154px #c4daaa, 78px 156px #c4daaa, 79px 158px #c4daaa, 80px 160px #c4daaa, 81px 162px #c4daaa, 82px 164px #c4daaa, 83px 166px #c4daaa, 84px 168px #c4daaa, 85px 170px #c4daaa, 86px 172px #c4daaa, 87px 174px #c4daaa, 88px 176px #c4daaa, 89px 178px #c4daaa, 90px 180px #c4daaa, 91px 182px #c4daaa, 92px 184px #c4daaa, 93px 186px #c4daaa, 94px 188px #c4daaa, 95px 190px #c4daaa, 96px 192px #c4daaa, 97px 194px #c4daaa, 98px 196px #c4daaa, 99px 198px #c4daaa, 100px 200px #c4daaa;
+  background-color: #dde9cd;
+  text-shadow: 1px 2px #c4daaa, 2px 4px #c4daaa, 3px 6px #c4daaa, 4px 8px #c4daaa, 5px 10px #c4daaa, 6px 12px #c4daaa, 7px 14px #c4daaa, 8px 16px #c4daaa, 9px 18px #c4daaa, 10px 20px #c4daaa, 11px 22px #c4daaa, 12px 24px #c4daaa, 13px 26px #c4daaa, 14px 28px #c4daaa, 15px 30px #c4daaa, 16px 32px #c4daaa, 17px 34px #c4daaa, 18px 36px #c4daaa, 19px 38px #c4daaa, 20px 40px #c4daaa, 21px 42px #c4daaa, 22px 44px #c4daaa, 23px 46px #c4daaa, 24px 48px #c4daaa, 25px 50px #c4daaa, 26px 52px #c4daaa, 27px 54px #c4daaa, 28px 56px #c4daaa, 29px 58px #c4daaa, 30px 60px #c4daaa, 31px 62px #c4daaa, 32px 64px #c4daaa, 33px 66px #c4daaa, 34px 68px #c4daaa, 35px 70px #c4daaa, 36px 72px #c4daaa, 37px 74px #c4daaa, 38px 76px #c4daaa, 39px 78px #c4daaa, 40px 80px #c4daaa, 41px 82px #c4daaa, 42px 84px #c4daaa, 43px 86px #c4daaa, 44px 88px #c4daaa, 45px 90px #c4daaa, 46px 92px #c4daaa, 47px 94px #c4daaa, 48px 96px #c4daaa, 49px 98px #c4daaa, 50px 100px #c4daaa, 51px 102px #c4daaa, 52px 104px #c4daaa, 53px 106px #c4daaa, 54px 108px #c4daaa, 55px 110px #c4daaa, 56px 112px #c4daaa, 57px 114px #c4daaa, 58px 116px #c4daaa, 59px 118px #c4daaa, 60px 120px #c4daaa, 61px 122px #c4daaa, 62px 124px #c4daaa, 63px 126px #c4daaa, 64px 128px #c4daaa, 65px 130px #c4daaa, 66px 132px #c4daaa, 67px 134px #c4daaa, 68px 136px #c4daaa, 69px 138px #c4daaa, 70px 140px #c4daaa, 71px 142px #c4daaa, 72px 144px #c4daaa, 73px 146px #c4daaa, 74px 148px #c4daaa, 75px 150px #c4daaa, 76px 152px #c4daaa, 77px 154px #c4daaa, 78px 156px #c4daaa, 79px 158px #c4daaa, 80px 160px #c4daaa, 81px 162px #c4daaa, 82px 164px #c4daaa, 83px 166px #c4daaa, 84px 168px #c4daaa, 85px 170px #c4daaa, 86px 172px #c4daaa, 87px 174px #c4daaa, 88px 176px #c4daaa, 89px 178px #c4daaa, 90px 180px #c4daaa, 91px 182px #c4daaa, 92px 184px #c4daaa, 93px 186px #c4daaa, 94px 188px #c4daaa, 95px 190px #c4daaa, 96px 192px #c4daaa, 97px 194px #c4daaa, 98px 196px #c4daaa, 99px 198px #c4daaa, 100px 200px #c4daaa;
 }
-
 .heronav span {
-	margin: auto;
+  margin: auto;
+}
+@media (min-width: 43.75em) {
+  .heronav li {
+    font-size: 3.5em;
+  }
+  .heronav a {
+    min-height: 30rem;
+    padding: 4rem;
+  }
 }
 
+/**
+ * Listing pagination
+ */
 .pagination {
-	margin: 0;
-	padding: 2rem 0;
-	list-style: none;
-	text-align: center;
+  margin: 0;
+  padding: 2rem 0;
+  list-style: none;
+  text-align: center;
 }
-
 .pagination-link {
-	font-family: "League Spartan",sans-serif;
-	display: inline-block;
-	margin: 0 .5rem;
+  font-family: "League Spartan", sans-serif;
+  display: inline-block;
+  margin: 0 .5rem;
 }
-
 .pagination-link a {
-	display: block;
-	padding: 1rem 2rem;
-	border: 0.1rem solid false;
-	color: inherit;
-	text-transform: uppercase;
+  display: block;
+  padding: 1rem 2rem;
+  border: 0.1rem solid false;
+  color: inherit;
+  text-transform: uppercase;
 }
 
+/**
+ * Post
+ */
 .post {
-	position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
-
 .post-thumb {
-	-webkit-flex: 1 1;
-	-ms-flex: 1 1;
-	flex: 1 1;
-	margin-bottom: 0;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  margin-bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
-
 .post-thumb img {
-	width: 100%;
-	height: auto;
-	visibility: hidden;
+  width: 100%;
+  height: auto;
+  visibility: hidden;
 }
-
+.post-meta {
+  margin: 0;
+  list-style: none;
+}
+.post-meta-item {
+  font-size: 0.8em;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  text-transform: uppercase;
+}
+.post-meta-item:after {
+  content: '/';
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 .5em;
+}
+.post-meta-item:last-child:after {
+  display: none;
+}
 .post-title {
-	font-size: 1em;
-	margin: 0;
+  font-size: 1em;
+  margin: 0;
 }
-
 .post-details {
-	-webkit-flex: 2 1;
-	-ms-flex: 2 1;
-	flex: 2 1;
-	padding: 2rem;
+  -webkit-box-flex: 2;
+  -webkit-flex: 2 1;
+      -ms-flex: 2 1;
+          flex: 2 1;
+  padding: 2rem;
+}
+@media (min-width: 43.75em) {
+  .post-thumb {
+    -webkit-flex-basis: 30rem;
+        -ms-flex-preferred-size: 30rem;
+            flex-basis: 30rem;
+  }
+  .post-thumb + .post-details {
+    padding: 2rem;
+  }
+  .post-meta {
+    margin-bottom: .5em;
+  }
+  .post-meta-item {
+    font-size: 1em;
+  }
+  .post-title {
+    font-size: 1.5em;
+  }
+  .post-details {
+    padding: 4rem 2rem;
+  }
 }
 
-.post-fullpostlink,
-.post-fullpostlink-tuck {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-.post-fullpostlink {
-	display: block;
-	overflow: hidden;
-}
-
-.post-fullpostlink-tuck {
-	position: relative;
-	-webkit-transform: translateX(100%);
-	transform: translateX(100%);
-	transition: .25s ease;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-
-.post-fullpostlink-label {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 10rem;
-	height: 10rem;
-	display: block;
-	margin: -5rem 0 0 -5rem;
-	line-height: 10rem;
-	text-align: center;
-}
-
-.post-fullpostlink:hover .post-fullpostlink-tuck {
-	-webkit-transform: translateX(0);
-	transform: translateX(0);
-}
-
+/**
+ * Post listing
+ */
 .postlisting {
-	max-width: 80rem;
-	margin: auto;
-	list-style: none;
+  margin: 0;
+  list-style: none;
 }
-
 .postlisting-item {
-	-webkit-flex: 1 1 40rem;
-	-ms-flex: 1 1 40rem;
-	flex: 1 1 40rem;
+  margin: 0;
+  background-color: #fff;
 }
-
+.postlisting-item:nth-child(odd) {
+  background-color: #E9F1DF;
+}
 .postlisting-item .post {
-	min-height: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  background-color: transparent;
 }
-
 .postlisting-item .post-details {
-	color: #fff;
+  color: #fff;
 }
-
 .postlisting-item[style^="background-color:#undefined"] .post-details {
-	color: #363942;
+  color: #363942;
 }
 
+/**
+ * Full post
+ */
 .fullpost-header {
-	position: relative;
-	background-color: #75BE22;
+  position: relative;
+  background-color: #75BE22;
 }
-
 .fullpost-header-inner {
-	position: relative;
-	z-index: 1;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	-webkit-justify-content: flex-end;
-	-ms-flex-pack: end;
-	justify-content: flex-end;
-	width: auto;
-	margin: auto;
-	padding: 4rem 2rem 2rem;
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: auto;
+  margin: auto;
+  padding: 4rem 2rem 2rem;
 }
-
 .fullpost-title {
-	margin: 0;
-	color: #fff;
-	font-size: 1.3em;
-	text-transform: uppercase;
+  margin: 0;
+  color: #fff;
+  font-size: 1.3em;
+  text-transform: uppercase;
 }
-
 .fullpost-hero {
-	padding-top: 4rem;
-	padding-bottom: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
-
 .fullpost-hero img {
-	margin: auto;
+  margin: auto;
 }
-
 .fullpost-body {
-	width: auto;
-	max-width: 80rem;
-	margin: auto;
-	padding: 4rem 2rem;
+  width: auto;
+  max-width: 80rem;
+  margin: auto;
+  padding: 4rem 2rem;
 }
-
-.fullpost-body>p:first-child {
-	font-size: 1.2em;
-	font-family: "League Spartan",sans-serif;
+.fullpost-body > p:first-child {
+  font-size: 1.2em;
+  font-family: "League Spartan", sans-serif;
 }
-
 .fullpost-body a {
-	text-decoration: underline;
+  text-decoration: underline;
 }
-
 .fullpost-body img {
-	max-width: 100%;
+  max-width: 100%;
+}
+@media (min-width: 43.75em) {
+  .fullpost-header-inner {
+    width: auto;
+    max-width: 80rem;
+    min-height: 30rem;
+    padding-top: 8rem;
+  }
+  .fullpost-body > p:first-child {
+    font-size: 1.5em;
+  }
+  .fullpost-title {
+    font-size: 4rem;
+  }
 }
 
+/**
+ * Page outer
+ */
 html {
-	background-color: #363942;
+  background-color: #363942;
 }
 
+/**
+ * Site header
+ */
 .site-header {
-	background-color: #fff;
+  background-color: #fff;
+  /**
+   * Active state
+   */
 }
-
 .site-header-inner {
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
-
 .site-logo {
-	font-size: 1em;
-	line-height: 2.5rem;
-	font-family: "League Spartan",sans-serif;
-	display: block;
-	margin: 0;
-	padding-right: 4rem;
-	text-transform: uppercase;
+  font-size: 1em;
+  line-height: 2.5rem;
+  font-family: "League Spartan", sans-serif;
+  display: block;
+  margin: 0;
+  padding-right: 4rem;
+  text-transform: uppercase;
 }
 
+.site-navigation {
+  display: none;
+  padding-top: 2rem;
+}
+.site-navigation li {
+  display: inline;
+  font-size: 0.8em;
+  font-family: "League Spartan", sans-serif;
+}
+.site-navigation a {
+  text-transform: uppercase;
+}
+.site-navigation a:after {
+  content: '/';
+  display: inline-block;
+  vertical-align: bottom;
+  padding: 0 .5em;
+  color: #b5b8c2;
+}
+.site-navigation a.state--current {
+  color: #75BE22;
+}
+.site-navigation li:last-child a:after {
+  display: none;
+}
+
+.site-navtoggle {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: block;
+  cursor: pointer;
+}
+.site-navtoggle:before {
+  width: 100%;
+  height: 0.2rem;
+  content: ' ';
+  display: block;
+  background-color: #b5b8c2;
+  box-shadow: 0 1.2rem #b5b8c2, 0 2.3rem #b5b8c2;
+}
+.site-header.state--navactive .site-navigation {
+  display: block;
+}
+@media (min-width: 43.75em) {
+  .site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    background-color: transparent;
+  }
+  .site-header-inner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .site-logo,
+  .site-navigation a {
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+  }
+  .site-logo:hover,
+  .site-navigation a:hover {
+    color: #fff;
+  }
+
+  .site-logo {
+    padding-top: 2rem;
+    padding-right: 0;
+    line-height: 1.5em;
+  }
+
+  .site-navigation {
+    display: block;
+    padding-top: 0;
+  }
+  .site-navigation li {
+    font-size: 1em;
+  }
+  .site-navigation a {
+    margin-left: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .site-navigation a:after {
+    display: none;
+  }
+  .site-navigation a.state--current {
+    padding-top: 1.5rem;
+    border-top: 0.5rem solid #fff;
+    color: #fff;
+  }
+
+  .site-navtoggle {
+    display: none;
+  }
+}
+
+/**
+ * Page content
+ */
 .page-content {
-	background-color: #fff;
+  background-color: #fff;
 }
 
+/**
+ * Site footer
+ */
 .site-footer {
-	background-color: #363942;
+  background-color: #363942;
 }
-
 .site-footer-inner {
-	padding-top: 4rem;
-	padding-bottom: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
-
 .site-footer h2 {
-	font-size: 1em;
-	margin: 0 0 1em;
-	color: #fff;
-	text-align: center;
-	text-transform: uppercase;
+  font-size: 1em;
+  margin: 0 0 1em;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
 }
-
+@media (min-width: 43.75em) {
+  .site-footer-inner {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
 .followme {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-justify-content: space-between;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
-	margin: 0;
-	list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  list-style: none;
 }
-
 .followme-link {
-	-webkit-flex: 1 1 0;
-	-ms-flex: 1 1 0;
-	flex: 1 1 0;
-	margin: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+      -ms-flex: 1 1 0;
+          flex: 1 1 0;
+  margin: 0;
 }
-
 .followme-link a {
-	display: block;
-	padding: 2rem;
-	color: #fff;
-	text-align: center;
+  display: block;
+  padding: 2rem;
+  color: #fff;
+  text-align: center;
 }
-
 .followme-link a:before {
-	width: 4rem;
-	height: 4rem;
-	content: ' ';
-	display: block;
-	margin: auto;
-	background-color: transparent;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: contain;
+  width: 4rem;
+  height: 4rem;
+  content: ' ';
+  display: block;
+  margin: auto;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
 }
-
 .followme-link a:hover {
-	background-color: #2b2d34;
+  background-color: #2b2d34;
 }
-
 .followme-link[data-link="twitter"] a:before {
-	background-image: url("../images/social-twitter.svg");
+  background-image: url("../images/social-twitter.svg");
 }
-
 .followme-link[data-link="github"] a:before {
-	background-image: url("../images/social-github.svg");
+  background-image: url("../images/social-github.svg");
 }
-
 .followme-link[data-link="codepen"] a:before {
-	background-image: url("../images/social-codepen.svg");
+  background-image: url("../images/social-codepen.svg");
 }
-
 .followme-link span {
-	display: none;
+  display: none;
+}
+@media (min-width: 43.75em) {
+  .followme-link {
+    font-size: 1.5em;
+  }
+  .followme-link a {
+    padding: 4rem;
+  }
+  .followme-link a:before {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: .5em;
+  }
+  .followme-link span {
+    display: inline;
+  }
 }
 
+/**
+ * Homepage layout
+ */
+.view-home .site-header {
+  display: none;
+}
+.home-intro {
+  background-color: #75BE22;
+}
+.home-intro .page-section-inner {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.home-intro .page-section-inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.home-intro p {
+  font-size: 1.3em;
+  line-height: 1.8;
+  font-family: "League Spartan", sans-serif;
+  margin: auto;
+  color: #fff;
+  text-align: center;
+}
+.home-intro a {
+  display: inline-block;
+  padding: 0 1rem;
+  background-color: #68a81e;
+  -webkit-transition: .25s ease;
+          transition: .25s ease;
+}
+.home-intro a:hover {
+  background-color: #7ac724;
+}
+@media (min-width: 43.75em) {
+  .home-intro .page-section-inner {
+    min-height: 70vh;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  .home-intro p {
+    font-size: 4em;
+  }
+}
+
+/**
+ * About page styles
+ */
 .fullpost-body img[src*="avatar"] {
-	width: 20rem;
-	float: right;
-	-webkit-shape-outside: url("/images/avatar-mask.png");
-	shape-outside: url("/images/avatar-mask.png");
+  width: 20rem;
+  float: right;
+  -webkit-shape-outside: url("/images/avatar-mask.png");
+          shape-outside: url("/images/avatar-mask.png");
+}
+@media (min-width: 31.25em) {
+  .fullpost-body img[src*="avatar"] {
+    width: 30rem;
+  }
 }
 
+/**
+ * Shame file
+ * Add quick changes here, to be incorperated properly at a later point
+ */
 .page-section-inner {
-	padding-top: 4rem;
-	padding-bottom: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
-
 .page-section-header {
-	font-size: 1em;
-	margin: 0 0 1em;
-	text-align: center;
-	text-transform: uppercase;
+  font-size: 1em;
+  margin: 0 0 1em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .browsermessage {
-	font-size: 0.85em;
-	background-color: #F4FF9B;
+  font-size: 0.85em;
+  background-color: #F4FF9B;
 }
-
 .browsermessage-inner {
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .page-header {
-	background-color: #75BE22;
+  background-color: #75BE22;
 }
-
 .page-header-inner {
-	position: relative;
-	z-index: 1;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	-webkit-justify-content: flex-end;
-	-ms-flex-pack: end;
-	justify-content: flex-end;
-	padding: 4rem 2rem 2rem;
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 4rem 2rem 2rem;
 }
-
 .page-header h1 {
-	margin: 0;
-	color: #fff;
-	font-size: 1.3em;
-	text-transform: uppercase;
+  margin: 0;
+  color: #fff;
+  font-size: 1.3em;
+  text-transform: uppercase;
 }
-
-@media (min-width: 31.25em) {
-
-.fullpost-body img[src*="avatar"] {
-	width: 30rem;
-}
-
-}
-
 @media (min-width: 43.75em) {
-
-.heronav li {
-	font-size: 3.5em;
+  .page-header-inner {
+    min-height: 30rem;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+  }
+  .page-header h1 {
+    font-size: 4em;
+  }
 }
-
-.heronav a {
-	min-height: 30rem;
-	padding: 4rem;
-}
-
-.fullpost-header-inner {
-	width: auto;
-	max-width: 80rem;
-	min-height: 30rem;
-	padding-top: 8rem;
-}
-
-.fullpost-body>p:first-child {
-	font-size: 1.5em;
-}
-
-.fullpost-title {
-	font-size: 4rem;
-}
-
-.site-header {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 2;
-	width: 100%;
-	background-color: transparent;
-}
-
-.site-header-inner {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-justify-content: space-between;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
-	padding-top: 0;
-	padding-bottom: 0;
-}
-
-.site-logo {
-	display: inline-block;
-	vertical-align: top;
-	color: #fff;
-}
-
-.site-logo:hover {
-	color: #fff;
-}
-
-.site-logo {
-	padding-top: 2rem;
-	padding-right: 0;
-	line-height: 1.5em;
-}
-
-.site-footer-inner {
-	padding-top: 6rem;
-	padding-bottom: 6rem;
-}
-
-.followme-link {
-	font-size: 1.5em;
-}
-
-.followme-link a {
-	padding: 4rem;
-}
-
-.followme-link a:before {
-	width: 8rem;
-	height: 8rem;
-	margin-bottom: .5em;
-}
-
-.followme-link span {
-	display: inline;
-}
-
-.page-header-inner {
-	min-height: 30rem;
-	padding-top: 8rem;
-	padding-bottom: 4rem;
-}
-
-.page-header h1 {
-	font-size: 4em;
-}
-
-}
-
